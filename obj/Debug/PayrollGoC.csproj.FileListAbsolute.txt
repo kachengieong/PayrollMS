@@ -1,0 +1,14 @@
+C:\Users\semih\source\repos\PayrollGoC\bin\Debug\PayrollGoC.exe.config
+C:\Users\semih\source\repos\PayrollGoC\bin\Debug\PayrollGoC.exe
+C:\Users\semih\source\repos\PayrollGoC\bin\Debug\PayrollGoC.pdb
+C:\Users\semih\source\repos\PayrollGoC\obj\Debug\PayrollGoC.csprojAssemblyReference.cache
+C:\Users\semih\source\repos\PayrollGoC\obj\Debug\PayrollGoC.Form1.resources
+C:\Users\semih\source\repos\PayrollGoC\obj\Debug\PayrollGoC.Properties.Resources.resources
+C:\Users\semih\source\repos\PayrollGoC\obj\Debug\PayrollGoC.csproj.GenerateResource.cache
+C:\Users\semih\source\repos\PayrollGoC\obj\Debug\PayrollGoC.csproj.CoreCompileInputs.cache
+C:\Users\semih\source\repos\PayrollGoC\obj\Debug\PayrollGoC.exe
+C:\Users\semih\source\repos\PayrollGoC\obj\Debug\PayrollGoC.pdb
+C:\Users\semih\source\repos\PayrollGoC\obj\Debug\PayrollGoC.Form2.resources
+C:\Users\semih\source\repos\PayrollGoC\obj\Debug\PayrollGoC.Form3.resources
+C:\Users\semih\source\repos\PayrollGoC\obj\Debug\PayrollGoC.Form4.resources
+C:\Users\semih\source\repos\PayrollGoC\obj\Debug\PayrollGoC.Form5.resources
