@@ -124,7 +124,7 @@ namespace PayrollGoC
                 string typetext = radioButton4.Text;
                 OleDbCommand cmd = conn.CreateCommand();
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "INSERT INTO Economictable (Firstname, Lastname, Occupation, Hours, Weeklygrosspay, HourlyPay, Paytime) VALUES ('" + textBox1.Text + "', '" + textBox2.Text + "', '" + textBox4.Text + "', '" + int.Parse(textBox13.Text) + "', '" + grossIncome + "', '" + Convert.ToDouble(textBox6.Text) + "', '" + typetext +"')";
+                cmd.CommandText = "INSERT INTO Economictable (Firstname, Lastname, Occupation, Hours, OvertimeHours, Overtimepay, Weeklygrosspay, HourlyPay, Paytime) VALUES ('" + textBox1.Text + "', '" + textBox2.Text + "', '" + textBox4.Text + "', '" + int.Parse(textBox13.Text) + "', '" + overtimeHour + "', '" + overtimePay + "', '" + grossIncome + "', '" + Convert.ToDouble(textBox6.Text) + "', '" + typetext +"')";
                 cmd.ExecuteNonQuery();
             }
             OleDbCommand addCommand = conn.CreateCommand();
@@ -140,16 +140,16 @@ namespace PayrollGoC
                 gendertext = radioButton2.Text;
             }
             addCommand.CommandText = "INSERT INTO HRView (Firstname, Lastname, DateofBirth, Age, Gender,Department, Occupation, Datehired, HealthPlan, DentalCoverage, VisionCoverage, Email, PhoneNumber, Address, Address2, ZipCode) VALUES ('" + 
-                textBox1.Text + "', '" + textBox2.Text + "', '" + dateTimePicker1.Value + "', '" + int.Parse(textBox12.Text) + "', '" + gendertext + "', '" + textBox3.Text + "', '" + textBox4.Text + "', '" + dateTimePicker2.Value + "', '" + comboBox1.Text + "', '"
-                + comboBox2.Text + "', '" + comboBox3.Text + "', '" + textBox7.Text + "', '" + textBox8.Text + "', '" + textBox9.Text + "', '" + textBox10.Text + "', '" + textBox11.Text + "')";
+                textBox1.Text + "', '"+ textBox2.Text + "', '" + dateTimePicker1.Value + "', '" + int.Parse(textBox12.Text) + "', '" + gendertext + "', '" + textBox3.Text + "', '" + textBox4.Text + "', '" + dateTimePicker2.Value + "', '" + comboBox1.Text + 
+                "', '" + comboBox2.Text + "', '" + comboBox3.Text + "', '" + textBox7.Text + "', '" + textBox8.Text + "', '" + textBox9.Text + "', '" + textBox10.Text + "', '" + textBox11.Text + "')";
             addCommand.ExecuteNonQuery();
             if (radioButton3.Checked)
             {
                 string typetext = radioButton3.Text;
                 OleDbCommand command = conn.CreateCommand();
                 command.CommandType = CommandType.Text;
-                command.CommandText = "INSERT INTO Mastertable (Hours, Weeklygrosspay, Paytime, Firstname, Lastname, DateofBirth, Age, Gender,Department, Occupation, Datehired, HealthPlan, DentalCoverage, VisionCoverage, Email, PhoneNumber, Address, Address2, ZipCode) VALUES ('"
-                    + int.Parse(textBox13.Text) + "', '" + grossIncome + "', '" + typetext + textBox1.Text + "', '" + textBox2.Text + "', '" + dateTimePicker1.Value + "', '" +
+                command.CommandText = "INSERT INTO Mastertable (Weeklygrosspay, Paytime, Firstname, Lastname, DateofBirth, Age, Gender,Department, Occupation, Datehired, HealthPlan, DentalCoverage, VisionCoverage, Email, PhoneNumber, Address, Address2, ZipCode) VALUES ('"
+                    + "', '" + Convert.ToDouble(textBox5.Text) + "', '" + typetext + textBox1.Text + "', '" + textBox2.Text + "', '" + dateTimePicker1.Value + "', '" +
                     int.Parse(textBox12.Text) + "', '" + gendertext + "', '" + textBox3.Text + "', '" + textBox4.Text + "', '" + dateTimePicker2.Value + "', '" + comboBox1.Text + "', '"
                     + comboBox2.Text + "', '" + comboBox3.Text + "', '" + textBox7.Text + "', '" + textBox8.Text + "', '" + textBox9.Text + "', '" + textBox10.Text + "', '" + textBox11.Text + "')";
                 command.ExecuteNonQuery();
@@ -159,14 +159,14 @@ namespace PayrollGoC
                 string typetext = radioButton4.Text;
                 OleDbCommand command = conn.CreateCommand();
                 command.CommandType = CommandType.Text;
-                command.CommandText = "INSERT INTO Mastertable (Hours, OvertimeHours, Weeklygrosspay, HourlyPay, Paytime, Firstname, Lastname, DateofBirth, Age, Gender,Department, Occupation, Datehired, HealthPlan, DentalCoverage, VisionCoverage, Email, PhoneNumber, Address, Address2, ZipCode) VALUES ('"
-                    + int.Parse(textBox13.Text) + "', '" + overtimeHour + "', '" + "', '" + grossIncome + "', '" + Convert.ToDouble(textBox6.Text) + "', '" + typetext + "', '" + textBox1.Text + "', '" + textBox2.Text + "', '" + dateTimePicker1.Value + "', '" +
+                command.CommandText = "INSERT INTO Mastertable (Hours, OvertimeHours, Overtimepay, Weeklygrosspay, HourlyPay, Paytime, Firstname, Lastname, DateofBirth, Age, Gender,Department, Occupation, Datehired, HealthPlan, DentalCoverage, VisionCoverage, Email, PhoneNumber, Address, Address2, ZipCode) VALUES ('"
+                    + int.Parse(textBox13.Text) + "', '" + overtimeHour + "', '" + overtimePay + "', '" + grossIncome + "', '" + Convert.ToDouble(textBox6.Text) + "', '" + typetext + "', '" + textBox1.Text + "', '" + textBox2.Text + "', '" + dateTimePicker1.Value + "', '" +
                     int.Parse(textBox12.Text) + "', '" + gendertext + "', '" + textBox3.Text + "', '" + textBox4.Text + "', '" + dateTimePicker2.Value + "', '" + comboBox1.Text + "', '"
                     + comboBox2.Text + "', '" + comboBox3.Text + "', '" + textBox7.Text + "', '" + textBox8.Text + "', '" + textBox9.Text + "', '" + textBox10.Text + "', '" + textBox11.Text + "')";
                 command.ExecuteNonQuery();
             }
-                conn.Close();
-                MessageBox.Show("Add Succeed!");
+            conn.Close();
+            MessageBox.Show("Add Succeed!");
         }
 
         private void label22_Click(object sender, EventArgs e)
