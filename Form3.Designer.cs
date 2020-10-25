@@ -75,6 +75,8 @@ namespace PayrollGoC
             this.textBox11 = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
             this.textBox12 = new System.Windows.Forms.TextBox();
+            this.label23 = new System.Windows.Forms.Label();
+            this.textBox13 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -161,7 +163,7 @@ namespace PayrollGoC
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Papyrus", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label7.Location = new System.Drawing.Point(35, 251);
+            this.label7.Location = new System.Drawing.Point(35, 248);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(75, 25);
@@ -174,7 +176,7 @@ namespace PayrollGoC
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Papyrus", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label8.Location = new System.Drawing.Point(35, 291);
+            this.label8.Location = new System.Drawing.Point(35, 282);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(109, 25);
@@ -219,7 +221,7 @@ namespace PayrollGoC
             this.radioButton3.BackColor = System.Drawing.Color.Transparent;
             this.radioButton3.Font = new System.Drawing.Font("Papyrus", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButton3.ForeColor = System.Drawing.Color.DarkBlue;
-            this.radioButton3.Location = new System.Drawing.Point(180, 282);
+            this.radioButton3.Location = new System.Drawing.Point(185, 278);
             this.radioButton3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.radioButton3.Name = "radioButton3";
             this.radioButton3.Size = new System.Drawing.Size(75, 29);
@@ -235,7 +237,7 @@ namespace PayrollGoC
             this.radioButton4.BackColor = System.Drawing.Color.Transparent;
             this.radioButton4.Font = new System.Drawing.Font("Papyrus", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButton4.ForeColor = System.Drawing.Color.DarkBlue;
-            this.radioButton4.Location = new System.Drawing.Point(316, 284);
+            this.radioButton4.Location = new System.Drawing.Point(321, 278);
             this.radioButton4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.radioButton4.Name = "radioButton4";
             this.radioButton4.Size = new System.Drawing.Size(80, 29);
@@ -248,7 +250,7 @@ namespace PayrollGoC
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox1.Location = new System.Drawing.Point(180, 74);
+            this.textBox1.Location = new System.Drawing.Point(138, 79);
             this.textBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(236, 26);
@@ -258,7 +260,7 @@ namespace PayrollGoC
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox2.Location = new System.Drawing.Point(180, 110);
+            this.textBox2.Location = new System.Drawing.Point(138, 115);
             this.textBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(236, 26);
@@ -289,7 +291,7 @@ namespace PayrollGoC
             // 
             this.dateTimePicker1.Font = new System.Drawing.Font("Papyrus", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(180, 144);
+            this.dateTimePicker1.Location = new System.Drawing.Point(158, 148);
             this.dateTimePicker1.MaxDate = new System.DateTime(2020, 10, 12, 0, 0, 0, 0);
             this.dateTimePicker1.MinDate = new System.DateTime(1940, 1, 1, 0, 0, 0, 0);
             this.dateTimePicker1.Name = "dateTimePicker1";
@@ -304,7 +306,7 @@ namespace PayrollGoC
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Papyrus", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label9.Location = new System.Drawing.Point(35, 324);
+            this.label9.Location = new System.Drawing.Point(35, 360);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(114, 25);
@@ -314,7 +316,7 @@ namespace PayrollGoC
             // textBox5
             // 
             this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox5.Location = new System.Drawing.Point(180, 318);
+            this.textBox5.Location = new System.Drawing.Point(181, 358);
             this.textBox5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(236, 26);
@@ -327,7 +329,7 @@ namespace PayrollGoC
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Papyrus", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label10.Location = new System.Drawing.Point(35, 393);
+            this.label10.Location = new System.Drawing.Point(37, 436);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(100, 25);
             this.label10.TabIndex = 19;
@@ -337,7 +339,7 @@ namespace PayrollGoC
             // 
             this.dateTimePicker2.Font = new System.Drawing.Font("Papyrus", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker2.Location = new System.Drawing.Point(180, 388);
+            this.dateTimePicker2.Location = new System.Drawing.Point(181, 428);
             this.dateTimePicker2.MaxDate = new System.DateTime(2020, 10, 12, 0, 0, 0, 0);
             this.dateTimePicker2.MinDate = new System.DateTime(1970, 1, 1, 0, 0, 0, 0);
             this.dateTimePicker2.Name = "dateTimePicker2";
@@ -352,7 +354,7 @@ namespace PayrollGoC
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Papyrus", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label11.Location = new System.Drawing.Point(35, 437);
+            this.label11.Location = new System.Drawing.Point(35, 475);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(140, 25);
             this.label11.TabIndex = 21;
@@ -365,7 +367,7 @@ namespace PayrollGoC
             "Premium Pack",
             "Gold Pack",
             "Limited Pack"});
-            this.comboBox1.Location = new System.Drawing.Point(180, 434);
+            this.comboBox1.Location = new System.Drawing.Point(181, 472);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(236, 28);
             this.comboBox1.TabIndex = 22;
@@ -378,7 +380,7 @@ namespace PayrollGoC
             "Premium Pack",
             "Gold Pack",
             "Limited Pack"});
-            this.comboBox2.Location = new System.Drawing.Point(180, 477);
+            this.comboBox2.Location = new System.Drawing.Point(181, 512);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(236, 28);
             this.comboBox2.TabIndex = 24;
@@ -390,7 +392,7 @@ namespace PayrollGoC
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("Papyrus", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label12.Location = new System.Drawing.Point(35, 480);
+            this.label12.Location = new System.Drawing.Point(35, 515);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(140, 25);
             this.label12.TabIndex = 23;
@@ -403,7 +405,7 @@ namespace PayrollGoC
             "Premium Pack",
             "Gold Pack",
             "Limited Pack"});
-            this.comboBox3.Location = new System.Drawing.Point(180, 522);
+            this.comboBox3.Location = new System.Drawing.Point(703, 76);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(236, 28);
             this.comboBox3.TabIndex = 26;
@@ -415,7 +417,7 @@ namespace PayrollGoC
             this.label13.BackColor = System.Drawing.Color.Transparent;
             this.label13.Font = new System.Drawing.Font("Papyrus", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label13.Location = new System.Drawing.Point(35, 525);
+            this.label13.Location = new System.Drawing.Point(557, 80);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(134, 25);
             this.label13.TabIndex = 25;
@@ -424,7 +426,7 @@ namespace PayrollGoC
             // textBox6
             // 
             this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox6.Location = new System.Drawing.Point(180, 354);
+            this.textBox6.Location = new System.Drawing.Point(181, 394);
             this.textBox6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(236, 26);
@@ -437,7 +439,7 @@ namespace PayrollGoC
             this.label14.BackColor = System.Drawing.Color.Transparent;
             this.label14.Font = new System.Drawing.Font("Papyrus", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label14.Location = new System.Drawing.Point(35, 360);
+            this.label14.Location = new System.Drawing.Point(37, 396);
             this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(119, 25);
@@ -487,7 +489,7 @@ namespace PayrollGoC
             this.label17.BackColor = System.Drawing.Color.Transparent;
             this.label17.Font = new System.Drawing.Font("Papyrus", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label17.Location = new System.Drawing.Point(586, 77);
+            this.label17.Location = new System.Drawing.Point(586, 113);
             this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(57, 25);
@@ -500,7 +502,7 @@ namespace PayrollGoC
             this.label18.BackColor = System.Drawing.Color.Transparent;
             this.label18.Font = new System.Drawing.Font("Papyrus", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label18.Location = new System.Drawing.Point(586, 113);
+            this.label18.Location = new System.Drawing.Point(586, 148);
             this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(90, 25);
@@ -513,7 +515,7 @@ namespace PayrollGoC
             this.label19.BackColor = System.Drawing.Color.Transparent;
             this.label19.Font = new System.Drawing.Font("Papyrus", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label19.Location = new System.Drawing.Point(586, 146);
+            this.label19.Location = new System.Drawing.Point(588, 180);
             this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(79, 25);
@@ -526,7 +528,7 @@ namespace PayrollGoC
             this.label20.BackColor = System.Drawing.Color.Transparent;
             this.label20.Font = new System.Drawing.Font("Papyrus", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label20.Location = new System.Drawing.Point(586, 182);
+            this.label20.Location = new System.Drawing.Point(586, 212);
             this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(91, 25);
@@ -539,7 +541,7 @@ namespace PayrollGoC
             this.label21.BackColor = System.Drawing.Color.Transparent;
             this.label21.Font = new System.Drawing.Font("Papyrus", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label21.Location = new System.Drawing.Point(586, 215);
+            this.label21.Location = new System.Drawing.Point(588, 248);
             this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(89, 25);
@@ -549,7 +551,7 @@ namespace PayrollGoC
             // textBox7
             // 
             this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox7.Location = new System.Drawing.Point(703, 74);
+            this.textBox7.Location = new System.Drawing.Point(703, 112);
             this.textBox7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(236, 26);
@@ -558,16 +560,17 @@ namespace PayrollGoC
             // textBox8
             // 
             this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox8.Location = new System.Drawing.Point(703, 110);
+            this.textBox8.Location = new System.Drawing.Point(703, 146);
             this.textBox8.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(236, 26);
             this.textBox8.TabIndex = 40;
+            this.textBox8.TextChanged += new System.EventHandler(this.textBox8_TextChanged);
             // 
             // textBox9
             // 
             this.textBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox9.Location = new System.Drawing.Point(703, 144);
+            this.textBox9.Location = new System.Drawing.Point(703, 180);
             this.textBox9.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(236, 26);
@@ -576,7 +579,7 @@ namespace PayrollGoC
             // textBox10
             // 
             this.textBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox10.Location = new System.Drawing.Point(703, 180);
+            this.textBox10.Location = new System.Drawing.Point(703, 212);
             this.textBox10.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBox10.Name = "textBox10";
             this.textBox10.Size = new System.Drawing.Size(236, 26);
@@ -585,7 +588,7 @@ namespace PayrollGoC
             // textBox11
             // 
             this.textBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox11.Location = new System.Drawing.Point(703, 216);
+            this.textBox11.Location = new System.Drawing.Point(703, 248);
             this.textBox11.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBox11.Name = "textBox11";
             this.textBox11.Size = new System.Drawing.Size(124, 26);
@@ -597,28 +600,50 @@ namespace PayrollGoC
             this.label22.BackColor = System.Drawing.Color.Transparent;
             this.label22.Font = new System.Drawing.Font("Papyrus", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label22.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label22.Location = new System.Drawing.Point(314, 150);
+            this.label22.Location = new System.Drawing.Point(292, 150);
             this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(51, 25);
             this.label22.TabIndex = 44;
             this.label22.Text = "Age :";
+            this.label22.Click += new System.EventHandler(this.label22_Click);
             // 
             // textBox12
             // 
             this.textBox12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox12.Location = new System.Drawing.Point(373, 148);
+            this.textBox12.Location = new System.Drawing.Point(351, 150);
             this.textBox12.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBox12.Name = "textBox12";
             this.textBox12.Size = new System.Drawing.Size(43, 26);
             this.textBox12.TabIndex = 45;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Papyrus", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.ForeColor = System.Drawing.Color.DarkBlue;
+            this.label23.Location = new System.Drawing.Point(35, 321);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(67, 25);
+            this.label23.TabIndex = 46;
+            this.label23.Text = "Hours : ";
+            this.label23.Click += new System.EventHandler(this.label23_Click);
+            // 
+            // textBox13
+            // 
+            this.textBox13.Location = new System.Drawing.Point(180, 321);
+            this.textBox13.Name = "textBox13";
+            this.textBox13.Size = new System.Drawing.Size(100, 26);
+            this.textBox13.TabIndex = 47;
             // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1044, 601);
+            this.ClientSize = new System.Drawing.Size(1064, 760);
+            this.Controls.Add(this.textBox13);
+            this.Controls.Add(this.label23);
             this.Controls.Add(this.textBox12);
             this.Controls.Add(this.label22);
             this.Controls.Add(this.textBox11);
@@ -720,5 +745,7 @@ namespace PayrollGoC
         private System.Windows.Forms.TextBox textBox11;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.TextBox textBox13;
     }
 }

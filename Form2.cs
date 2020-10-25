@@ -24,7 +24,7 @@ namespace PayrollGoC
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            
             this.WindowState = FormWindowState.Minimized;
             Form5 myInfo = new Form5();
             myInfo.Show();

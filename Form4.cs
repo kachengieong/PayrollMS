@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.OleDb;
 
 namespace PayrollGoC
 {
@@ -26,6 +27,10 @@ namespace PayrollGoC
         private void button1_Click(object sender, EventArgs e)
         {
             //search Emp ID then retrieve Info for labels and textboxes (error handling employee number search !!!)
+            OleDbConnection conn = new OleDbConnection(@"Provider = Microsoft.ACE.OLEDB.12.0; Data Source = C:/Users/ieong/Source/Repos/PayrollMS1/ Payrollredone2.accdb");
+            OleDbCommand cmd = conn.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "SELECT * from Mastertable WHERE ID = " + textBox1.Text;
 
         }
 
@@ -63,11 +68,15 @@ namespace PayrollGoC
             if (result == DialogResult.Yes)
             {
                 // Delete Record
-
-
-
+                OleDbConnection conn = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:/Users/ieong/Source/Repos/PayrollMS1/Payrollredone2.accdb");
+                conn.Open();
+                OleDbCommand cmd = conn.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "DELETE FROM Economictable WHERE ID = " + textBox1.Text;
+                cmd.ExecuteNonQuery();
+                conn.Close();
                 this.Close();
-                MessageBox.Show("Empolyee Record Deleted");
+                MessageBox.Show("Employee Record Deleted");
             }
             else
             {
@@ -161,6 +170,19 @@ namespace PayrollGoC
 
         }
 
+        private void dateTimePicker2_ValueChanged(object sender, EventArgs e)
+        {
 
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

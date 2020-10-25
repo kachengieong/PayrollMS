@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.OleDb;
 
 namespace PayrollGoC
 {
@@ -68,6 +69,7 @@ namespace PayrollGoC
         {
             //hourly income choice disables gross income
             textBox6.Enabled = radioButton4.Checked;
+            textBox13.Enabled = radioButton4.Checked;
         }
 
         private void textBox5_TextChanged(object sender, EventArgs e)
@@ -103,6 +105,81 @@ namespace PayrollGoC
         }
 
         private void button2_Click(object sender, EventArgs e)
+        {
+            int overtimeHour = GrossIncome.CalculateOvertimeHour(int.Parse(textBox13.Text));
+            double overtimePay = GrossIncome.CalculateOvertimePay(overtimeHour, Convert.ToDouble(textBox6.Text));
+            double grossIncome = GrossIncome.CalculateGrossIncome(int.Parse(textBox13.Text), overtimePay, Convert.ToDouble(textBox6.Text));
+            OleDbConnection conn = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:/Users/ieong/Source/Repos/PayrollMS1/Payrollredone2.accdb");
+            conn.Open();
+            if (radioButton3.Checked)
+            {
+                string typetext = radioButton3.Text;
+                OleDbCommand cmd = conn.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "INSERT INTO Economictable (Firstname, Lastname, Occupation, Weeklygrosspay, Paytime) VALUES ('" + textBox1.Text + "', '" + textBox2.Text + "', '" + textBox4.Text + "', '"+ Convert.ToDouble(textBox5.Text) + "', '"  + typetext + "')";
+                cmd.ExecuteNonQuery();
+            }
+            else if (radioButton4.Checked)
+            {
+                string typetext = radioButton4.Text;
+                OleDbCommand cmd = conn.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "INSERT INTO Economictable (Firstname, Lastname, Occupation, Hours, Weeklygrosspay, HourlyPay, Paytime) VALUES ('" + textBox1.Text + "', '" + textBox2.Text + "', '" + textBox4.Text + "', '" + int.Parse(textBox13.Text) + "', '" + grossIncome + "', '" + Convert.ToDouble(textBox6.Text) + "', '" + typetext +"')";
+                cmd.ExecuteNonQuery();
+            }
+            OleDbCommand addCommand = conn.CreateCommand();
+            addCommand.CommandType = CommandType.Text;
+            //to choose gender radio button:
+            string gendertext = "";
+            if (radioButton1.Checked)
+            {
+                gendertext = radioButton1.Text;
+            }
+            else if (radioButton2.Checked)
+            {
+                gendertext = radioButton2.Text;
+            }
+            addCommand.CommandText = "INSERT INTO HRView (Firstname, Lastname, DateofBirth, Age, Gender,Department, Occupation, Datehired, HealthPlan, DentalCoverage, VisionCoverage, Email, PhoneNumber, Address, Address2, ZipCode) VALUES ('" + 
+                textBox1.Text + "', '" + textBox2.Text + "', '" + dateTimePicker1.Value + "', '" + int.Parse(textBox12.Text) + "', '" + gendertext + "', '" + textBox3.Text + "', '" + textBox4.Text + "', '" + dateTimePicker2.Value + "', '" + comboBox1.Text + "', '"
+                + comboBox2.Text + "', '" + comboBox3.Text + "', '" + textBox7.Text + "', '" + textBox8.Text + "', '" + textBox9.Text + "', '" + textBox10.Text + "', '" + textBox11.Text + "')";
+            addCommand.ExecuteNonQuery();
+            if (radioButton3.Checked)
+            {
+                string typetext = radioButton3.Text;
+                OleDbCommand command = conn.CreateCommand();
+                command.CommandType = CommandType.Text;
+                command.CommandText = "INSERT INTO Mastertable (Hours, Weeklygrosspay, Paytime, Firstname, Lastname, DateofBirth, Age, Gender,Department, Occupation, Datehired, HealthPlan, DentalCoverage, VisionCoverage, Email, PhoneNumber, Address, Address2, ZipCode) VALUES ('"
+                    + int.Parse(textBox13.Text) + "', '" + grossIncome + "', '" + typetext + textBox1.Text + "', '" + textBox2.Text + "', '" + dateTimePicker1.Value + "', '" +
+                    int.Parse(textBox12.Text) + "', '" + gendertext + "', '" + textBox3.Text + "', '" + textBox4.Text + "', '" + dateTimePicker2.Value + "', '" + comboBox1.Text + "', '"
+                    + comboBox2.Text + "', '" + comboBox3.Text + "', '" + textBox7.Text + "', '" + textBox8.Text + "', '" + textBox9.Text + "', '" + textBox10.Text + "', '" + textBox11.Text + "')";
+                command.ExecuteNonQuery();
+            }
+            else if (radioButton4.Checked)
+            {
+                string typetext = radioButton4.Text;
+                OleDbCommand command = conn.CreateCommand();
+                command.CommandType = CommandType.Text;
+                command.CommandText = "INSERT INTO Mastertable (Hours, OvertimeHours, Weeklygrosspay, HourlyPay, Paytime, Firstname, Lastname, DateofBirth, Age, Gender,Department, Occupation, Datehired, HealthPlan, DentalCoverage, VisionCoverage, Email, PhoneNumber, Address, Address2, ZipCode) VALUES ('"
+                    + int.Parse(textBox13.Text) + "', '" + overtimeHour + "', '" + "', '" + grossIncome + "', '" + Convert.ToDouble(textBox6.Text) + "', '" + typetext + "', '" + textBox1.Text + "', '" + textBox2.Text + "', '" + dateTimePicker1.Value + "', '" +
+                    int.Parse(textBox12.Text) + "', '" + gendertext + "', '" + textBox3.Text + "', '" + textBox4.Text + "', '" + dateTimePicker2.Value + "', '" + comboBox1.Text + "', '"
+                    + comboBox2.Text + "', '" + comboBox3.Text + "', '" + textBox7.Text + "', '" + textBox8.Text + "', '" + textBox9.Text + "', '" + textBox10.Text + "', '" + textBox11.Text + "')";
+                command.ExecuteNonQuery();
+            }
+                conn.Close();
+                MessageBox.Show("Add Succeed!");
+        }
+
+        private void label22_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox8_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label23_Click(object sender, EventArgs e)
         {
 
         }
