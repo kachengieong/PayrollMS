@@ -167,6 +167,7 @@ namespace PayrollGoC
             }
             conn.Close();
             MessageBox.Show("Add Succeed!");
+            this.Close();
         }
 
         private void label22_Click(object sender, EventArgs e)
