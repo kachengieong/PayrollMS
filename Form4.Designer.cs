@@ -225,7 +225,7 @@
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Papyrus", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label8.Location = new System.Drawing.Point(604, 235);
+            this.label8.Location = new System.Drawing.Point(606, 191);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(122, 25);
@@ -480,7 +480,7 @@
             this.radioButton4.BackColor = System.Drawing.Color.Transparent;
             this.radioButton4.Font = new System.Drawing.Font("Papyrus", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButton4.ForeColor = System.Drawing.Color.White;
-            this.radioButton4.Location = new System.Drawing.Point(843, 233);
+            this.radioButton4.Location = new System.Drawing.Point(845, 189);
             this.radioButton4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.radioButton4.Name = "radioButton4";
             this.radioButton4.Size = new System.Drawing.Size(86, 29);
@@ -496,7 +496,7 @@
             this.radioButton3.BackColor = System.Drawing.Color.Transparent;
             this.radioButton3.Font = new System.Drawing.Font("Papyrus", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButton3.ForeColor = System.Drawing.Color.White;
-            this.radioButton3.Location = new System.Drawing.Point(751, 233);
+            this.radioButton3.Location = new System.Drawing.Point(753, 189);
             this.radioButton3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.radioButton3.Name = "radioButton3";
             this.radioButton3.Size = new System.Drawing.Size(81, 29);
@@ -643,7 +643,7 @@
             // label28
             // 
             this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(895, 227);
+            this.label28.Location = new System.Drawing.Point(582, 247);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(0, 13);
             this.label28.TabIndex = 79;
@@ -652,7 +652,7 @@
             // 
             this.label29.AutoSize = true;
             this.label29.Font = new System.Drawing.Font("Papyrus", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.Location = new System.Drawing.Point(612, 199);
+            this.label29.Location = new System.Drawing.Point(616, 235);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(75, 25);
             this.label29.TabIndex = 80;
@@ -660,7 +660,8 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(751, 196);
+            this.textBox2.Font = new System.Drawing.Font("Papyrus", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Location = new System.Drawing.Point(755, 232);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(115, 28);

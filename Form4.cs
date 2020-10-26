@@ -27,10 +27,7 @@ namespace PayrollGoC
         private void button1_Click(object sender, EventArgs e)
         {
             //search Emp ID then retrieve Info for labels and textboxes (error handling employee number search !!!)
-            OleDbConnection conn = new OleDbConnection(@"Provider = Microsoft.ACE.OLEDB.12.0; Data Source = C:/Users/ieong/Source/Repos/PayrollMS1/ Payrollredone2.accdb");
-            OleDbCommand cmd = conn.CreateCommand();
-            cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "SELECT * from Mastertable WHERE ID = " + textBox1.Text;
+                
 
         }
 
@@ -46,7 +43,6 @@ namespace PayrollGoC
             if (result == DialogResult.Yes)
             {
                 // Update Record
-
 
 
                 this.Close();
@@ -182,7 +178,63 @@ namespace PayrollGoC
 
         private void button1_Click_1(object sender, EventArgs e)
         {
+            //sql connection
+            OleDbConnection con1 = new OleDbConnection(@"Provider = Microsoft.ACE.OLEDB.12.0; Data Source =C:/Users/ieong/Source/Repos/PayrollMS1/Payrollredone2.accdb");
+            con1.Open();
+            //check if the employee id is found:
+            //data from HRView:
+            OleDbDataReader myReader = null;
+            OleDbCommand myCommand = new OleDbCommand("select * from HRView where ID =" + int.Parse(textBox1.Text), con1);
+            //DataTable dt = new DataTable();
+            //OleDbDataAdapter da = new OleDbDataAdapter(myCommand);
+            //da.Fill(dt);
+            //if (dt.Rows.Count == 1)
+            //{
+                myReader = myCommand.ExecuteReader();
 
+                //read data from database into gui form 4:
+                while (myReader.Read())
+                {
+                    label16.Text = (myReader["Firstname"].ToString());
+                    label20.Text = (myReader["Lastname"].ToString());
+                    label21.Text = (myReader["DateofBirth"].ToString());
+
+                    textBox7.Text = (myReader["Email"].ToString());
+                    textBox8.Text = (myReader["PhoneNumber"].ToString());
+                    textBox9.Text = (myReader["Address"].ToString());
+                    textBox10.Text = (myReader["Address2"].ToString());
+                    textBox11.Text = (myReader["ZipCode"].ToString());
+                    textBox3.Text = (myReader["Department"].ToString());
+                    textBox4.Text = (myReader["Position"].ToString());
+                    dateTimePicker2.Text = (myReader["Datehired"].ToString());
+                    //comboBox1.SelectedItem.Text = (myReader["HealthCover"].ToString());
+                    //comboBox2.SelectedItem.Text = (myReader["DentalCover"].ToString());
+                    //comboBox3.SelectedItem.Text = (myReader["VisionCover"].ToString());
+
+            }
+            //else
+            //{
+            //    MessageBox.Show("The ID you inputted did not exist in the database");
+            //}
+            OleDbCommand myCommand1 = new OleDbCommand("select * from Economictable where ID =" + int.Parse(textBox1.Text), con1);
+            //DataTable dt1 = new DataTable();
+            //OleDbDataAdapter da1 = new OleDbDataAdapter(myCommand);
+            //da1.Fill(dt1);
+            //if (dt.Rows.Count == 1)
+            //{
+                myReader = myCommand1.ExecuteReader();
+
+                //read data from database into gui form 4:
+                while (myReader.Read())
+                {
+                    textBox2.Text = (myReader["Hours"].ToString());
+                    textBox5.Text = (myReader["Weeklygrosspay"].ToString());
+                    textBox6.Text = (myReader["HourlyPay"].ToString());
+                }
+            }
+            //else
+            //{
+            //    MessageBox.Show("The ID you inputted did not exist in the database");
+            //}
         }
-    }
 }
