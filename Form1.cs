@@ -55,11 +55,24 @@ namespace PayrollGoC
                 da.Fill(dt);
                 if (dt.Rows.Count == 1)
                 {
+                    int status = Convert.ToInt32(comboBox1.SelectedIndex);
                     textBox1.Clear();
                     textBox2.Clear();
-                    MessageBox.Show("Login Succeed!");
-                    Form2 HR = new Form2();
-                    HR.Show();
+                    if (status == 0)
+                    {
+                        Form2 frm2 = new Form2();
+                        frm2.Show();
+                        this.Hide();
+                        MessageBox.Show("Login Succeed!");
+                    }
+
+                    else if (status == 1)
+                    {
+                        Form5 frm5 = new Form5();
+                        frm5.Show();
+                        this.Hide();
+                        MessageBox.Show("Login Succeed!");
+                    }
                 }
                 else
                 {

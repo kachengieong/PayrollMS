@@ -16,7 +16,7 @@ namespace PayrollGoC
         public Form4()
         {
             InitializeComponent();
-            
+
         }
 
         private void Form4_Load(object sender, EventArgs e)
@@ -27,7 +27,10 @@ namespace PayrollGoC
         private void button1_Click(object sender, EventArgs e)
         {
             //search Emp ID then retrieve Info for labels and textboxes (error handling employee number search !!!)
-                
+            OleDbConnection conn = new OleDbConnection(@"Provider = Microsoft.ACE.OLEDB.12.0; Data Source = C:/Users/ieong/Source/Repos/PayrollMS1/ Payrollredone2.accdb");
+            OleDbCommand cmd = conn.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "SELECT * from Mastertable WHERE ID = " + textBox1.Text;
 
         }
 
@@ -43,6 +46,40 @@ namespace PayrollGoC
             if (result == DialogResult.Yes)
             {
                 // Update Record
+                //sql connection
+                OleDbConnection con1 = new OleDbConnection(@"Provider = Microsoft.ACE.OLEDB.12.0; Data Source = C:/Users/ieong/Source/Repos/PayrollMS1/Payrollredone2.accdb");
+                con1.Open();
+
+
+
+                OleDbCommand cmd = new OleDbCommand("UPDATE HRview SET Email = @email, PhoneNumber = @PhoneNumber, Address = @Address, Address2 =  @Address2,ZipCode = @ZipCode, Department= @Department, Position = @Position, Datehired = @Datehired, HealthCover = @HealthCover,DentalCover = @DentalCover, VisionCover = @VisionCover where ID =" + int.Parse(textBox1.Text), con1);
+
+
+                //to save the updates to database:
+                cmd.Parameters.AddWithValue("@Email", textBox7.Text);
+                cmd.Parameters.AddWithValue("@PhoneNumber", textBox8.Text);
+                cmd.Parameters.AddWithValue("@Address", textBox9.Text);
+                cmd.Parameters.AddWithValue("@Address2", textBox10.Text);
+                cmd.Parameters.AddWithValue("@ZipCode", textBox11.Text);
+                cmd.Parameters.AddWithValue("@Department", textBox3.Text);
+                cmd.Parameters.AddWithValue("@Position", textBox4.Text);
+                //cmd.Parameters.AddWithValue("@HealthCover", comboBox1.SelectedItem.Text);
+                //cmd.Parameters.AddWithValue("@DentalCover", comboBox2.SelectedItem.Text);
+                //cmd.Parameters.AddWithValue("@VisionCover", comboBox3.SelectedItem.Text);
+
+
+                OleDbCommand cmd1 = new OleDbCommand("UPDATE Economictable SET Weeklygrosspay = @Weeklygrosspay, HourlyPay = @HourlyPay where ID =" + int.Parse(textBox1.Text), con1);
+
+
+                cmd1.Parameters.AddWithValue("@Weeklygrosspay", textBox5.Text);
+                cmd1.Parameters.AddWithValue("@HourlyPay", textBox6.Text);
+
+                cmd.ExecuteNonQuery();
+
+
+
+                con1.Close();
+
 
 
                 this.Close();
@@ -68,8 +105,16 @@ namespace PayrollGoC
                 conn.Open();
                 OleDbCommand cmd = conn.CreateCommand();
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "DELETE FROM Economictable WHERE ID = " + textBox1.Text;
+                cmd.CommandText = "DELETE FROM Economictable WHERE ID = " + int.Parse(textBox1.Text);
                 cmd.ExecuteNonQuery();
+                OleDbCommand cmd1 = conn.CreateCommand();
+                cmd1.CommandType = CommandType.Text;
+                cmd1.CommandText = "DELETE FROM HRView WHERE ID = " + int.Parse(textBox1.Text);
+                cmd1.ExecuteNonQuery();
+                OleDbCommand cmd2 = conn.CreateCommand();
+                cmd2.CommandType = CommandType.Text;
+                cmd2.CommandText = "DELETE FROM Mastertable WHERE ID = " + int.Parse(textBox1.Text);
+                cmd2.ExecuteNonQuery();
                 conn.Close();
                 this.Close();
                 MessageBox.Show("Employee Record Deleted");
@@ -93,12 +138,12 @@ namespace PayrollGoC
 
         private void radioButton3_CheckedChanged(object sender, EventArgs e)
         {
-            textBox5.Enabled = radioButton3.Checked;
+
         }
 
         private void radioButton4_CheckedChanged(object sender, EventArgs e)
         {
-            textBox6.Enabled = radioButton4.Checked;
+
         }
 
         private void textBox5_TextChanged(object sender, EventArgs e)
@@ -190,26 +235,25 @@ namespace PayrollGoC
             //da.Fill(dt);
             //if (dt.Rows.Count == 1)
             //{
-                myReader = myCommand.ExecuteReader();
+            myReader = myCommand.ExecuteReader();
 
-                //read data from database into gui form 4:
-                while (myReader.Read())
-                {
-                    label16.Text = (myReader["Firstname"].ToString());
-                    label20.Text = (myReader["Lastname"].ToString());
-                    label21.Text = (myReader["DateofBirth"].ToString());
+            //read data from database into gui form 4:
+            while (myReader.Read())
+            {
+                label16.Text = (myReader["Firstname"].ToString());
+                label20.Text = (myReader["Lastname"].ToString());
+                label21.Text = (myReader["DateofBirth"].ToString());
 
-                    textBox7.Text = (myReader["Email"].ToString());
-                    textBox8.Text = (myReader["PhoneNumber"].ToString());
-                    textBox9.Text = (myReader["Address"].ToString());
-                    textBox10.Text = (myReader["Address2"].ToString());
-                    textBox11.Text = (myReader["ZipCode"].ToString());
-                    textBox3.Text = (myReader["Department"].ToString());
-                    textBox4.Text = (myReader["Position"].ToString());
-                    dateTimePicker2.Text = (myReader["Datehired"].ToString());
-                    //comboBox1.SelectedItem.Text = (myReader["HealthCover"].ToString());
-                    //comboBox2.SelectedItem.Text = (myReader["DentalCover"].ToString());
-                    //comboBox3.SelectedItem.Text = (myReader["VisionCover"].ToString());
+                textBox7.Text = (myReader["Email"].ToString());
+                textBox8.Text = (myReader["PhoneNumber"].ToString());
+                textBox9.Text = (myReader["Address"].ToString());
+                textBox10.Text = (myReader["Address2"].ToString());
+                textBox11.Text = (myReader["ZipCode"].ToString());
+                textBox3.Text = (myReader["Department"].ToString());
+                textBox4.Text = (myReader["Position"].ToString());
+                //comboBox1.SelectedItem.Text = (myReader["HealthCover"].ToString());
+                //comboBox2.SelectedItem.Text = (myReader["DentalCover"].ToString());
+                //comboBox3.SelectedItem.Text = (myReader["VisionCover"].ToString());
 
             }
             //else
@@ -222,19 +266,76 @@ namespace PayrollGoC
             //da1.Fill(dt1);
             //if (dt.Rows.Count == 1)
             //{
-                myReader = myCommand1.ExecuteReader();
+            myReader = myCommand1.ExecuteReader();
 
-                //read data from database into gui form 4:
-                while (myReader.Read())
-                {
-                    textBox2.Text = (myReader["Hours"].ToString());
-                    textBox5.Text = (myReader["Weeklygrosspay"].ToString());
-                    textBox6.Text = (myReader["HourlyPay"].ToString());
-                }
+            //read data from database into gui form 4:
+            while (myReader.Read())
+            {
+                textBox2.Text = (myReader["Hours"].ToString());
+                textBox5.Text = (myReader["Weeklygrosspay"].ToString());
+                textBox6.Text = (myReader["HourlyPay"].ToString());
             }
             //else
             //{
             //    MessageBox.Show("The ID you inputted did not exist in the database");
             //}
         }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            // Save New Info to database 
+
+
+            //string message = "Confirm Updating Employee Record";
+            //string title = "Update Record";
+            //MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+            //DialogResult result = MessageBox.Show(message, title, buttons);
+            //if (result == DialogResult.Yes)
+            //{
+            // Update Record
+            //sql connection
+                OleDbConnection con1 = new OleDbConnection(@"Provider = Microsoft.ACE.OLEDB.12.0; Data Source = C:/Users/ieong/Source/Repos/PayrollMS1/Payrollredone2.accdb");
+                con1.Open();
+
+
+
+                OleDbCommand cmd = new OleDbCommand("UPDATE HRView SET [Email] = @Email, [PhoneNumber] = @PhoneNumber, [Address] = @Address, [Address2] =  @Address2, [ZipCode] = @ZipCode, [Department]= @Department, [Position] = @Position where ID =" + int.Parse(textBox1.Text), con1);
+
+
+                //to save the updates to database:
+                cmd.Parameters.AddWithValue("@Email", textBox7.Text);
+                cmd.Parameters.AddWithValue("@PhoneNumber", textBox8.Text);
+                cmd.Parameters.AddWithValue("@Address", textBox9.Text);
+                cmd.Parameters.AddWithValue("@Address2", textBox10.Text);
+                cmd.Parameters.AddWithValue("@ZipCode", textBox11.Text);
+                cmd.Parameters.AddWithValue("@Department", textBox3.Text);
+                cmd.Parameters.AddWithValue("@Position", textBox4.Text);
+                //cmd.Parameters.AddWithValue("@HealthCover", comboBox1.SelectedItem.Text);
+                //cmd.Parameters.AddWithValue("@DentalCover", comboBox2.SelectedItem.Text);
+                //cmd.Parameters.AddWithValue("@VisionCover", comboBox3.SelectedItem.Text);
+                cmd.ExecuteNonQuery();
+
+            OleDbCommand cmd1 = new OleDbCommand("UPDATE Economictable SET [Weeklygrosspay] = @Weeklygrosspay, [HourlyPay] = @HourlyPay where ID =" + int.Parse(textBox1.Text), con1);
+
+
+            cmd1.Parameters.AddWithValue("@Weeklygrosspay", textBox5.Text);
+            cmd1.Parameters.AddWithValue("@HourlyPay", textBox6.Text);
+
+            cmd1.ExecuteNonQuery();
+
+
+
+            con1.Close();
+
+
+
+                this.Close();
+                MessageBox.Show("Empolyee Record Updated");
+            }
+        }
+            //else
+            //{
+            //    this.Close();
+            //}
+        //}
 }
