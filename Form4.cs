@@ -332,7 +332,12 @@ namespace PayrollGoC
                 this.Close();
                 MessageBox.Show("Empolyee Record Updated");
             }
+
+        private void label29_Click(object sender, EventArgs e)
+        {
+
         }
+    }
             //else
             //{
             //    this.Close();

@@ -68,8 +68,8 @@ namespace PayrollGoC
 
                     else if (status == 1)
                     {
-                        Form5 frm5 = new Form5();
-                        frm5.Show();
+                        Form6 frm6 = new Form6();
+                        frm6.Show();
                         this.Hide();
                         MessageBox.Show("Login Succeed!");
                     }
