@@ -8,6 +8,10 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2F4664B2-3007-458C-BF2B-77D3DBFB0782}"
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
+		..\..\..\Downloads\Payroll\Logo60px.jpg = ..\..\..\Downloads\Payroll\Logo60px.jpg
+		..\..\..\Downloads\Payroll\payroll_check.jpg = ..\..\..\Downloads\Payroll\payroll_check.jpg
+		..\..\..\Downloads\Payroll\team___copy_C6o_icon.ico = ..\..\..\Downloads\Payroll\team___copy_C6o_icon.ico
+		..\..\..\Downloads\Payroll\Untitled.png = ..\..\..\Downloads\Payroll\Untitled.png
 	EndProjectSection
 EndProject
 Global

@@ -27,7 +27,7 @@ namespace PayrollGoC
         private void button1_Click(object sender, EventArgs e)
         {
             //search Emp ID then retrieve Info for labels and textboxes (error handling employee number search !!!)
-            OleDbConnection conn = new OleDbConnection(@"Provider = Microsoft.ACE.OLEDB.12.0; Data Source = C:/Users/ieong/Source/Repos/PayrollMS1/ Payrollredone2.accdb");
+            OleDbConnection conn = new OleDbConnection(@"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\semih\Source\Repos\PayrollMS\PayrollDB.mdb");
             OleDbCommand cmd = conn.CreateCommand();
             cmd.CommandType = CommandType.Text;
             cmd.CommandText = "SELECT * from Mastertable WHERE ID = " + textBox1.Text;
@@ -47,10 +47,8 @@ namespace PayrollGoC
             {
                 // Update Record
                 //sql connection
-                OleDbConnection con1 = new OleDbConnection(@"Provider = Microsoft.ACE.OLEDB.12.0; Data Source = C:/Users/ieong/Source/Repos/PayrollMS1/Payrollredone2.accdb");
+                OleDbConnection con1 = new OleDbConnection(@"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\semih\Source\Repos\PayrollMS\PayrollDB.mdb");
                 con1.Open();
-
-
 
                 OleDbCommand cmd = new OleDbCommand("UPDATE HRview SET Email = @email, PhoneNumber = @PhoneNumber, Address = @Address, Address2 =  @Address2,ZipCode = @ZipCode, Department= @Department, Position = @Position, Datehired = @Datehired, HealthCover = @HealthCover,DentalCover = @DentalCover, VisionCover = @VisionCover where ID =" + int.Parse(textBox1.Text), con1);
 
@@ -63,7 +61,7 @@ namespace PayrollGoC
                 cmd.Parameters.AddWithValue("@ZipCode", textBox11.Text);
                 cmd.Parameters.AddWithValue("@Department", textBox3.Text);
                 cmd.Parameters.AddWithValue("@Position", textBox4.Text);
-                //cmd.Parameters.AddWithValue("@HealthCover", comboBox1.SelectedItem.Text);
+                //cmd.Parameters.AddWithValue("@HealthCover", comboBox1.SelectedItem.Text) ;
                 //cmd.Parameters.AddWithValue("@DentalCover", comboBox2.SelectedItem.Text);
                 //cmd.Parameters.AddWithValue("@VisionCover", comboBox3.SelectedItem.Text);
 
@@ -101,7 +99,7 @@ namespace PayrollGoC
             if (result == DialogResult.Yes)
             {
                 // Delete Record
-                OleDbConnection conn = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:/Users/ieong/Source/Repos/PayrollMS1/Payrollredone2.accdb");
+                OleDbConnection conn = new OleDbConnection(@"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\semih\Source\Repos\PayrollMS\PayrollDB.mdb");
                 conn.Open();
                 OleDbCommand cmd = conn.CreateCommand();
                 cmd.CommandType = CommandType.Text;
@@ -224,7 +222,7 @@ namespace PayrollGoC
         private void button1_Click_1(object sender, EventArgs e)
         {
             //sql connection
-            OleDbConnection con1 = new OleDbConnection(@"Provider = Microsoft.ACE.OLEDB.12.0; Data Source =C:/Users/ieong/Source/Repos/PayrollMS1/Payrollredone2.accdb");
+            OleDbConnection con1 = new OleDbConnection(@"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\semih\Source\Repos\PayrollMS\PayrollDB.mdb");
             con1.Open();
             //check if the employee id is found:
             //data from HRView:
@@ -294,7 +292,7 @@ namespace PayrollGoC
             //{
             // Update Record
             //sql connection
-                OleDbConnection con1 = new OleDbConnection(@"Provider = Microsoft.ACE.OLEDB.12.0; Data Source = C:/Users/ieong/Source/Repos/PayrollMS1/Payrollredone2.accdb");
+                OleDbConnection con1 = new OleDbConnection(@"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\semih\Source\Repos\PayrollMS\PayrollDB.mdb");
                 con1.Open();
 
 
@@ -336,6 +334,13 @@ namespace PayrollGoC
         private void label29_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Form2 hr = new Form2();
+            hr.Show();
         }
     }
             //else

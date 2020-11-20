@@ -82,7 +82,7 @@ namespace PayrollGoC
         }
         private void dateTimePicker2_ValueChanged(object sender, EventArgs e)
         {
-            //date hired
+             //date hired
         }
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -109,7 +109,7 @@ namespace PayrollGoC
             int overtimeHour = GrossIncome.CalculateOvertimeHour(int.Parse(textBox13.Text));
             double overtimePay = GrossIncome.CalculateOvertimePay(overtimeHour, Convert.ToDouble(textBox6.Text));
             double grossIncome = GrossIncome.CalculateGrossIncome(int.Parse(textBox13.Text), overtimePay, Convert.ToDouble(textBox6.Text));
-            OleDbConnection conn = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:/Users/ieong/Source/Repos/PayrollMS1/Payrollredone2.accdb");
+            OleDbConnection conn = new OleDbConnection(@"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\semih\Source\Repos\PayrollMS\PayrollDB.mdb");
             conn.Open();
             if (radioButton3.Checked)
             {
@@ -183,6 +183,13 @@ namespace PayrollGoC
         private void label23_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+            Form2 hr = new Form2();
+            hr.Show();
         }
     }
 }

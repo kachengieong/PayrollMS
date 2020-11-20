@@ -57,7 +57,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(640, 363);
+            this.label2.Location = new System.Drawing.Point(715, 386);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(115, 19);
             this.label2.TabIndex = 1;
@@ -69,7 +69,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(659, 414);
+            this.label3.Location = new System.Drawing.Point(734, 426);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(96, 19);
             this.label3.TabIndex = 2;
@@ -81,7 +81,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(622, 467);
+            this.label4.Location = new System.Drawing.Point(697, 466);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(133, 19);
             this.label4.TabIndex = 3;
@@ -90,7 +90,7 @@
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(772, 356);
+            this.textBox1.Location = new System.Drawing.Point(836, 383);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(166, 26);
             this.textBox1.TabIndex = 4;
@@ -99,7 +99,7 @@
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(772, 411);
+            this.textBox2.Location = new System.Drawing.Point(836, 423);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(166, 26);
             this.textBox2.TabIndex = 5;
@@ -112,7 +112,7 @@
             this.comboBox1.Items.AddRange(new object[] {
             "HR View",
             "Employee View"});
-            this.comboBox1.Location = new System.Drawing.Point(772, 464);
+            this.comboBox1.Location = new System.Drawing.Point(836, 463);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(166, 27);
             this.comboBox1.TabIndex = 6;
@@ -123,9 +123,9 @@
             this.button1.BackColor = System.Drawing.Color.CadetBlue;
             this.button1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(842, 515);
+            this.button1.Location = new System.Drawing.Point(690, 514);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(96, 44);
+            this.button1.Size = new System.Drawing.Size(312, 40);
             this.button1.TabIndex = 7;
             this.button1.Text = "Login";
             this.button1.UseVisualStyleBackColor = false;

@@ -24,31 +24,38 @@ namespace PayrollGoC
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
-            this.WindowState = FormWindowState.Minimized;
+
+            this.Close();
             Form5 myInfo = new Form5();
             myInfo.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Minimized;
-            Form3 Add = new Form3();
-            Add.Show();
+            this.Close();
+            Form3 add = new Form3();
+            add.Show();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Minimized;
-            Form4 Update = new Form4();
-            Update.Show();
+            this.Close();
+            Form4 update = new Form4();
+            update.Show();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Minimized;
-            Form4 Update = new Form4();
-            Update.Show();
+            this.Close();
+            Form4 delete = new Form4();
+            delete.Show();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Form8 p_check = new Form8();
+            p_check.Show();
         }
     }
 }
