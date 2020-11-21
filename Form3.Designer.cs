@@ -77,6 +77,10 @@ namespace PayrollGoC
             this.textBox12 = new System.Windows.Forms.TextBox();
             this.label23 = new System.Windows.Forms.Label();
             this.textBox13 = new System.Windows.Forms.TextBox();
+            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.label24 = new System.Windows.Forms.Label();
+            this.textBox15 = new System.Windows.Forms.TextBox();
+            this.label25 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -640,6 +644,50 @@ namespace PayrollGoC
             this.textBox13.Size = new System.Drawing.Size(100, 26);
             this.textBox13.TabIndex = 47;
             // 
+            // textBox14
+            // 
+            this.textBox14.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox14.Location = new System.Drawing.Point(703, 288);
+            this.textBox14.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textBox14.Name = "textBox14";
+            this.textBox14.Size = new System.Drawing.Size(124, 26);
+            this.textBox14.TabIndex = 49;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.BackColor = System.Drawing.Color.Transparent;
+            this.label24.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.ForeColor = System.Drawing.Color.Black;
+            this.label24.Location = new System.Drawing.Point(584, 288);
+            this.label24.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(111, 19);
+            this.label24.TabIndex = 48;
+            this.label24.Text = "Employee ID:";
+            // 
+            // textBox15
+            // 
+            this.textBox15.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox15.Location = new System.Drawing.Point(703, 325);
+            this.textBox15.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textBox15.Name = "textBox15";
+            this.textBox15.Size = new System.Drawing.Size(236, 26);
+            this.textBox15.TabIndex = 51;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.BackColor = System.Drawing.Color.Transparent;
+            this.label25.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.ForeColor = System.Drawing.Color.Black;
+            this.label25.Location = new System.Drawing.Point(586, 326);
+            this.label25.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(92, 19);
+            this.label25.TabIndex = 50;
+            this.label25.Text = "Password:";
+            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -647,6 +695,10 @@ namespace PayrollGoC
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1044, 601);
+            this.Controls.Add(this.textBox15);
+            this.Controls.Add(this.label25);
+            this.Controls.Add(this.textBox14);
+            this.Controls.Add(this.label24);
             this.Controls.Add(this.textBox13);
             this.Controls.Add(this.label23);
             this.Controls.Add(this.textBox12);
@@ -753,5 +805,9 @@ namespace PayrollGoC
         private System.Windows.Forms.TextBox textBox12;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.TextBox textBox13;
+        private System.Windows.Forms.TextBox textBox14;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.TextBox textBox15;
+        private System.Windows.Forms.Label label25;
     }
 }
