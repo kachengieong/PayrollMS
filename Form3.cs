@@ -20,6 +20,8 @@ namespace PayrollGoC
 
         private void Form3_Load(object sender, EventArgs e)
         {
+            label15.Text = Form1.SetValueForText1;
+
             this.TopMost = true;
         }
 
@@ -109,7 +111,7 @@ namespace PayrollGoC
             int overtimeHour = GrossIncome.CalculateOvertimeHour(int.Parse(textBox13.Text));
             double overtimePay = GrossIncome.CalculateOvertimePay(overtimeHour, Convert.ToDouble(textBox6.Text));
             double grossIncome = GrossIncome.CalculateGrossIncome(int.Parse(textBox13.Text), overtimePay, Convert.ToDouble(textBox6.Text));
-            OleDbConnection conn = new OleDbConnection(@"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\semih\Source\Repos\PayrollMS\PayrollDB.mdb");
+            OleDbConnection conn = new OleDbConnection(@"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\rinu\Desktop\FALL2020\CSC430\IMDONE\payrollSystem.mdb");
             conn.Open();
             if (radioButton3.Checked)
             {

@@ -19,6 +19,8 @@ namespace PayrollGoC
 
         private void Form2_Load(object sender, EventArgs e)
         {
+            label2.Text = Form1.SetValueForText1;  //corner emplid
+
             this.TopMost = true;
         }
 
@@ -56,6 +58,11 @@ namespace PayrollGoC
             this.Close();
             Form8 p_check = new Form8();
             p_check.Show();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

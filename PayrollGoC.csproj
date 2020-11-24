@@ -100,6 +100,21 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>PayrollDBDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="payrollSystemDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>payrollSystemDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="payrollSystemDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>payrollSystemDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="payrollSystemDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>payrollSystemDataSet2.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -147,6 +162,39 @@
     <None Include="PayrollDBDataSet.xss">
       <DependentUpon>PayrollDBDataSet.xsd</DependentUpon>
     </None>
+    <None Include="payrollSystemDataSet.xsc">
+      <DependentUpon>payrollSystemDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="payrollSystemDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>payrollSystemDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="payrollSystemDataSet.xss">
+      <DependentUpon>payrollSystemDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="payrollSystemDataSet1.xsc">
+      <DependentUpon>payrollSystemDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="payrollSystemDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>payrollSystemDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="payrollSystemDataSet1.xss">
+      <DependentUpon>payrollSystemDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="payrollSystemDataSet2.xsc">
+      <DependentUpon>payrollSystemDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="payrollSystemDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>payrollSystemDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="payrollSystemDataSet2.xss">
+      <DependentUpon>payrollSystemDataSet2.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -162,6 +210,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="PayrollDB.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="payrollSystem.mdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

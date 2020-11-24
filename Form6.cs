@@ -33,6 +33,10 @@ namespace PayrollGoC
             //OleDbDataReader myReader = null;
             //OleDbCommand myCommand = new OleDbCommand("select * from HRView where ID =" + int.Parse(textBox1.Text), con1);
 
+
+            SetValueForText2 = textBox1.Text;
+
+
             this.Close();
             Form7 coworker = new Form7();
             coworker.Show();
@@ -108,6 +112,11 @@ namespace PayrollGoC
         {
 
             System.Diagnostics.Process.Start("https://www.ny.gov/");
+        }
+
+        private void Form6_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

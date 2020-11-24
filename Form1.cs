@@ -42,6 +42,7 @@ namespace PayrollGoC
         private void button1_Click(object sender, EventArgs e)
         {
 
+            SetValueForText1 = textBox1.Text;
 
             this.WindowState = FormWindowState.Minimized; //Minimize the window when clicked
             if ((textBox1.Text == string.Empty) || (textBox2.Text == string.Empty) || (comboBox1.Text == string.Empty))
@@ -50,7 +51,7 @@ namespace PayrollGoC
             }
             else
             {
-                OleDbConnection conn = new OleDbConnection(@"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\semih\Source\Repos\PayrollMS\PayrollDB.mdb");
+                OleDbConnection conn = new OleDbConnection(@"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\rinu\Desktop\FALL2020\CSC430\IMDONE\payrollSystem.mdb");
                 conn.Open();
                 OleDbCommand cmd = conn.CreateCommand();
                 cmd.CommandType = CommandType.Text;
@@ -88,6 +89,11 @@ namespace PayrollGoC
         }
 
         private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load_1(object sender, EventArgs e)
         {
 
         }
