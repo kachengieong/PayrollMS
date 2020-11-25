@@ -10,10 +10,13 @@ using System.Windows.Forms;
 using System.Data.OleDb;
 using System.Threading;
 
+
 namespace PayrollGoC
 {
     public partial class Form1 : Form
     {
+
+
         public Form1()
         {
             InitializeComponent();
@@ -28,6 +31,7 @@ namespace PayrollGoC
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
             //Enter EmpID
+
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
@@ -37,6 +41,9 @@ namespace PayrollGoC
         }
         private void button1_Click(object sender, EventArgs e)
         {
+
+            SetValueForText1 = textBox1.Text;
+
             this.WindowState = FormWindowState.Minimized; //Minimize the window when clicked
             if ((textBox1.Text == string.Empty) || (textBox2.Text == string.Empty) || (comboBox1.Text == string.Empty))
             {
@@ -44,7 +51,7 @@ namespace PayrollGoC
             }
             else
             {
-                OleDbConnection conn = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\ieong\Source\Repos\PayrollMS1\Payrollredone2.accdb");
+                OleDbConnection conn = new OleDbConnection(@"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\rinu\Desktop\FALL2020\CSC430\IMDONE\payrollSystem.mdb");
                 conn.Open();
                 OleDbCommand cmd = conn.CreateCommand();
                 cmd.CommandType = CommandType.Text;
@@ -79,6 +86,16 @@ namespace PayrollGoC
                     MessageBox.Show("Uncorrect username or password");
                 }
             }
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

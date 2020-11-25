@@ -149,11 +149,11 @@
             // 
             this.label15.AutoSize = true;
             this.label15.BackColor = System.Drawing.Color.Transparent;
-            this.label15.Font = new System.Drawing.Font("Arial Narrow", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.DarkBlue;
+            this.label15.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.Black;
             this.label15.Location = new System.Drawing.Point(63, 577);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(20, 15);
+            this.label15.Size = new System.Drawing.Size(26, 15);
             this.label15.TabIndex = 32;
             this.label15.Text = "ID#";
             // 
@@ -161,33 +161,37 @@
             // 
             this.label16.AutoSize = true;
             this.label16.BackColor = System.Drawing.Color.Transparent;
-            this.label16.Font = new System.Drawing.Font("Arial Narrow", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.Color.DarkBlue;
+            this.label16.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.Color.Black;
             this.label16.Location = new System.Drawing.Point(12, 577);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(40, 15);
+            this.label16.Size = new System.Drawing.Size(51, 15);
             this.label16.TabIndex = 31;
             this.label16.Text = "Emp ID:";
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.LightCoral;
             this.button1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(820, 526);
+            this.button1.Location = new System.Drawing.Point(720, 538);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(196, 52);
+            this.button1.Size = new System.Drawing.Size(312, 40);
             this.button1.TabIndex = 33;
             this.button1.Text = "Log Out";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
+            this.button2.BackColor = System.Drawing.Color.MistyRose;
             this.button2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(591, 526);
+            this.button2.Location = new System.Drawing.Point(392, 538);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(208, 52);
+            this.button2.Size = new System.Drawing.Size(312, 40);
             this.button2.TabIndex = 34;
             this.button2.Text = "Back";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Form7
             // 
@@ -211,6 +215,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form7";
             this.Text = "Form7";
+            this.Load += new System.EventHandler(this.Form7_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

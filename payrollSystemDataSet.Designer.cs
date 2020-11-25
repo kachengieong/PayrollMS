@@ -20,9 +20,9 @@ namespace PayrollGoC {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("Payrollredone2DataSet")]
+    [global::System.Xml.Serialization.XmlRootAttribute("payrollSystemDataSet")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class Payrollredone2DataSet : global::System.Data.DataSet {
+    public partial class payrollSystemDataSet : global::System.Data.DataSet {
         
         private EconomictableDataTable tableEconomictable;
         
@@ -36,7 +36,7 @@ namespace PayrollGoC {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public Payrollredone2DataSet() {
+        public payrollSystemDataSet() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -47,7 +47,7 @@ namespace PayrollGoC {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        protected Payrollredone2DataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected payrollSystemDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -172,7 +172,7 @@ namespace PayrollGoC {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            Payrollredone2DataSet cln = ((Payrollredone2DataSet)(base.Clone()));
+            payrollSystemDataSet cln = ((payrollSystemDataSet)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -271,9 +271,9 @@ namespace PayrollGoC {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "Payrollredone2DataSet";
+            this.DataSetName = "payrollSystemDataSet";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/Payrollredone2DataSet.xsd";
+            this.Namespace = "http://tempuri.org/payrollSystemDataSet.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tableEconomictable = new EconomictableDataTable();
@@ -321,7 +321,7 @@ namespace PayrollGoC {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            Payrollredone2DataSet ds = new Payrollredone2DataSet();
+            payrollSystemDataSet ds = new payrollSystemDataSet();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -780,7 +780,7 @@ namespace PayrollGoC {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                Payrollredone2DataSet ds = new Payrollredone2DataSet();
+                payrollSystemDataSet ds = new payrollSystemDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -893,6 +893,8 @@ namespace PayrollGoC {
             private global::System.Data.DataColumn columnPosition;
             
             private global::System.Data.DataColumn columnStatus;
+            
+            private global::System.Data.DataColumn columnRoomNo;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
@@ -1121,6 +1123,14 @@ namespace PayrollGoC {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn RoomNoColumn {
+                get {
+                    return this.columnRoomNo;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1179,7 +1189,8 @@ namespace PayrollGoC {
                         string DentalCoverage, 
                         string VisionCoverage, 
                         string Position, 
-                        string Status) {
+                        string Status, 
+                        int RoomNo) {
                 HRViewRow rowHRViewRow = ((HRViewRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -1205,7 +1216,8 @@ namespace PayrollGoC {
                         DentalCoverage,
                         VisionCoverage,
                         Position,
-                        Status};
+                        Status,
+                        RoomNo};
                 rowHRViewRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowHRViewRow);
                 return rowHRViewRow;
@@ -1259,6 +1271,7 @@ namespace PayrollGoC {
                 this.columnVisionCoverage = base.Columns["VisionCoverage"];
                 this.columnPosition = base.Columns["Position"];
                 this.columnStatus = base.Columns["Status"];
+                this.columnRoomNo = base.Columns["RoomNo"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1314,6 +1327,8 @@ namespace PayrollGoC {
                 base.Columns.Add(this.columnPosition);
                 this.columnStatus = new global::System.Data.DataColumn("Status", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnStatus);
+                this.columnRoomNo = new global::System.Data.DataColumn("RoomNo", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnRoomNo);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnID1}, true));
                 this.columnID1.AutoIncrement = true;
@@ -1410,7 +1425,7 @@ namespace PayrollGoC {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                Payrollredone2DataSet ds = new Payrollredone2DataSet();
+                payrollSystemDataSet ds = new payrollSystemDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1525,6 +1540,8 @@ namespace PayrollGoC {
             private global::System.Data.DataColumn columnWeeklygrosspay;
             
             private global::System.Data.DataColumn columnNetpay;
+            
+            private global::System.Data.DataColumn columnOvertimepay;
             
             private global::System.Data.DataColumn columnYearlypay;
             
@@ -1771,6 +1788,14 @@ namespace PayrollGoC {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn OvertimepayColumn {
+                get {
+                    return this.columnOvertimepay;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn YearlypayColumn {
                 get {
                     return this.columnYearlypay;
@@ -1871,6 +1896,7 @@ namespace PayrollGoC {
                         decimal HourlyPay, 
                         decimal Weeklygrosspay, 
                         decimal Netpay, 
+                        decimal Overtimepay, 
                         decimal Yearlypay, 
                         string Status, 
                         string CurrentDisability, 
@@ -1903,6 +1929,7 @@ namespace PayrollGoC {
                         HourlyPay,
                         Weeklygrosspay,
                         Netpay,
+                        Overtimepay,
                         Yearlypay,
                         Status,
                         CurrentDisability,
@@ -1962,6 +1989,7 @@ namespace PayrollGoC {
                 this.columnHourlyPay = base.Columns["HourlyPay"];
                 this.columnWeeklygrosspay = base.Columns["Weeklygrosspay"];
                 this.columnNetpay = base.Columns["Netpay"];
+                this.columnOvertimepay = base.Columns["Overtimepay"];
                 this.columnYearlypay = base.Columns["Yearlypay"];
                 this.columnStatus = base.Columns["Status"];
                 this.columnCurrentDisability = base.Columns["CurrentDisability"];
@@ -2022,6 +2050,8 @@ namespace PayrollGoC {
                 base.Columns.Add(this.columnWeeklygrosspay);
                 this.columnNetpay = new global::System.Data.DataColumn("Netpay", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnNetpay);
+                this.columnOvertimepay = new global::System.Data.DataColumn("Overtimepay", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnOvertimepay);
                 this.columnYearlypay = new global::System.Data.DataColumn("Yearlypay", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnYearlypay);
                 this.columnStatus = new global::System.Data.DataColumn("Status", typeof(string), null, global::System.Data.MappingType.Element);
@@ -2124,7 +2154,7 @@ namespace PayrollGoC {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                Payrollredone2DataSet ds = new Payrollredone2DataSet();
+                payrollSystemDataSet ds = new payrollSystemDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -2826,7 +2856,7 @@ namespace PayrollGoC {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                Payrollredone2DataSet ds = new Payrollredone2DataSet();
+                payrollSystemDataSet ds = new payrollSystemDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -3698,6 +3728,22 @@ namespace PayrollGoC {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int RoomNo {
+                get {
+                    try {
+                        return ((int)(this[this.tableHRView.RoomNoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'RoomNo\' in table \'HRView\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableHRView.RoomNoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsIDNull() {
                 return this.IsNull(this.tableHRView.IDColumn);
             }
@@ -3970,6 +4016,18 @@ namespace PayrollGoC {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetStatusNull() {
                 this[this.tableHRView.StatusColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsRoomNoNull() {
+                return this.IsNull(this.tableHRView.RoomNoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetRoomNoNull() {
+                this[this.tableHRView.RoomNoColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -4384,6 +4442,22 @@ namespace PayrollGoC {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public decimal Overtimepay {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableLeftcompany.OvertimepayColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Overtimepay\' in table \'Leftcompany\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableLeftcompany.OvertimepayColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public decimal Yearlypay {
                 get {
                     try {
@@ -4748,6 +4822,18 @@ namespace PayrollGoC {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetNetpayNull() {
                 this[this.tableLeftcompany.NetpayColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsOvertimepayNull() {
+                return this.IsNull(this.tableLeftcompany.OvertimepayColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetOvertimepayNull() {
+                this[this.tableLeftcompany.OvertimepayColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5804,7 +5890,7 @@ namespace PayrollGoC {
         }
     }
 }
-namespace PayrollGoC.Payrollredone2DataSetTableAdapters {
+namespace PayrollGoC.payrollSystemDataSetTableAdapters {
     
     
     /// <summary>
@@ -6051,7 +6137,7 @@ namespace PayrollGoC.Payrollredone2DataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.OleDb.OleDbConnection();
-            this._connection.ConnectionString = global::PayrollGoC.Properties.Settings.Default.Payrollredone2ConnectionString;
+            this._connection.ConnectionString = "";
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6070,7 +6156,7 @@ namespace PayrollGoC.Payrollredone2DataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(Payrollredone2DataSet.EconomictableDataTable dataTable) {
+        public virtual int Fill(payrollSystemDataSet.EconomictableDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -6083,9 +6169,9 @@ namespace PayrollGoC.Payrollredone2DataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual Payrollredone2DataSet.EconomictableDataTable GetData() {
+        public virtual payrollSystemDataSet.EconomictableDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            Payrollredone2DataSet.EconomictableDataTable dataTable = new Payrollredone2DataSet.EconomictableDataTable();
+            payrollSystemDataSet.EconomictableDataTable dataTable = new payrollSystemDataSet.EconomictableDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -6093,14 +6179,14 @@ namespace PayrollGoC.Payrollredone2DataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(Payrollredone2DataSet.EconomictableDataTable dataTable) {
+        public virtual int Update(payrollSystemDataSet.EconomictableDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(Payrollredone2DataSet dataSet) {
+        public virtual int Update(payrollSystemDataSet dataSet) {
             return this.Adapter.Update(dataSet, "Economictable");
         }
         
@@ -6729,10 +6815,11 @@ namespace PayrollGoC.Payrollredone2DataSetTableAdapters {
             tableMapping.ColumnMappings.Add("VisionCoverage", "VisionCoverage");
             tableMapping.ColumnMappings.Add("Position", "Position");
             tableMapping.ColumnMappings.Add("Status", "Status");
+            tableMapping.ColumnMappings.Add("RoomNo", "RoomNo");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `HRView` WHERE ((`ID1` = ?) AND ((? = 1 AND `ID` IS NULL) OR (`ID` = ?)) AND ((? = 1 AND `Firstname` IS NULL) OR (`Firstname` = ?)) AND ((? = 1 AND `Lastname` IS NULL) OR (`Lastname` = ?)) AND ((? = 1 AND `Occupation` IS NULL) OR (`Occupation` = ?)) AND ((? = 1 AND `Benefits` IS NULL) OR (`Benefits` = ?)) AND ((? = 1 AND `HealthPlan` IS NULL) OR (`HealthPlan` = ?)) AND ((? = 1 AND `RetirementPlan` IS NULL) OR (`RetirementPlan` = ?)) AND ((? = 1 AND `Maternaty/Paternatyleave` IS NULL) OR (`Maternaty/Paternatyleave` = ?)) AND ((? = 1 AND `Password` IS NULL) OR (`Password` = ?)) AND ((? = 1 AND `Age` IS NULL) OR (`Age` = ?)) AND ((? = 1 AND `DateofBirth` IS NULL) OR (`DateofBirth` = ?)) AND ((? = 1 AND `Gender` IS NULL) OR (`Gender` = ?)) AND ((? = 1 AND `DentalCoverage` IS NULL) OR (`DentalCoverage` = ?)) AND ((? = 1 AND `VisionCoverage` IS NULL) OR (`VisionCoverage` = ?)) AND ((? = 1 AND `Position` IS NULL) OR (`Position` = ?)) AND ((? = 1 AND `Status` IS NULL) OR (`Status` = ?)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `HRView` WHERE ((`ID1` = ?) AND ((? = 1 AND `ID` IS NULL) OR (`ID` = ?)) AND ((? = 1 AND `Firstname` IS NULL) OR (`Firstname` = ?)) AND ((? = 1 AND `Lastname` IS NULL) OR (`Lastname` = ?)) AND ((? = 1 AND `Occupation` IS NULL) OR (`Occupation` = ?)) AND ((? = 1 AND `Benefits` IS NULL) OR (`Benefits` = ?)) AND ((? = 1 AND `HealthPlan` IS NULL) OR (`HealthPlan` = ?)) AND ((? = 1 AND `RetirementPlan` IS NULL) OR (`RetirementPlan` = ?)) AND ((? = 1 AND `Maternaty/Paternatyleave` IS NULL) OR (`Maternaty/Paternatyleave` = ?)) AND ((? = 1 AND `Password` IS NULL) OR (`Password` = ?)) AND ((? = 1 AND `Age` IS NULL) OR (`Age` = ?)) AND ((? = 1 AND `DateofBirth` IS NULL) OR (`DateofBirth` = ?)) AND ((? = 1 AND `Gender` IS NULL) OR (`Gender` = ?)) AND ((? = 1 AND `DentalCoverage` IS NULL) OR (`DentalCoverage` = ?)) AND ((? = 1 AND `VisionCoverage` IS NULL) OR (`VisionCoverage` = ?)) AND ((? = 1 AND `Position` IS NULL) OR (`Position` = ?)) AND ((? = 1 AND `Status` IS NULL) OR (`Status` = ?)) AND ((? = 1 AND `RoomNo` IS NULL) OR (`RoomNo` = ?)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_ID1", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ID1", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_ID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ID", global::System.Data.DataRowVersion.Original, true, null));
@@ -6767,9 +6854,11 @@ namespace PayrollGoC.Payrollredone2DataSetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Position", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Position", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Status", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Status", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Status", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Status", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_RoomNo", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RoomNo", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_RoomNo", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RoomNo", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.InsertCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO `HRView` (`ID`, `Firstname`, `Lastname`, `Occupation`, `Benefits`, `HealthPlan`, `RetirementPlan`, `Maternaty/Paternatyleave`, `Password`, `Age`, `DateofBirth`, `Department`, `Datehired`, `Email`, `PhoneNumber`, `Address`, `Address2`, `ZipCode`, `Gender`, `DentalCoverage`, `VisionCoverage`, `Position`, `Status`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO `HRView` (`ID`, `Firstname`, `Lastname`, `Occupation`, `Benefits`, `HealthPlan`, `RetirementPlan`, `Maternaty/Paternatyleave`, `Password`, `Age`, `DateofBirth`, `Department`, `Datehired`, `Email`, `PhoneNumber`, `Address`, `Address2`, `ZipCode`, `Gender`, `DentalCoverage`, `VisionCoverage`, `Position`, `Status`, `RoomNo`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("ID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ID", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Firstname", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Firstname", global::System.Data.DataRowVersion.Current, false, null));
@@ -6794,9 +6883,10 @@ namespace PayrollGoC.Payrollredone2DataSetTableAdapters {
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("VisionCoverage", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "VisionCoverage", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Position", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Position", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Status", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Status", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("RoomNo", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RoomNo", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE `HRView` SET `ID` = ?, `Firstname` = ?, `Lastname` = ?, `Occupation` = ?, `Benefits` = ?, `HealthPlan` = ?, `RetirementPlan` = ?, `Maternaty/Paternatyleave` = ?, `Password` = ?, `Age` = ?, `DateofBirth` = ?, `Department` = ?, `Datehired` = ?, `Email` = ?, `PhoneNumber` = ?, `Address` = ?, `Address2` = ?, `ZipCode` = ?, `Gender` = ?, `DentalCoverage` = ?, `VisionCoverage` = ?, `Position` = ?, `Status` = ? WHERE ((`ID1` = ?) AND ((? = 1 AND `ID` IS NULL) OR (`ID` = ?)) AND ((? = 1 AND `Firstname` IS NULL) OR (`Firstname` = ?)) AND ((? = 1 AND `Lastname` IS NULL) OR (`Lastname` = ?)) AND ((? = 1 AND `Occupation` IS NULL) OR (`Occupation` = ?)) AND ((? = 1 AND `Benefits` IS NULL) OR (`Benefits` = ?)) AND ((? = 1 AND `HealthPlan` IS NULL) OR (`HealthPlan` = ?)) AND ((? = 1 AND `RetirementPlan` IS NULL) OR (`RetirementPlan` = ?)) AND ((? = 1 AND `Maternaty/Paternatyleave` IS NULL) OR (`Maternaty/Paternatyleave` = ?)) AND ((? = 1 AND `Password` IS NULL) OR (`Password` = ?)) AND ((? = 1 AND `Age` IS NULL) OR (`Age` = ?)) AND ((? = 1 AND `DateofBirth` IS NULL) OR (`DateofBirth` = ?)) AND ((? = 1 AND `Gender` IS NULL) OR (`Gender` = ?)) AND ((? = 1 AND `DentalCoverage` IS NULL) OR (`DentalCoverage` = ?)) AND ((? = 1 AND `VisionCoverage` IS NULL) OR (`VisionCoverage` = ?)) AND ((? = 1 AND `Position` IS NULL) OR (`Position` = ?)) AND ((? = 1 AND `Status` IS NULL) OR (`Status` = ?)))";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE `HRView` SET `ID` = ?, `Firstname` = ?, `Lastname` = ?, `Occupation` = ?, `Benefits` = ?, `HealthPlan` = ?, `RetirementPlan` = ?, `Maternaty/Paternatyleave` = ?, `Password` = ?, `Age` = ?, `DateofBirth` = ?, `Department` = ?, `Datehired` = ?, `Email` = ?, `PhoneNumber` = ?, `Address` = ?, `Address2` = ?, `ZipCode` = ?, `Gender` = ?, `DentalCoverage` = ?, `VisionCoverage` = ?, `Position` = ?, `Status` = ?, `RoomNo` = ? WHERE ((`ID1` = ?) AND ((? = 1 AND `ID` IS NULL) OR (`ID` = ?)) AND ((? = 1 AND `Firstname` IS NULL) OR (`Firstname` = ?)) AND ((? = 1 AND `Lastname` IS NULL) OR (`Lastname` = ?)) AND ((? = 1 AND `Occupation` IS NULL) OR (`Occupation` = ?)) AND ((? = 1 AND `Benefits` IS NULL) OR (`Benefits` = ?)) AND ((? = 1 AND `HealthPlan` IS NULL) OR (`HealthPlan` = ?)) AND ((? = 1 AND `RetirementPlan` IS NULL) OR (`RetirementPlan` = ?)) AND ((? = 1 AND `Maternaty/Paternatyleave` IS NULL) OR (`Maternaty/Paternatyleave` = ?)) AND ((? = 1 AND `Password` IS NULL) OR (`Password` = ?)) AND ((? = 1 AND `Age` IS NULL) OR (`Age` = ?)) AND ((? = 1 AND `DateofBirth` IS NULL) OR (`DateofBirth` = ?)) AND ((? = 1 AND `Gender` IS NULL) OR (`Gender` = ?)) AND ((? = 1 AND `DentalCoverage` IS NULL) OR (`DentalCoverage` = ?)) AND ((? = 1 AND `VisionCoverage` IS NULL) OR (`VisionCoverage` = ?)) AND ((? = 1 AND `Position` IS NULL) OR (`Position` = ?)) AND ((? = 1 AND `Status` IS NULL) OR (`Status` = ?)) AND ((? = 1 AND `RoomNo` IS NULL) OR (`RoomNo` = ?)))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("ID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ID", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Firstname", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Firstname", global::System.Data.DataRowVersion.Current, false, null));
@@ -6821,6 +6911,7 @@ namespace PayrollGoC.Payrollredone2DataSetTableAdapters {
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("VisionCoverage", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "VisionCoverage", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Position", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Position", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Status", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Status", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("RoomNo", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RoomNo", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_ID1", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ID1", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_ID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ID", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_ID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ID", global::System.Data.DataRowVersion.Original, false, null));
@@ -6854,13 +6945,15 @@ namespace PayrollGoC.Payrollredone2DataSetTableAdapters {
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Position", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Position", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Status", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Status", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Status", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Status", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_RoomNo", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RoomNo", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_RoomNo", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "RoomNo", global::System.Data.DataRowVersion.Original, false, null));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.OleDb.OleDbConnection();
-            this._connection.ConnectionString = global::PayrollGoC.Properties.Settings.Default.Payrollredone2ConnectionString;
+            this._connection.ConnectionString = "";
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6869,7 +6962,7 @@ namespace PayrollGoC.Payrollredone2DataSetTableAdapters {
             this._commandCollection = new global::System.Data.OleDb.OleDbCommand[1];
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT ID1, ID, Firstname, Lastname, Occupation, Benefits, HealthPlan, RetirementPlan, [Maternaty/Paternatyleave], [Password], Age, DateofBirth, Department, Datehired, Email, PhoneNumber, Address, Address2, ZipCode, Gender, DentalCoverage, VisionCoverage, [Position], Status FROM HRView";
+            this._commandCollection[0].CommandText = @"SELECT ID1, ID, Firstname, Lastname, Occupation, Benefits, HealthPlan, RetirementPlan, [Maternaty/Paternatyleave], [Password], Age, DateofBirth, Department, Datehired, Email, PhoneNumber, Address, Address2, ZipCode, Gender, DentalCoverage, VisionCoverage, [Position], Status, RoomNo FROM HRView";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -6877,7 +6970,7 @@ namespace PayrollGoC.Payrollredone2DataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(Payrollredone2DataSet.HRViewDataTable dataTable) {
+        public virtual int Fill(payrollSystemDataSet.HRViewDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -6890,9 +6983,9 @@ namespace PayrollGoC.Payrollredone2DataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual Payrollredone2DataSet.HRViewDataTable GetData() {
+        public virtual payrollSystemDataSet.HRViewDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            Payrollredone2DataSet.HRViewDataTable dataTable = new Payrollredone2DataSet.HRViewDataTable();
+            payrollSystemDataSet.HRViewDataTable dataTable = new payrollSystemDataSet.HRViewDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -6900,14 +6993,14 @@ namespace PayrollGoC.Payrollredone2DataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(Payrollredone2DataSet.HRViewDataTable dataTable) {
+        public virtual int Update(payrollSystemDataSet.HRViewDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(Payrollredone2DataSet dataSet) {
+        public virtual int Update(payrollSystemDataSet dataSet) {
             return this.Adapter.Update(dataSet, "HRView");
         }
         
@@ -6947,7 +7040,8 @@ namespace PayrollGoC.Payrollredone2DataSetTableAdapters {
                     string Original_DentalCoverage, 
                     string Original_VisionCoverage, 
                     string Original_Position, 
-                    string Original_Status) {
+                    string Original_Status, 
+                    global::System.Nullable<int> Original_RoomNo) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_ID1));
             if ((Original_ID.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
@@ -7077,6 +7171,14 @@ namespace PayrollGoC.Payrollredone2DataSetTableAdapters {
                 this.Adapter.DeleteCommand.Parameters[31].Value = ((object)(0));
                 this.Adapter.DeleteCommand.Parameters[32].Value = ((string)(Original_Status));
             }
+            if ((Original_RoomNo.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[33].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[34].Value = ((int)(Original_RoomNo.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[33].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[34].Value = global::System.DBNull.Value;
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -7120,7 +7222,8 @@ namespace PayrollGoC.Payrollredone2DataSetTableAdapters {
                     string DentalCoverage, 
                     string VisionCoverage, 
                     string Position, 
-                    string Status) {
+                    string Status, 
+                    global::System.Nullable<int> RoomNo) {
             if ((ID.HasValue == true)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = ((int)(ID.Value));
             }
@@ -7259,6 +7362,12 @@ namespace PayrollGoC.Payrollredone2DataSetTableAdapters {
             else {
                 this.Adapter.InsertCommand.Parameters[22].Value = ((string)(Status));
             }
+            if ((RoomNo.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[23].Value = ((int)(RoomNo.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[23].Value = global::System.DBNull.Value;
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -7303,6 +7412,7 @@ namespace PayrollGoC.Payrollredone2DataSetTableAdapters {
                     string VisionCoverage, 
                     string Position, 
                     string Status, 
+                    global::System.Nullable<int> RoomNo, 
                     int Original_ID1, 
                     global::System.Nullable<int> Original_ID, 
                     string Original_Firstname, 
@@ -7319,7 +7429,8 @@ namespace PayrollGoC.Payrollredone2DataSetTableAdapters {
                     string Original_DentalCoverage, 
                     string Original_VisionCoverage, 
                     string Original_Position, 
-                    string Original_Status) {
+                    string Original_Status, 
+                    global::System.Nullable<int> Original_RoomNo) {
             if ((ID.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(ID.Value));
             }
@@ -7458,134 +7569,148 @@ namespace PayrollGoC.Payrollredone2DataSetTableAdapters {
             else {
                 this.Adapter.UpdateCommand.Parameters[22].Value = ((string)(Status));
             }
-            this.Adapter.UpdateCommand.Parameters[23].Value = ((int)(Original_ID1));
-            if ((Original_ID.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[25].Value = ((int)(Original_ID.Value));
+            if ((RoomNo.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((int)(RoomNo.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[25].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[23].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[24].Value = ((int)(Original_ID1));
+            if ((Original_ID.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[25].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[26].Value = ((int)(Original_ID.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[25].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[26].Value = global::System.DBNull.Value;
             }
             if ((Original_Firstname == null)) {
-                this.Adapter.UpdateCommand.Parameters[26].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[27].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[27].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[28].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[26].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[27].Value = ((string)(Original_Firstname));
+                this.Adapter.UpdateCommand.Parameters[27].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[28].Value = ((string)(Original_Firstname));
             }
             if ((Original_Lastname == null)) {
-                this.Adapter.UpdateCommand.Parameters[28].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[29].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[29].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[30].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[28].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[29].Value = ((string)(Original_Lastname));
+                this.Adapter.UpdateCommand.Parameters[29].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[30].Value = ((string)(Original_Lastname));
             }
             if ((Original_Occupation == null)) {
-                this.Adapter.UpdateCommand.Parameters[30].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[31].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[31].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[32].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[30].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[31].Value = ((string)(Original_Occupation));
+                this.Adapter.UpdateCommand.Parameters[31].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[32].Value = ((string)(Original_Occupation));
             }
             if ((Original_Benefits == null)) {
-                this.Adapter.UpdateCommand.Parameters[32].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[33].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[33].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[34].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[32].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[33].Value = ((string)(Original_Benefits));
+                this.Adapter.UpdateCommand.Parameters[33].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[34].Value = ((string)(Original_Benefits));
             }
             if ((Original_HealthPlan == null)) {
-                this.Adapter.UpdateCommand.Parameters[34].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[35].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[35].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[36].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[34].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[35].Value = ((string)(Original_HealthPlan));
+                this.Adapter.UpdateCommand.Parameters[35].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[36].Value = ((string)(Original_HealthPlan));
             }
             if ((Original_RetirementPlan == null)) {
-                this.Adapter.UpdateCommand.Parameters[36].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[37].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[37].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[38].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[36].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[37].Value = ((string)(Original_RetirementPlan));
+                this.Adapter.UpdateCommand.Parameters[37].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[38].Value = ((string)(Original_RetirementPlan));
             }
             if ((_Original_Maternaty_Paternatyleave == null)) {
-                this.Adapter.UpdateCommand.Parameters[38].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[39].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[39].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[40].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[38].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[39].Value = ((string)(_Original_Maternaty_Paternatyleave));
+                this.Adapter.UpdateCommand.Parameters[39].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[40].Value = ((string)(_Original_Maternaty_Paternatyleave));
             }
             if ((Original_Password == null)) {
-                this.Adapter.UpdateCommand.Parameters[40].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[41].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[41].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[42].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[40].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[41].Value = ((string)(Original_Password));
+                this.Adapter.UpdateCommand.Parameters[41].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[42].Value = ((string)(Original_Password));
             }
             if ((Original_Age == null)) {
-                this.Adapter.UpdateCommand.Parameters[42].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[43].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[43].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[44].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[42].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[43].Value = ((string)(Original_Age));
+                this.Adapter.UpdateCommand.Parameters[43].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[44].Value = ((string)(Original_Age));
             }
             if ((Original_DateofBirth == null)) {
-                this.Adapter.UpdateCommand.Parameters[44].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[45].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[45].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[46].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[44].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[45].Value = ((string)(Original_DateofBirth));
+                this.Adapter.UpdateCommand.Parameters[45].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[46].Value = ((string)(Original_DateofBirth));
             }
             if ((Original_Gender == null)) {
-                this.Adapter.UpdateCommand.Parameters[46].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[47].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[47].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[48].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[46].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[47].Value = ((string)(Original_Gender));
+                this.Adapter.UpdateCommand.Parameters[47].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[48].Value = ((string)(Original_Gender));
             }
             if ((Original_DentalCoverage == null)) {
-                this.Adapter.UpdateCommand.Parameters[48].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[49].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[49].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[50].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[48].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[49].Value = ((string)(Original_DentalCoverage));
+                this.Adapter.UpdateCommand.Parameters[49].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[50].Value = ((string)(Original_DentalCoverage));
             }
             if ((Original_VisionCoverage == null)) {
-                this.Adapter.UpdateCommand.Parameters[50].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[51].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[51].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[52].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[50].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[51].Value = ((string)(Original_VisionCoverage));
+                this.Adapter.UpdateCommand.Parameters[51].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[52].Value = ((string)(Original_VisionCoverage));
             }
             if ((Original_Position == null)) {
-                this.Adapter.UpdateCommand.Parameters[52].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[53].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[53].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[54].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[52].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[53].Value = ((string)(Original_Position));
+                this.Adapter.UpdateCommand.Parameters[53].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[54].Value = ((string)(Original_Position));
             }
             if ((Original_Status == null)) {
-                this.Adapter.UpdateCommand.Parameters[54].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[55].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[55].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[56].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[54].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[55].Value = ((string)(Original_Status));
+                this.Adapter.UpdateCommand.Parameters[55].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[56].Value = ((string)(Original_Status));
+            }
+            if ((Original_RoomNo.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[57].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[58].Value = ((int)(Original_RoomNo.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[57].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[58].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -7750,6 +7875,7 @@ namespace PayrollGoC.Payrollredone2DataSetTableAdapters {
             tableMapping.ColumnMappings.Add("HourlyPay", "HourlyPay");
             tableMapping.ColumnMappings.Add("Weeklygrosspay", "Weeklygrosspay");
             tableMapping.ColumnMappings.Add("Netpay", "Netpay");
+            tableMapping.ColumnMappings.Add("Overtimepay", "Overtimepay");
             tableMapping.ColumnMappings.Add("Yearlypay", "Yearlypay");
             tableMapping.ColumnMappings.Add("Status", "Status");
             tableMapping.ColumnMappings.Add("CurrentDisability", "CurrentDisability");
@@ -7758,7 +7884,7 @@ namespace PayrollGoC.Payrollredone2DataSetTableAdapters {
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `Leftcompany` WHERE ((`ID` = ?) AND ((? = 1 AND `Firstname` IS NULL) OR (`Firstname` = ?)) AND ((? = 1 AND `Lastname` IS NULL) OR (`Lastname` = ?)) AND ((? = 1 AND `Position` IS NULL) OR (`Position` = ?)) AND ((? = 1 AND `DateHired` IS NULL) OR (`DateHired` = ?)) AND ((? = 1 AND `Age` IS NULL) OR (`Age` = ?)) AND ((? = 1 AND `DateofBirth` IS NULL) OR (`DateofBirth` = ?)) AND ((? = 1 AND `Gender` IS NULL) OR (`Gender` = ?)) AND ((? = 1 AND `retired` IS NULL) OR (`retired` = ?)) AND ((? = 1 AND `Fired` IS NULL) OR (`Fired` = ?)) AND ((? = 1 AND `Hours` IS NULL) OR (`Hours` = ?)) AND ((? = 1 AND `OvertimeHours` IS NULL) OR (`OvertimeHours` = ?)) AND ((? = 1 AND `HourlyPay` IS NULL) OR (`HourlyPay` = ?)) AND ((? = 1 AND `Weeklygrosspay` IS NULL) OR (`Weeklygrosspay` = ?)) AND ((? = 1 AND `Netpay` IS NULL) OR (`Netpay` = ?)) AND ((? = 1 AND `Yearlypay` IS NULL) OR (`Yearlypay` = ?)) AND ((? = 1 AND `Status` IS NULL) OR (`Status` = ?)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `Leftcompany` WHERE ((`ID` = ?) AND ((? = 1 AND `Firstname` IS NULL) OR (`Firstname` = ?)) AND ((? = 1 AND `Lastname` IS NULL) OR (`Lastname` = ?)) AND ((? = 1 AND `Position` IS NULL) OR (`Position` = ?)) AND ((? = 1 AND `DateHired` IS NULL) OR (`DateHired` = ?)) AND ((? = 1 AND `Age` IS NULL) OR (`Age` = ?)) AND ((? = 1 AND `DateofBirth` IS NULL) OR (`DateofBirth` = ?)) AND ((? = 1 AND `Gender` IS NULL) OR (`Gender` = ?)) AND ((? = 1 AND `retired` IS NULL) OR (`retired` = ?)) AND ((? = 1 AND `Fired` IS NULL) OR (`Fired` = ?)) AND ((? = 1 AND `Hours` IS NULL) OR (`Hours` = ?)) AND ((? = 1 AND `OvertimeHours` IS NULL) OR (`OvertimeHours` = ?)) AND ((? = 1 AND `HourlyPay` IS NULL) OR (`HourlyPay` = ?)) AND ((? = 1 AND `Weeklygrosspay` IS NULL) OR (`Weeklygrosspay` = ?)) AND ((? = 1 AND `Netpay` IS NULL) OR (`Netpay` = ?)) AND ((? = 1 AND `Overtimepay` IS NULL) OR (`Overtimepay` = ?)) AND ((? = 1 AND `Yearlypay` IS NULL) OR (`Yearlypay` = ?)) AND ((? = 1 AND `Status` IS NULL) OR (`Status` = ?)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_ID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ID", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Firstname", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Firstname", global::System.Data.DataRowVersion.Original, true, null));
@@ -7789,13 +7915,15 @@ namespace PayrollGoC.Payrollredone2DataSetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Weeklygrosspay", global::System.Data.OleDb.OleDbType.Currency, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Weeklygrosspay", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Netpay", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Netpay", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Netpay", global::System.Data.OleDb.OleDbType.Currency, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Netpay", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Overtimepay", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Overtimepay", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Overtimepay", global::System.Data.OleDb.OleDbType.Currency, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Overtimepay", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Yearlypay", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Yearlypay", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Yearlypay", global::System.Data.OleDb.OleDbType.Currency, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Yearlypay", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Status", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Status", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Status", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Status", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.InsertCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO `Leftcompany` (`Firstname`, `Lastname`, `Position`, `Department`, `DateHired`, `Age`, `DateofBirth`, `Gender`, `Email`, `PhoneNumber`, `Address`, `Address2`, `Zipcode`, `retired`, `Fired`, `reasonoffiring`, `RetirementPlan`, `DentalCoverage`, `VisionCoverage`, `Hours`, `OvertimeHours`, `HourlyPay`, `Weeklygrosspay`, `Netpay`, `Yearlypay`, `Status`, `CurrentDisability`, `Causeofdeath`, `ReasonforQuit`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO `Leftcompany` (`Firstname`, `Lastname`, `Position`, `Department`, `DateHired`, `Age`, `DateofBirth`, `Gender`, `Email`, `PhoneNumber`, `Address`, `Address2`, `Zipcode`, `retired`, `Fired`, `reasonoffiring`, `RetirementPlan`, `DentalCoverage`, `VisionCoverage`, `Hours`, `OvertimeHours`, `HourlyPay`, `Weeklygrosspay`, `Netpay`, `Overtimepay`, `Yearlypay`, `Status`, `CurrentDisability`, `Causeofdeath`, `ReasonforQuit`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Firstname", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Firstname", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Lastname", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Lastname", global::System.Data.DataRowVersion.Current, false, null));
@@ -7821,6 +7949,7 @@ namespace PayrollGoC.Payrollredone2DataSetTableAdapters {
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("HourlyPay", global::System.Data.OleDb.OleDbType.Currency, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "HourlyPay", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Weeklygrosspay", global::System.Data.OleDb.OleDbType.Currency, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Weeklygrosspay", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Netpay", global::System.Data.OleDb.OleDbType.Currency, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Netpay", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Overtimepay", global::System.Data.OleDb.OleDbType.Currency, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Overtimepay", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Yearlypay", global::System.Data.OleDb.OleDbType.Currency, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Yearlypay", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Status", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Status", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("CurrentDisability", global::System.Data.OleDb.OleDbType.LongVarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "CurrentDisability", global::System.Data.DataRowVersion.Current, false, null));
@@ -7828,7 +7957,26 @@ namespace PayrollGoC.Payrollredone2DataSetTableAdapters {
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("ReasonforQuit", global::System.Data.OleDb.OleDbType.LongVarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ReasonforQuit", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE `Leftcompany` SET `Firstname` = ?, `Lastname` = ?, `Position` = ?, `Department` = ?, `DateHired` = ?, `Age` = ?, `DateofBirth` = ?, `Gender` = ?, `Email` = ?, `PhoneNumber` = ?, `Address` = ?, `Address2` = ?, `Zipcode` = ?, `retired` = ?, `Fired` = ?, `reasonoffiring` = ?, `RetirementPlan` = ?, `DentalCoverage` = ?, `VisionCoverage` = ?, `Hours` = ?, `OvertimeHours` = ?, `HourlyPay` = ?, `Weeklygrosspay` = ?, `Netpay` = ?, `Yearlypay` = ?, `Status` = ?, `CurrentDisability` = ?, `Causeofdeath` = ?, `ReasonforQuit` = ? WHERE ((`ID` = ?) AND ((? = 1 AND `Firstname` IS NULL) OR (`Firstname` = ?)) AND ((? = 1 AND `Lastname` IS NULL) OR (`Lastname` = ?)) AND ((? = 1 AND `Position` IS NULL) OR (`Position` = ?)) AND ((? = 1 AND `DateHired` IS NULL) OR (`DateHired` = ?)) AND ((? = 1 AND `Age` IS NULL) OR (`Age` = ?)) AND ((? = 1 AND `DateofBirth` IS NULL) OR (`DateofBirth` = ?)) AND ((? = 1 AND `Gender` IS NULL) OR (`Gender` = ?)) AND ((? = 1 AND `retired` IS NULL) OR (`retired` = ?)) AND ((? = 1 AND `Fired` IS NULL) OR (`Fired` = ?)) AND ((? = 1 AND `Hours` IS NULL) OR (`Hours` = ?)) AND ((? = 1 AND `OvertimeHours` IS NULL) OR (`OvertimeHours` = ?)) AND ((? = 1 AND `HourlyPay` IS NULL) OR (`HourlyPay` = ?)) AND ((? = 1 AND `Weeklygrosspay` IS NULL) OR (`Weeklygrosspay` = ?)) AND ((? = 1 AND `Netpay` IS NULL) OR (`Netpay` = ?)) AND ((? = 1 AND `Yearlypay` IS NULL) OR (`Yearlypay` = ?)) AND ((? = 1 AND `Status` IS NULL) OR (`Status` = ?)))";
+            this._adapter.UpdateCommand.CommandText = "UPDATE `Leftcompany` SET `Firstname` = ?, `Lastname` = ?, `Position` = ?, `Depart" +
+                "ment` = ?, `DateHired` = ?, `Age` = ?, `DateofBirth` = ?, `Gender` = ?, `Email` " +
+                "= ?, `PhoneNumber` = ?, `Address` = ?, `Address2` = ?, `Zipcode` = ?, `retired` " +
+                "= ?, `Fired` = ?, `reasonoffiring` = ?, `RetirementPlan` = ?, `DentalCoverage` =" +
+                " ?, `VisionCoverage` = ?, `Hours` = ?, `OvertimeHours` = ?, `HourlyPay` = ?, `We" +
+                "eklygrosspay` = ?, `Netpay` = ?, `Overtimepay` = ?, `Yearlypay` = ?, `Status` = " +
+                "?, `CurrentDisability` = ?, `Causeofdeath` = ?, `ReasonforQuit` = ? WHERE ((`ID`" +
+                " = ?) AND ((? = 1 AND `Firstname` IS NULL) OR (`Firstname` = ?)) AND ((? = 1 AND" +
+                " `Lastname` IS NULL) OR (`Lastname` = ?)) AND ((? = 1 AND `Position` IS NULL) OR" +
+                " (`Position` = ?)) AND ((? = 1 AND `DateHired` IS NULL) OR (`DateHired` = ?)) AN" +
+                "D ((? = 1 AND `Age` IS NULL) OR (`Age` = ?)) AND ((? = 1 AND `DateofBirth` IS NU" +
+                "LL) OR (`DateofBirth` = ?)) AND ((? = 1 AND `Gender` IS NULL) OR (`Gender` = ?))" +
+                " AND ((? = 1 AND `retired` IS NULL) OR (`retired` = ?)) AND ((? = 1 AND `Fired` " +
+                "IS NULL) OR (`Fired` = ?)) AND ((? = 1 AND `Hours` IS NULL) OR (`Hours` = ?)) AN" +
+                "D ((? = 1 AND `OvertimeHours` IS NULL) OR (`OvertimeHours` = ?)) AND ((? = 1 AND" +
+                " `HourlyPay` IS NULL) OR (`HourlyPay` = ?)) AND ((? = 1 AND `Weeklygrosspay` IS " +
+                "NULL) OR (`Weeklygrosspay` = ?)) AND ((? = 1 AND `Netpay` IS NULL) OR (`Netpay` " +
+                "= ?)) AND ((? = 1 AND `Overtimepay` IS NULL) OR (`Overtimepay` = ?)) AND ((? = 1" +
+                " AND `Yearlypay` IS NULL) OR (`Yearlypay` = ?)) AND ((? = 1 AND `Status` IS NULL" +
+                ") OR (`Status` = ?)))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Firstname", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Firstname", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Lastname", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Lastname", global::System.Data.DataRowVersion.Current, false, null));
@@ -7854,6 +8002,7 @@ namespace PayrollGoC.Payrollredone2DataSetTableAdapters {
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("HourlyPay", global::System.Data.OleDb.OleDbType.Currency, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "HourlyPay", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Weeklygrosspay", global::System.Data.OleDb.OleDbType.Currency, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Weeklygrosspay", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Netpay", global::System.Data.OleDb.OleDbType.Currency, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Netpay", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Overtimepay", global::System.Data.OleDb.OleDbType.Currency, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Overtimepay", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Yearlypay", global::System.Data.OleDb.OleDbType.Currency, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Yearlypay", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Status", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Status", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("CurrentDisability", global::System.Data.OleDb.OleDbType.LongVarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "CurrentDisability", global::System.Data.DataRowVersion.Current, false, null));
@@ -7888,6 +8037,8 @@ namespace PayrollGoC.Payrollredone2DataSetTableAdapters {
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Weeklygrosspay", global::System.Data.OleDb.OleDbType.Currency, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Weeklygrosspay", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Netpay", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Netpay", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Netpay", global::System.Data.OleDb.OleDbType.Currency, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Netpay", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Overtimepay", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Overtimepay", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Overtimepay", global::System.Data.OleDb.OleDbType.Currency, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Overtimepay", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Yearlypay", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Yearlypay", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Yearlypay", global::System.Data.OleDb.OleDbType.Currency, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Yearlypay", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Status", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Status", global::System.Data.DataRowVersion.Original, true, null));
@@ -7898,7 +8049,7 @@ namespace PayrollGoC.Payrollredone2DataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.OleDb.OleDbConnection();
-            this._connection.ConnectionString = global::PayrollGoC.Properties.Settings.Default.Payrollredone2ConnectionString;
+            this._connection.ConnectionString = "";
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7907,7 +8058,7 @@ namespace PayrollGoC.Payrollredone2DataSetTableAdapters {
             this._commandCollection = new global::System.Data.OleDb.OleDbCommand[1];
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT ID, Firstname, Lastname, [Position], Department, DateHired, Age, DateofBirth, Gender, Email, PhoneNumber, Address, Address2, Zipcode, retired, Fired, reasonoffiring, RetirementPlan, DentalCoverage, VisionCoverage, Hours, OvertimeHours, HourlyPay, Weeklygrosspay, Netpay, Yearlypay, Status, CurrentDisability, Causeofdeath, ReasonforQuit FROM Leftcompany";
+            this._commandCollection[0].CommandText = @"SELECT ID, Firstname, Lastname, [Position], Department, DateHired, Age, DateofBirth, Gender, Email, PhoneNumber, Address, Address2, Zipcode, retired, Fired, reasonoffiring, RetirementPlan, DentalCoverage, VisionCoverage, Hours, OvertimeHours, HourlyPay, Weeklygrosspay, Netpay, Overtimepay, Yearlypay, Status, CurrentDisability, Causeofdeath, ReasonforQuit FROM Leftcompany";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -7915,7 +8066,7 @@ namespace PayrollGoC.Payrollredone2DataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(Payrollredone2DataSet.LeftcompanyDataTable dataTable) {
+        public virtual int Fill(payrollSystemDataSet.LeftcompanyDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -7928,9 +8079,9 @@ namespace PayrollGoC.Payrollredone2DataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual Payrollredone2DataSet.LeftcompanyDataTable GetData() {
+        public virtual payrollSystemDataSet.LeftcompanyDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            Payrollredone2DataSet.LeftcompanyDataTable dataTable = new Payrollredone2DataSet.LeftcompanyDataTable();
+            payrollSystemDataSet.LeftcompanyDataTable dataTable = new payrollSystemDataSet.LeftcompanyDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -7938,14 +8089,14 @@ namespace PayrollGoC.Payrollredone2DataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(Payrollredone2DataSet.LeftcompanyDataTable dataTable) {
+        public virtual int Update(payrollSystemDataSet.LeftcompanyDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(Payrollredone2DataSet dataSet) {
+        public virtual int Update(payrollSystemDataSet dataSet) {
             return this.Adapter.Update(dataSet, "Leftcompany");
         }
         
@@ -7984,6 +8135,7 @@ namespace PayrollGoC.Payrollredone2DataSetTableAdapters {
                     global::System.Nullable<decimal> Original_HourlyPay, 
                     global::System.Nullable<decimal> Original_Weeklygrosspay, 
                     global::System.Nullable<decimal> Original_Netpay, 
+                    global::System.Nullable<decimal> Original_Overtimepay, 
                     global::System.Nullable<decimal> Original_Yearlypay, 
                     string Original_Status) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_ID));
@@ -8087,21 +8239,29 @@ namespace PayrollGoC.Payrollredone2DataSetTableAdapters {
                 this.Adapter.DeleteCommand.Parameters[27].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[28].Value = global::System.DBNull.Value;
             }
-            if ((Original_Yearlypay.HasValue == true)) {
+            if ((Original_Overtimepay.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[29].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[30].Value = ((decimal)(Original_Yearlypay.Value));
+                this.Adapter.DeleteCommand.Parameters[30].Value = ((decimal)(Original_Overtimepay.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[29].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[30].Value = global::System.DBNull.Value;
             }
-            if ((Original_Status == null)) {
+            if ((Original_Yearlypay.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[31].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[32].Value = ((decimal)(Original_Yearlypay.Value));
+            }
+            else {
                 this.Adapter.DeleteCommand.Parameters[31].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[32].Value = global::System.DBNull.Value;
             }
+            if ((Original_Status == null)) {
+                this.Adapter.DeleteCommand.Parameters[33].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[34].Value = global::System.DBNull.Value;
+            }
             else {
-                this.Adapter.DeleteCommand.Parameters[31].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[32].Value = ((string)(Original_Status));
+                this.Adapter.DeleteCommand.Parameters[33].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[34].Value = ((string)(Original_Status));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -8148,6 +8308,7 @@ namespace PayrollGoC.Payrollredone2DataSetTableAdapters {
                     global::System.Nullable<decimal> HourlyPay, 
                     global::System.Nullable<decimal> Weeklygrosspay, 
                     global::System.Nullable<decimal> Netpay, 
+                    global::System.Nullable<decimal> Overtimepay, 
                     global::System.Nullable<decimal> Yearlypay, 
                     string Status, 
                     string CurrentDisability, 
@@ -8287,35 +8448,41 @@ namespace PayrollGoC.Payrollredone2DataSetTableAdapters {
             else {
                 this.Adapter.InsertCommand.Parameters[23].Value = global::System.DBNull.Value;
             }
-            if ((Yearlypay.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[24].Value = ((decimal)(Yearlypay.Value));
+            if ((Overtimepay.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[24].Value = ((decimal)(Overtimepay.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[24].Value = global::System.DBNull.Value;
             }
-            if ((Status == null)) {
-                this.Adapter.InsertCommand.Parameters[25].Value = global::System.DBNull.Value;
+            if ((Yearlypay.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[25].Value = ((decimal)(Yearlypay.Value));
             }
             else {
-                this.Adapter.InsertCommand.Parameters[25].Value = ((string)(Status));
+                this.Adapter.InsertCommand.Parameters[25].Value = global::System.DBNull.Value;
             }
-            if ((CurrentDisability == null)) {
+            if ((Status == null)) {
                 this.Adapter.InsertCommand.Parameters[26].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[26].Value = ((string)(CurrentDisability));
+                this.Adapter.InsertCommand.Parameters[26].Value = ((string)(Status));
             }
-            if ((Causeofdeath == null)) {
+            if ((CurrentDisability == null)) {
                 this.Adapter.InsertCommand.Parameters[27].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[27].Value = ((string)(Causeofdeath));
+                this.Adapter.InsertCommand.Parameters[27].Value = ((string)(CurrentDisability));
             }
-            if ((ReasonforQuit == null)) {
+            if ((Causeofdeath == null)) {
                 this.Adapter.InsertCommand.Parameters[28].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[28].Value = ((string)(ReasonforQuit));
+                this.Adapter.InsertCommand.Parameters[28].Value = ((string)(Causeofdeath));
+            }
+            if ((ReasonforQuit == null)) {
+                this.Adapter.InsertCommand.Parameters[29].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[29].Value = ((string)(ReasonforQuit));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -8362,6 +8529,7 @@ namespace PayrollGoC.Payrollredone2DataSetTableAdapters {
                     global::System.Nullable<decimal> HourlyPay, 
                     global::System.Nullable<decimal> Weeklygrosspay, 
                     global::System.Nullable<decimal> Netpay, 
+                    global::System.Nullable<decimal> Overtimepay, 
                     global::System.Nullable<decimal> Yearlypay, 
                     string Status, 
                     string CurrentDisability, 
@@ -8382,6 +8550,7 @@ namespace PayrollGoC.Payrollredone2DataSetTableAdapters {
                     global::System.Nullable<decimal> Original_HourlyPay, 
                     global::System.Nullable<decimal> Original_Weeklygrosspay, 
                     global::System.Nullable<decimal> Original_Netpay, 
+                    global::System.Nullable<decimal> Original_Overtimepay, 
                     global::System.Nullable<decimal> Original_Yearlypay, 
                     string Original_Status) {
             if ((Firstname == null)) {
@@ -8518,152 +8687,166 @@ namespace PayrollGoC.Payrollredone2DataSetTableAdapters {
             else {
                 this.Adapter.UpdateCommand.Parameters[23].Value = global::System.DBNull.Value;
             }
-            if ((Yearlypay.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[24].Value = ((decimal)(Yearlypay.Value));
+            if ((Overtimepay.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[24].Value = ((decimal)(Overtimepay.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[24].Value = global::System.DBNull.Value;
             }
-            if ((Status == null)) {
-                this.Adapter.UpdateCommand.Parameters[25].Value = global::System.DBNull.Value;
+            if ((Yearlypay.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[25].Value = ((decimal)(Yearlypay.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[25].Value = ((string)(Status));
+                this.Adapter.UpdateCommand.Parameters[25].Value = global::System.DBNull.Value;
             }
-            if ((CurrentDisability == null)) {
+            if ((Status == null)) {
                 this.Adapter.UpdateCommand.Parameters[26].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[26].Value = ((string)(CurrentDisability));
+                this.Adapter.UpdateCommand.Parameters[26].Value = ((string)(Status));
             }
-            if ((Causeofdeath == null)) {
+            if ((CurrentDisability == null)) {
                 this.Adapter.UpdateCommand.Parameters[27].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[27].Value = ((string)(Causeofdeath));
+                this.Adapter.UpdateCommand.Parameters[27].Value = ((string)(CurrentDisability));
             }
-            if ((ReasonforQuit == null)) {
+            if ((Causeofdeath == null)) {
                 this.Adapter.UpdateCommand.Parameters[28].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[28].Value = ((string)(ReasonforQuit));
+                this.Adapter.UpdateCommand.Parameters[28].Value = ((string)(Causeofdeath));
             }
-            this.Adapter.UpdateCommand.Parameters[29].Value = ((int)(Original_ID));
-            if ((Original_Firstname == null)) {
-                this.Adapter.UpdateCommand.Parameters[30].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[31].Value = global::System.DBNull.Value;
+            if ((ReasonforQuit == null)) {
+                this.Adapter.UpdateCommand.Parameters[29].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[30].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[31].Value = ((string)(Original_Firstname));
+                this.Adapter.UpdateCommand.Parameters[29].Value = ((string)(ReasonforQuit));
+            }
+            this.Adapter.UpdateCommand.Parameters[30].Value = ((int)(Original_ID));
+            if ((Original_Firstname == null)) {
+                this.Adapter.UpdateCommand.Parameters[31].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[32].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[31].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[32].Value = ((string)(Original_Firstname));
             }
             if ((Original_Lastname == null)) {
-                this.Adapter.UpdateCommand.Parameters[32].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[33].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[33].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[34].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[32].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[33].Value = ((string)(Original_Lastname));
+                this.Adapter.UpdateCommand.Parameters[33].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[34].Value = ((string)(Original_Lastname));
             }
             if ((Original_Position == null)) {
-                this.Adapter.UpdateCommand.Parameters[34].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[35].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[35].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[36].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[34].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[35].Value = ((string)(Original_Position));
+                this.Adapter.UpdateCommand.Parameters[35].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[36].Value = ((string)(Original_Position));
             }
             if ((Original_DateHired.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[36].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[37].Value = ((System.DateTime)(Original_DateHired.Value));
+                this.Adapter.UpdateCommand.Parameters[37].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[38].Value = ((System.DateTime)(Original_DateHired.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[36].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[37].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[37].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[38].Value = global::System.DBNull.Value;
             }
             if ((Original_Age.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[38].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[39].Value = ((int)(Original_Age.Value));
+                this.Adapter.UpdateCommand.Parameters[39].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[40].Value = ((int)(Original_Age.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[38].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[39].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[39].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[40].Value = global::System.DBNull.Value;
             }
             if ((Original_DateofBirth.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[40].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[41].Value = ((System.DateTime)(Original_DateofBirth.Value));
+                this.Adapter.UpdateCommand.Parameters[41].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[42].Value = ((System.DateTime)(Original_DateofBirth.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[40].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[41].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[41].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[42].Value = global::System.DBNull.Value;
             }
             if ((Original_Gender == null)) {
-                this.Adapter.UpdateCommand.Parameters[42].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[43].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[43].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[44].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[42].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[43].Value = ((string)(Original_Gender));
+                this.Adapter.UpdateCommand.Parameters[43].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[44].Value = ((string)(Original_Gender));
             }
-            this.Adapter.UpdateCommand.Parameters[44].Value = ((object)(0));
-            this.Adapter.UpdateCommand.Parameters[45].Value = ((bool)(Original_retired));
-            this.Adapter.UpdateCommand.Parameters[46].Value = ((object)(0));
-            this.Adapter.UpdateCommand.Parameters[47].Value = ((bool)(Original_Fired));
+            this.Adapter.UpdateCommand.Parameters[45].Value = ((object)(0));
+            this.Adapter.UpdateCommand.Parameters[46].Value = ((bool)(Original_retired));
+            this.Adapter.UpdateCommand.Parameters[47].Value = ((object)(0));
+            this.Adapter.UpdateCommand.Parameters[48].Value = ((bool)(Original_Fired));
             if ((Original_Hours.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[48].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[49].Value = ((int)(Original_Hours.Value));
+                this.Adapter.UpdateCommand.Parameters[49].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[50].Value = ((int)(Original_Hours.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[48].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[49].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[49].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[50].Value = global::System.DBNull.Value;
             }
             if ((Original_OvertimeHours.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[50].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[51].Value = ((int)(Original_OvertimeHours.Value));
+                this.Adapter.UpdateCommand.Parameters[51].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[52].Value = ((int)(Original_OvertimeHours.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[50].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[51].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[51].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[52].Value = global::System.DBNull.Value;
             }
             if ((Original_HourlyPay.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[52].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[53].Value = ((decimal)(Original_HourlyPay.Value));
+                this.Adapter.UpdateCommand.Parameters[53].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[54].Value = ((decimal)(Original_HourlyPay.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[52].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[53].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[53].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[54].Value = global::System.DBNull.Value;
             }
             if ((Original_Weeklygrosspay.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[54].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[55].Value = ((decimal)(Original_Weeklygrosspay.Value));
+                this.Adapter.UpdateCommand.Parameters[55].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[56].Value = ((decimal)(Original_Weeklygrosspay.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[54].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[55].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[55].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[56].Value = global::System.DBNull.Value;
             }
             if ((Original_Netpay.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[56].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[57].Value = ((decimal)(Original_Netpay.Value));
+                this.Adapter.UpdateCommand.Parameters[57].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[58].Value = ((decimal)(Original_Netpay.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[56].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[57].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[57].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[58].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Overtimepay.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[59].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[60].Value = ((decimal)(Original_Overtimepay.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[59].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[60].Value = global::System.DBNull.Value;
             }
             if ((Original_Yearlypay.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[58].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[59].Value = ((decimal)(Original_Yearlypay.Value));
+                this.Adapter.UpdateCommand.Parameters[61].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[62].Value = ((decimal)(Original_Yearlypay.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[58].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[59].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[61].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[62].Value = global::System.DBNull.Value;
             }
             if ((Original_Status == null)) {
-                this.Adapter.UpdateCommand.Parameters[60].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[61].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[63].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[64].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[60].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[61].Value = ((string)(Original_Status));
+                this.Adapter.UpdateCommand.Parameters[63].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[64].Value = ((string)(Original_Status));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -8874,7 +9057,7 @@ namespace PayrollGoC.Payrollredone2DataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.OleDb.OleDbConnection();
-            this._connection.ConnectionString = global::PayrollGoC.Properties.Settings.Default.Payrollredone2ConnectionString;
+            this._connection.ConnectionString = "";
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8891,7 +9074,7 @@ namespace PayrollGoC.Payrollredone2DataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(Payrollredone2DataSet.MastertableDataTable dataTable) {
+        public virtual int Fill(payrollSystemDataSet.MastertableDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -8904,9 +9087,9 @@ namespace PayrollGoC.Payrollredone2DataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual Payrollredone2DataSet.MastertableDataTable GetData() {
+        public virtual payrollSystemDataSet.MastertableDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            Payrollredone2DataSet.MastertableDataTable dataTable = new Payrollredone2DataSet.MastertableDataTable();
+            payrollSystemDataSet.MastertableDataTable dataTable = new payrollSystemDataSet.MastertableDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -8914,14 +9097,14 @@ namespace PayrollGoC.Payrollredone2DataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(Payrollredone2DataSet.MastertableDataTable dataTable) {
+        public virtual int Update(payrollSystemDataSet.MastertableDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(Payrollredone2DataSet dataSet) {
+        public virtual int Update(payrollSystemDataSet dataSet) {
             return this.Adapter.Update(dataSet, "Mastertable");
         }
         
@@ -9322,7 +9505,7 @@ namespace PayrollGoC.Payrollredone2DataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateUpdatedRows(Payrollredone2DataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(payrollSystemDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._economictableTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.Economictable.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
@@ -9368,7 +9551,7 @@ namespace PayrollGoC.Payrollredone2DataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateInsertedRows(Payrollredone2DataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(payrollSystemDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._economictableTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.Economictable.Select(null, null, global::System.Data.DataViewRowState.Added);
@@ -9410,7 +9593,7 @@ namespace PayrollGoC.Payrollredone2DataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateDeletedRows(Payrollredone2DataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(payrollSystemDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             if ((this._mastertableTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.Mastertable.Select(null, null, global::System.Data.DataViewRowState.Deleted);
@@ -9476,7 +9659,7 @@ namespace PayrollGoC.Payrollredone2DataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public virtual int UpdateAll(Payrollredone2DataSet dataSet) {
+        public virtual int UpdateAll(payrollSystemDataSet dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }
