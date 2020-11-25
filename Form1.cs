@@ -51,7 +51,7 @@ namespace PayrollGoC
             }
             else
             {
-                OleDbConnection conn = new OleDbConnection(@"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\rinu\Desktop\FALL2020\CSC430\IMDONE\payrollSystem.mdb");
+                OleDbConnection conn = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\ieong\Source\Repos\PayrollMS1\payrollSystem.accdb");
                 conn.Open();
                 OleDbCommand cmd = conn.CreateCommand();
                 cmd.CommandType = CommandType.Text;
@@ -62,10 +62,17 @@ namespace PayrollGoC
                 da.Fill(dt);
                 if (dt.Rows.Count == 1)
                 {
+                    OleDbCommand command = conn.CreateCommand();
+                    command.CommandType = CommandType.Text;
+                    command.CommandText = "Select * from Mastertable where ID =" + textBox1.Text + " and (Department = 'Human Resource' or Department = 'human resource' or Department = 'Human resource' or Department = 'HR' or Department = 'hr' or Department = 'Hr')";
+                    command.ExecuteNonQuery();
+                    DataTable datatable = new DataTable();
+                    OleDbDataAdapter dataAdapter = new OleDbDataAdapter(command);
+                    dataAdapter.Fill(datatable);
                     int status = Convert.ToInt32(comboBox1.SelectedIndex);
                     textBox1.Clear();
                     textBox2.Clear();
-                    if (status == 0)
+                    if (status == 0 && datatable.Rows.Count == 1)
                     {
                         Form2 frm2 = new Form2();
                         frm2.Show();
@@ -73,12 +80,16 @@ namespace PayrollGoC
                         MessageBox.Show("Login Succeed!");
                     }
 
-                    else if (status == 1)
+                    else if (status == 1 && datatable.Rows.Count == 0)
                     {
                         Form6 frm6 = new Form6();
                         frm6.Show();
                         this.Hide();
                         MessageBox.Show("Login Succeed!");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Please choose the right position");
                     }
                 }
                 else

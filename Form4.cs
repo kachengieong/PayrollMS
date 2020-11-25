@@ -21,72 +21,21 @@ namespace PayrollGoC
 
         private void Form4_Load(object sender, EventArgs e)
         {
+            label3.Text = Form1.SetValueForText1;
+
             this.TopMost = true;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //search Emp ID then retrieve Info for labels and textboxes (error handling employee number search !!!)
-            OleDbConnection conn = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\ieong\source\repos\PayrollMS1\Payrollredone4.accdb");
-            OleDbCommand cmd = conn.CreateCommand();
-            cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "SELECT * from Mastertable WHERE ID = " + textBox1.Text;
 
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            // Save New Info to database 
-
-
-            string message = "Confirm Updating Employee Record";
-            string title = "Update Record";
-            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
-            DialogResult result = MessageBox.Show(message, title, buttons);
-            if (result == DialogResult.Yes)
-            {
-                // Update Record
-                //sql connection
-                OleDbConnection con1 = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\ieong\source\repos\PayrollMS1\Payrollredone4.accdb");
-                con1.Open();
-
-                OleDbCommand cmd = new OleDbCommand("UPDATE HRview SET Email = @email, PhoneNumber = @PhoneNumber, Address = @Address, Address2 =  @Address2,ZipCode = @ZipCode, Department= @Department, Position = @Position, Datehired = @Datehired, HealthCover = @HealthCover,DentalCover = @DentalCover, VisionCover = @VisionCover where ID =" + int.Parse(textBox1.Text), con1);
-
-
-                //to save the updates to database:
-                cmd.Parameters.AddWithValue("@Email", textBox7.Text);
-                cmd.Parameters.AddWithValue("@PhoneNumber", textBox8.Text);
-                cmd.Parameters.AddWithValue("@Address", textBox9.Text);
-                cmd.Parameters.AddWithValue("@Address2", textBox10.Text);
-                cmd.Parameters.AddWithValue("@ZipCode", textBox11.Text);
-                cmd.Parameters.AddWithValue("@Department", textBox3.Text);
-                cmd.Parameters.AddWithValue("@Position", textBox4.Text);
-                //cmd.Parameters.AddWithValue("@HealthCover", comboBox1.SelectedItem.Text) ;
-                //cmd.Parameters.AddWithValue("@DentalCover", comboBox2.SelectedItem.Text);
-                //cmd.Parameters.AddWithValue("@VisionCover", comboBox3.SelectedItem.Text);
-
-
-                OleDbCommand cmd1 = new OleDbCommand("UPDATE Economictable SET Weeklygrosspay = @Weeklygrosspay, HourlyPay = @HourlyPay where ID =" + int.Parse(textBox1.Text), con1);
-
-
-                cmd1.Parameters.AddWithValue("@Weeklygrosspay", textBox5.Text);
-                cmd1.Parameters.AddWithValue("@HourlyPay", textBox6.Text);
-
-                cmd.ExecuteNonQuery();
 
 
 
-                con1.Close();
-
-
-
-                this.Close();
-                MessageBox.Show("Empolyee Record Updated");
-            }
-            else
-            {
-                this.Close();
-            }
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -99,9 +48,7 @@ namespace PayrollGoC
             if (result == DialogResult.Yes)
             {
                 // Delete Record
-                //int overtimeHour = GrossIncome.CalculateOvertimeHour(int.Parse(textBox2.Text));
-                //double overtimePay = GrossIncome.CalculateOvertimePay(overtimeHour, Convert.ToDouble(textBox6.Text));
-                OleDbConnection conn = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\ieong\source\repos\PayrollMS1\Payrollredone4.accdb");
+                OleDbConnection conn = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\ieong\Source\Repos\PayrollMS1\payrollSystem.accdb");
                 conn.Open();
                 OleDbCommand cmd = conn.CreateCommand();
                 cmd.CommandType = CommandType.Text;
@@ -224,7 +171,7 @@ namespace PayrollGoC
         private void button1_Click_1(object sender, EventArgs e)
         {
             //sql connection
-            OleDbConnection con1 = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\ieong\source\repos\PayrollMS1\Payrollredone4.accdb");
+            OleDbConnection con1 = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\ieong\Source\Repos\PayrollMS1\payrollSystem.accdb");
             con1.Open();
             //check if the employee id is found:
             //data from HRView:
@@ -243,7 +190,7 @@ namespace PayrollGoC
                 label16.Text = (myReader["Firstname"].ToString());
                 label20.Text = (myReader["Lastname"].ToString());
                 label21.Text = (myReader["DateofBirth"].ToString());
-
+                label22.Text = (myReader["Gender"].ToString());
                 textBox7.Text = (myReader["Email"].ToString());
                 textBox8.Text = (myReader["PhoneNumber"].ToString());
                 textBox9.Text = (myReader["Address"].ToString());
@@ -251,9 +198,11 @@ namespace PayrollGoC
                 textBox11.Text = (myReader["ZipCode"].ToString());
                 textBox3.Text = (myReader["Department"].ToString());
                 textBox4.Text = (myReader["Position"].ToString());
-                //comboBox1.SelectedItem.Text = (myReader["HealthCover"].ToString());
-                //comboBox2.SelectedItem.Text = (myReader["DentalCover"].ToString());
-                //comboBox3.SelectedItem.Text = (myReader["VisionCover"].ToString());
+                label33.Text = (myReader["HealthPlan"].ToString());
+                label32.Text = (myReader["DentalCoverage"].ToString());
+                label31.Text = (myReader["VisionCoverage"].ToString());
+                label10.Text = (myReader["Status"].ToString());
+
 
             }
             //else
@@ -294,26 +243,26 @@ namespace PayrollGoC
             //{
             // Update Record
             //sql connection
-                OleDbConnection con1 = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\ieong\source\repos\PayrollMS1\Payrollredone4.accdb");
-                con1.Open();
+            OleDbConnection con1 = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\ieong\Source\Repos\PayrollMS1\payrollSystem.accdb");
+            con1.Open();
 
 
+            OleDbCommand cmd = new OleDbCommand("UPDATE HRView SET [Email] = @Email, [PhoneNumber] = @PhoneNumber, [Address] = @Address, [Address2] =  @Address2, [ZipCode] = @ZipCode, [Department]= @Department, [Position] = @Position where ID =" + int.Parse(textBox1.Text), con1);
+            //OleDbCommand cmd = new OleDbCommand("UPDATE HRView SET [Email] = @Email, [PhoneNumber] = @PhoneNumber, [Address] = @Address, [Address2] =  @Address2, [ZipCode] = @ZipCode, [Department]= @Department, [Position] = @Position, [HealthPlan] = @HealthPlan, [DentalCoverage] = @DentalCoverage, [VisionCoverage] = @VisionCoverage WHERE ID =" + int.Parse(textBox1.Text), con1);
 
-                OleDbCommand cmd = new OleDbCommand("UPDATE HRView SET [Email] = @Email, [PhoneNumber] = @PhoneNumber, [Address] = @Address, [Address2] =  @Address2, [ZipCode] = @ZipCode, [Department]= @Department, [Position] = @Position where ID =" + int.Parse(textBox1.Text), con1);
 
-
-                //to save the updates to database:
-                cmd.Parameters.AddWithValue("@Email", textBox7.Text);
-                cmd.Parameters.AddWithValue("@PhoneNumber", textBox8.Text);
-                cmd.Parameters.AddWithValue("@Address", textBox9.Text);
-                cmd.Parameters.AddWithValue("@Address2", textBox10.Text);
-                cmd.Parameters.AddWithValue("@ZipCode", textBox11.Text);
-                cmd.Parameters.AddWithValue("@Department", textBox3.Text);
-                cmd.Parameters.AddWithValue("@Position", textBox4.Text);
-                //cmd.Parameters.AddWithValue("@HealthCover", comboBox1.SelectedItem.Text);
-                //cmd.Parameters.AddWithValue("@DentalCover", comboBox2.SelectedItem.Text);
-                //cmd.Parameters.AddWithValue("@VisionCover", comboBox3.SelectedItem.Text);
-                cmd.ExecuteNonQuery();
+            //to save the updates to database:
+            cmd.Parameters.AddWithValue("@Email", textBox7.Text);
+            cmd.Parameters.AddWithValue("@PhoneNumber", textBox8.Text);
+            cmd.Parameters.AddWithValue("@Address", textBox9.Text);
+            cmd.Parameters.AddWithValue("@Address2", textBox10.Text);
+            cmd.Parameters.AddWithValue("@ZipCode", textBox11.Text);
+            cmd.Parameters.AddWithValue("@Department", textBox3.Text);
+            cmd.Parameters.AddWithValue("@Position", textBox4.Text);
+            //cmd.Parameters.AddWithValue("@HealthPlan", comboBox1.SelectedItem.Text);
+            //cmd.Parameters.AddWithValue("@DentalCoverage", comboBox2.SelectedItem.Text);
+            //cmd.Parameters.AddWithValue("@VisionCoverage", comboBox3.SelectedItem.Text);
+            cmd.ExecuteNonQuery();
 
             OleDbCommand cmd1 = new OleDbCommand("UPDATE Economictable SET [Weeklygrosspay] = @Weeklygrosspay, [HourlyPay] = @HourlyPay where ID =" + int.Parse(textBox1.Text), con1);
 
@@ -329,9 +278,9 @@ namespace PayrollGoC
 
 
 
-                this.Close();
-                MessageBox.Show("Empolyee Record Updated");
-            }
+            this.Close();
+            MessageBox.Show("Empolyee Record Updated");
+        }
 
         private void label29_Click(object sender, EventArgs e)
         {
@@ -345,9 +294,9 @@ namespace PayrollGoC
             hr.Show();
         }
     }
-            //else
-            //{
-            //    this.Close();
-            //}
-        //}
+    //else
+    //{
+    //    this.Close();
+    //}
+    //}
 }

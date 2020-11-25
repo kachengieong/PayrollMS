@@ -27,7 +27,7 @@ namespace PayrollGoC
 
 
             //database connection
-            OleDbConnection con1 = new OleDbConnection(@"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\rinu\Desktop\FALL2020\CSC430\IMDONE\payrollSystem.mdb");
+            OleDbConnection con1 = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\ieong\Source\Repos\PayrollMS1\payrollSystem.accdb");
             con1.Open();
 
             //retrieve info from databse based on empl id

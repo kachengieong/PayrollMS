@@ -20,6 +20,8 @@ namespace PayrollGoC
 
         private void Form3_Load(object sender, EventArgs e)
         {
+            label15.Text = Form1.SetValueForText1;
+
             this.TopMost = true;
         }
 
@@ -61,8 +63,8 @@ namespace PayrollGoC
         private void radioButton3_CheckedChanged(object sender, EventArgs e)
         {
             //yearly income choice disables hourly income
-            textBox5.Enabled = radioButton3.Checked; 
-            
+            textBox5.Enabled = radioButton3.Checked;
+
         }
 
         private void radioButton4_CheckedChanged(object sender, EventArgs e)
@@ -82,7 +84,7 @@ namespace PayrollGoC
         }
         private void dateTimePicker2_ValueChanged(object sender, EventArgs e)
         {
-             //date hired
+            //date hired
         }
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -101,7 +103,7 @@ namespace PayrollGoC
 
         private void button1_Click(object sender, EventArgs e)
         {
-      
+
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -109,7 +111,7 @@ namespace PayrollGoC
             int overtimeHour = GrossIncome.CalculateOvertimeHour(int.Parse(textBox13.Text));
             double overtimePay = GrossIncome.CalculateOvertimePay(overtimeHour, Convert.ToDouble(textBox6.Text));
             double grossIncome = GrossIncome.CalculateGrossIncome(int.Parse(textBox13.Text), overtimePay, Convert.ToDouble(textBox6.Text));
-            OleDbConnection conn = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:/Users/ieong/Source/Repos/PayrollMS1/Payrollredone4.accdb");
+            OleDbConnection conn = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\ieong\Source\Repos\PayrollMS1\payrollSystem.accdb");
             conn.Open();
             if (radioButton3.Checked)
             {
@@ -124,7 +126,7 @@ namespace PayrollGoC
                 string typetext = radioButton4.Text;
                 OleDbCommand cmd = conn.CreateCommand();
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "INSERT INTO Economictable (Firstname, Lastname, Occupation, Hours, Weeklygrosspay, HourlyPay, Paytime) VALUES ('" + textBox1.Text + "', '" + textBox2.Text + "', '" + textBox4.Text + "', '" + int.Parse(textBox13.Text) + "', '" + grossIncome + "', '" + Convert.ToDouble(textBox6.Text) + "', '" + typetext + "')";
+                cmd.CommandText = "INSERT INTO Economictable (Firstname, Lastname, Occupation, Hours, OvertimeHours, Overtimepay, Weeklygrosspay, HourlyPay, Paytime) VALUES ('" + textBox1.Text + "', '" + textBox2.Text + "', '" + textBox4.Text + "', '" + (int.Parse(textBox13.Text) - overtimeHour) + "', '" + overtimeHour + "', '" + overtimePay + "', '" + grossIncome + "', '" + Convert.ToDouble(textBox6.Text) + "', '" + typetext + "')";
                 cmd.ExecuteNonQuery();
             }
             OleDbCommand addCommand = conn.CreateCommand();
@@ -140,8 +142,8 @@ namespace PayrollGoC
                 gendertext = radioButton2.Text;
             }
             addCommand.CommandText = "INSERT INTO HRView (Firstname, Lastname, DateofBirth, Age, Gender,Department, Occupation, Datehired, HealthPlan, DentalCoverage, VisionCoverage, Email, PhoneNumber, Address, Address2, ZipCode) VALUES ('" +
-                 textBox1.Text + "', '" + textBox2.Text + "', '" + dateTimePicker1.Value + "', '" + int.Parse(textBox12.Text) + "', '" + gendertext + "', '" + textBox3.Text + "', '" + textBox4.Text + "', '" + dateTimePicker2.Value + "', '" + comboBox1.Text + "', '"
-                + comboBox2.Text + "', '" + comboBox3.Text + "', '" + textBox7.Text + "', '" + textBox8.Text + "', '" + textBox9.Text + "', '" + textBox10.Text + "', '" + textBox11.Text + "')";
+                textBox1.Text + "', '" + textBox2.Text + "', '" + dateTimePicker1.Value + "', '" + int.Parse(textBox12.Text) + "', '" + gendertext + "', '" + textBox3.Text + "', '" + textBox4.Text + "', '" + dateTimePicker2.Value + "', '" + comboBox1.Text +
+                "', '" + comboBox2.Text + "', '" + comboBox3.Text + "', '" + textBox7.Text + "', '" + textBox8.Text + "', '" + textBox9.Text + "', '" + textBox10.Text + "', '" + textBox11.Text + "')";
             addCommand.ExecuteNonQuery();
             if (radioButton3.Checked)
             {
@@ -159,14 +161,15 @@ namespace PayrollGoC
                 string typetext = radioButton4.Text;
                 OleDbCommand command = conn.CreateCommand();
                 command.CommandType = CommandType.Text;
-                command.CommandText = "INSERT INTO Mastertable (Hours, OvertimeHours, Weeklygrosspay, HourlyPay, Paytime, Firstname, Lastname, DateofBirth, Age, Gender,Department, Occupation, Datehired, HealthPlan, DentalCoverage, VisionCoverage, Email, PhoneNumber, Address, Address2, Zipcode) VALUES ('"
-                    + int.Parse(textBox13.Text) + "', '" + overtimeHour + "', '" + grossIncome + "', '" + Convert.ToDouble(textBox6.Text) + "', '" + typetext + "', '" + textBox1.Text + "', '" + textBox2.Text + "', '" + dateTimePicker1.Value + "', '" +
+                command.CommandText = "INSERT INTO Mastertable (Hours, OvertimeHours, Overtimepay, Weeklygrosspay, HourlyPay, Paytime, Firstname, Lastname, DateofBirth, Age, Gender,Department, Occupation, Datehired, HealthPlan, DentalCoverage, VisionCoverage, Email, PhoneNumber, Address, Address2, Zipcode) VALUES ('"
+                    + (int.Parse(textBox13.Text) - overtimeHour) + "', '" + overtimeHour + "', '" + overtimePay + "', '" + grossIncome + "', '" + Convert.ToDouble(textBox6.Text) + "', '" + typetext + "', '" + textBox1.Text + "', '" + textBox2.Text + "', '" + dateTimePicker1.Value + "', '" +
                     int.Parse(textBox12.Text) + "', '" + gendertext + "', '" + textBox3.Text + "', '" + textBox4.Text + "', '" + dateTimePicker2.Value + "', '" + comboBox1.Text + "', '"
                     + comboBox2.Text + "', '" + comboBox3.Text + "', '" + textBox7.Text + "', '" + textBox8.Text + "', '" + textBox9.Text + "', '" + textBox10.Text + "', '" + textBox11.Text + "')";
                 command.ExecuteNonQuery();
             }
             conn.Close();
             MessageBox.Show("Add Succeed!");
+            this.Close();
         }
 
         private void label22_Click(object sender, EventArgs e)
@@ -189,11 +192,6 @@ namespace PayrollGoC
             this.Close();
             Form2 hr = new Form2();
             hr.Show();
-        }
-
-        private void label25_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
