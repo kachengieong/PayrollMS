@@ -63,7 +63,7 @@ namespace PayrollGoC
 
                 label20.Text = (myReader["Paytime"].ToString());
                 label21.Text = (myReader["Weeklygrosspay"].ToString());
-                label25.Text = (myReader["DentalCoverage"].ToString());
+                 label25.Text = (myReader["DentalCoverage"].ToString());
                 label26.Text = (myReader["VisionCoverage"].ToString());
                 label3.Text = (myReader["DateofBirth"].ToString());
 
