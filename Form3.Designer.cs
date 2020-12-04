@@ -80,6 +80,10 @@ namespace PayrollGoC
             this.button1 = new System.Windows.Forms.Button();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.label24 = new System.Windows.Forms.Label();
+            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.label25 = new System.Windows.Forms.Label();
+            this.textBox15 = new System.Windows.Forms.TextBox();
+            this.label26 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -481,7 +485,7 @@ namespace PayrollGoC
             this.button2.BackColor = System.Drawing.Color.Tomato;
             this.button2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.Location = new System.Drawing.Point(712, 390);
+            this.button2.Location = new System.Drawing.Point(712, 482);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(312, 40);
             this.button2.TabIndex = 33;
@@ -681,6 +685,50 @@ namespace PayrollGoC
             this.label24.TabIndex = 49;
             this.label24.Text = "Applied State Tax :";
             // 
+            // textBox14
+            // 
+            this.textBox14.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox14.Location = new System.Drawing.Point(712, 403);
+            this.textBox14.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textBox14.Name = "textBox14";
+            this.textBox14.Size = new System.Drawing.Size(236, 26);
+            this.textBox14.TabIndex = 52;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.BackColor = System.Drawing.Color.Transparent;
+            this.label25.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.ForeColor = System.Drawing.Color.Black;
+            this.label25.Location = new System.Drawing.Point(608, 406);
+            this.label25.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(96, 19);
+            this.label25.TabIndex = 51;
+            this.label25.Text = "Password: ";
+            // 
+            // textBox15
+            // 
+            this.textBox15.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox15.Location = new System.Drawing.Point(712, 364);
+            this.textBox15.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textBox15.Name = "textBox15";
+            this.textBox15.Size = new System.Drawing.Size(124, 26);
+            this.textBox15.TabIndex = 54;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.BackColor = System.Drawing.Color.Transparent;
+            this.label26.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.ForeColor = System.Drawing.Color.Black;
+            this.label26.Location = new System.Drawing.Point(589, 367);
+            this.label26.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(115, 19);
+            this.label26.TabIndex = 53;
+            this.label26.Text = "Employee ID: ";
+            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -688,6 +736,10 @@ namespace PayrollGoC
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1044, 601);
+            this.Controls.Add(this.textBox15);
+            this.Controls.Add(this.label26);
+            this.Controls.Add(this.textBox14);
+            this.Controls.Add(this.label25);
             this.Controls.Add(this.comboBox4);
             this.Controls.Add(this.label24);
             this.Controls.Add(this.button1);
@@ -800,5 +852,9 @@ namespace PayrollGoC
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ComboBox comboBox4;
         private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.TextBox textBox14;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.TextBox textBox15;
+        private System.Windows.Forms.Label label26;
     }
 }

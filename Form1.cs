@@ -89,12 +89,12 @@ namespace PayrollGoC
                     }
                     else
                     {
-                        MessageBox.Show("Please choose the right position");
+                        MessageBox.Show("Please choose the right position", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Uncorrect username or password");
+                    MessageBox.Show("Uncorrect username or password", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }

@@ -41,6 +41,8 @@ namespace PayrollGoC
         private void button4_Click(object sender, EventArgs e)
         {
             // DELETE EMP RECORD 
+            int overtimeHour = GrossIncome.CalculateOvertimeHour(int.Parse(textBox2.Text));
+            double overtimePay = GrossIncome.CalculateOvertimePay(overtimeHour, Convert.ToDouble(textBox6.Text));
             string message = "Confirm Deleting Employee Record";
             string title = "Delete Record";
             MessageBoxButtons buttons = MessageBoxButtons.YesNo;
@@ -50,6 +52,12 @@ namespace PayrollGoC
                 // Delete Record
                 OleDbConnection conn = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\ieong\Source\Repos\PayrollMS1\payrollSystem.accdb");
                 conn.Open();
+                OleDbCommand command = conn.CreateCommand();
+                command.CommandType = CommandType.Text;
+                command.CommandText = "INSERT INTO Leftcompany (ID, Firstname, Lastname, Occupation, Department, DateofBirth, Gender, Email, PhoneNumber, Address, Address2, Zipcode, DentalCoverage, VisionCoverage, Hours, OvertimeHours, Overtimepay, HourlyPay, WeeklyGrosspay, Status) VALUES ('" +
+                    int.Parse(textBox1.Text) + "', '" + label16.Text + "', '" + label20.Text + "', '" + textBox4.Text + "', '" + textBox3.Text + "', '" + label21.Text + "', '" + label22.Text + "', '" + textBox7.Text + "', '" + textBox8.Text + "', '" +
+                    textBox9.Text + "', '" + textBox10.Text + "', '" + textBox11.Text + "', '" + label32.Text + "', '" + label31.Text + "', '" + int.Parse(textBox2.Text) + "', '" + overtimeHour + "', '" + overtimePay + "', '" + Convert.ToDouble(textBox5.Text) + "', '" + Convert.ToDouble(textBox6.Text) + "', '" + textBox12.Text + "')";
+                command.ExecuteNonQuery();
                 OleDbCommand cmd = conn.CreateCommand();
                 cmd.CommandType = CommandType.Text;
                 cmd.CommandText = "DELETE FROM Economictable WHERE ID = " + int.Parse(textBox1.Text);
@@ -201,7 +209,7 @@ namespace PayrollGoC
                 label33.Text = (myReader["HealthPlan"].ToString());
                 label32.Text = (myReader["DentalCoverage"].ToString());
                 label31.Text = (myReader["VisionCoverage"].ToString());
-                label10.Text = (myReader["Status"].ToString());
+                textBox12.Text = (myReader["Status"].ToString());
 
 
             }
@@ -243,6 +251,9 @@ namespace PayrollGoC
             //{
             // Update Record
             //sql connection
+            int overtimeHour = GrossIncome.CalculateOvertimeHour(int.Parse(textBox2.Text));
+            double overtimePay = GrossIncome.CalculateOvertimePay(overtimeHour, Convert.ToDouble(textBox6.Text));
+            double grossIncome = GrossIncome.CalculateGrossIncome(int.Parse(textBox2.Text), overtimePay, Convert.ToDouble(textBox6.Text));
             OleDbConnection con1 = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\ieong\Source\Repos\PayrollMS1\payrollSystem.accdb");
             con1.Open();
 
@@ -264,14 +275,65 @@ namespace PayrollGoC
             //cmd.Parameters.AddWithValue("@VisionCoverage", comboBox3.SelectedItem.Text);
             cmd.ExecuteNonQuery();
 
-            OleDbCommand cmd1 = new OleDbCommand("UPDATE Economictable SET [Weeklygrosspay] = @Weeklygrosspay, [HourlyPay] = @HourlyPay where ID =" + int.Parse(textBox1.Text), con1);
+            if (textBox6.Text == "0.00")
+            {
+                OleDbCommand cmd1 = new OleDbCommand("UPDATE Economictable SET [Weeklygrosspay] = @Weeklygrosspay, [Occupation] = @Occupation, [Email] = @Email, [PhoneNumber] = @PhoneNumber, [Address] = @Address, [Address2] =  @Address2, [Zipcode] = @Zipcode, [Department]= @Department where ID =" + int.Parse(textBox1.Text), con1);
+                cmd1.Parameters.AddWithValue("@Occupation", textBox4.Text);
+                cmd1.Parameters.AddWithValue("@Weeklygrosspay", Convert.ToDouble(textBox5.Text));
+                cmd1.Parameters.AddWithValue("@Email", textBox7.Text);
+                cmd1.Parameters.AddWithValue("@PhoneNumber", textBox8.Text);
+                cmd1.Parameters.AddWithValue("@Address", textBox9.Text);
+                cmd1.Parameters.AddWithValue("@Address2", textBox10.Text);
+                cmd1.Parameters.AddWithValue("@Zipcode", textBox11.Text);
+                cmd1.Parameters.AddWithValue("@Department", textBox3.Text);
+                cmd1.ExecuteNonQuery();
+            }
+            else
+            {
+                OleDbCommand cmd2 = new OleDbCommand("UPDATE Economictable SET [Hours] = @Hours, [OvertimeHours] = @OvertimeHours, [Overtimepay] = @Overtimepay, [Weeklygrosspay] = @Weeklygrosspay, [Occupation] = @Occupation, [Email] = @Email, [PhoneNumber] = @PhoneNumber, [Address] = @Address, [Address2] =  @Address2, [Zipcode] = @Zipcode, [Department]= @Department where ID =" + int.Parse(textBox1.Text), con1);
+                cmd2.Parameters.AddWithValue("@Hours", (int.Parse(textBox2.Text) - overtimeHour));
+                cmd2.Parameters.AddWithValue("@OvertimeHours", overtimeHour);
+                cmd2.Parameters.AddWithValue("@Overtimepay", overtimePay);
+                cmd2.Parameters.AddWithValue("@Weeklygrosspay", grossIncome);
+                cmd2.Parameters.AddWithValue("@Occupation", textBox4.Text);
+                cmd2.Parameters.AddWithValue("@Email", textBox7.Text);
+                cmd2.Parameters.AddWithValue("@PhoneNumber", textBox8.Text);
+                cmd2.Parameters.AddWithValue("@Address", textBox9.Text);
+                cmd2.Parameters.AddWithValue("@Address2", textBox10.Text);
+                cmd2.Parameters.AddWithValue("@Zipcode", textBox11.Text);
+                cmd2.Parameters.AddWithValue("@Department", textBox3.Text);
+                cmd2.ExecuteNonQuery();
+            }
 
-
-            cmd1.Parameters.AddWithValue("@Weeklygrosspay", textBox5.Text);
-            cmd1.Parameters.AddWithValue("@HourlyPay", textBox6.Text);
-
-            cmd1.ExecuteNonQuery();
-
+            if (textBox6.Text == "0.00")
+            {
+                OleDbCommand cmd3 = new OleDbCommand("UPDATE Mastertable SET [Weeklygrosspay] = @Weeklygrosspay, [Occupation] = @Occupation, [Email] = @Email, [PhoneNumber] = @PhoneNumber, [Address] = @Address, [Address2] =  @Address2, [ZipCode] = @ZipCode, [Department]= @Department where ID =" + int.Parse(textBox1.Text), con1);
+                cmd3.Parameters.AddWithValue("@Occupation", textBox4.Text);
+                cmd3.Parameters.AddWithValue("@Weeklygrosspay", Convert.ToDouble(textBox5.Text));
+                cmd3.Parameters.AddWithValue("@Email", textBox7.Text);
+                cmd3.Parameters.AddWithValue("@PhoneNumber", textBox8.Text);
+                cmd3.Parameters.AddWithValue("@Address", textBox9.Text);
+                cmd3.Parameters.AddWithValue("@Address2", textBox10.Text);
+                cmd3.Parameters.AddWithValue("@ZipCode", textBox11.Text);
+                cmd3.Parameters.AddWithValue("@Department", textBox3.Text);
+                cmd3.ExecuteNonQuery();
+            }
+            else
+            {
+                OleDbCommand cmd4 = new OleDbCommand("UPDATE Mastertable SET [Hours] = @Hours, [OvertimeHours] = @OvertimeHours, [Overtimepay] = @Overtimepay, [Weeklygrosspay] = @Weeklygrosspay, [Occupation] = @Occupation, [Email] = @Email, [PhoneNumber] = @PhoneNumber, [Address] = @Address, [Address2] =  @Address2, [ZipCode] = @ZipCode, [Department]= @Department where ID =" + int.Parse(textBox1.Text), con1);
+                cmd4.Parameters.AddWithValue("@Hours", (int.Parse(textBox2.Text) - overtimeHour));
+                cmd4.Parameters.AddWithValue("@OvertimeHours", overtimeHour);
+                cmd4.Parameters.AddWithValue("@Overtimepay", overtimePay);
+                cmd4.Parameters.AddWithValue("@Weeklygrosspay", grossIncome);
+                cmd4.Parameters.AddWithValue("@Occupation", textBox4.Text);
+                cmd4.Parameters.AddWithValue("@Email", textBox7.Text);
+                cmd4.Parameters.AddWithValue("@PhoneNumber", textBox8.Text);
+                cmd4.Parameters.AddWithValue("@Address", textBox9.Text);
+                cmd4.Parameters.AddWithValue("@Address2", textBox10.Text);
+                cmd4.Parameters.AddWithValue("@ZipCode", textBox11.Text);
+                cmd4.Parameters.AddWithValue("@Department", textBox3.Text);
+                cmd4.ExecuteNonQuery();
+            }
 
 
             con1.Close();
@@ -279,7 +341,7 @@ namespace PayrollGoC
 
 
             this.Close();
-            MessageBox.Show("Empolyee Record Updated");
+            MessageBox.Show("Employee Record Updated");
         }
 
         private void label29_Click(object sender, EventArgs e)
