@@ -1102,6 +1102,7 @@
             this.button2.TabIndex = 90;
             this.button2.Text = "Retrieve Employee Info";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Form8
             // 

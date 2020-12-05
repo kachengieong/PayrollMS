@@ -66,7 +66,11 @@ namespace PayrollGoC
                  label25.Text = (myReader["DentalCoverage"].ToString());
                 label26.Text = (myReader["VisionCoverage"].ToString());
                 label3.Text = (myReader["DateofBirth"].ToString());
-
+                //label21.Text = (myReader["Yearlypay"].ToString());
+                label27.Text = ((FedTax.FedRate(Convert.ToDouble(label21.Text)).ToString()));
+                //  label28.Text = ((CTstateTax.PayRateCT(Convert.ToDouble(label21.Text)).ToString()));
+                //  label28.Text = ((NJstateTax.PayRateNJ(Convert.ToDouble(label21.Text)).ToString()));
+                label28.Text = ((NYstateTax.PayRateNY(Convert.ToDouble(label21.Text)).ToString()));
 
             }
 
@@ -90,8 +94,8 @@ namespace PayrollGoC
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
-            Form1 login = new Form1();
-            login.Show();
+            Form2 hrview = new Form2();
+            hrview.Show();
         }
 
         private void button3_Click(object sender, EventArgs e)
