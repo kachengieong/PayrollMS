@@ -171,11 +171,11 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(103, 127);
+            this.label5.Location = new System.Drawing.Point(37, 127);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(192, 18);
+            this.label5.Size = new System.Drawing.Size(13, 18);
             this.label5.TabIndex = 4;
-            this.label5.Text = "////////Amount Written //////////";
+            this.label5.Text = "-";
             // 
             // label6
             // 
@@ -259,7 +259,7 @@
             this.label13.AutoSize = true;
             this.label13.BackColor = System.Drawing.Color.Transparent;
             this.label13.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(270, 345);
+            this.label13.Location = new System.Drawing.Point(274, 346);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(36, 16);
             this.label13.TabIndex = 12;
@@ -503,9 +503,9 @@
             this.label35.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label35.Location = new System.Drawing.Point(416, 453);
             this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(91, 16);
+            this.label35.Size = new System.Drawing.Size(72, 16);
             this.label35.TabIndex = 30;
-            this.label35.Text = "Social Security Tax";
+            this.label35.Text = "Social Security";
             // 
             // label36
             // 
@@ -571,8 +571,7 @@
             this.label41.Name = "label41";
             this.label41.Size = new System.Drawing.Size(183, 51);
             this.label41.TabIndex = 41;
-            this.label41.Text = "GoC Payroll Management Systems\r\n1200 Victory Blvd. Staten Island NY\r\n(718)-555-55" +
-    "55\r\n";
+            this.label41.Text = "GoC Payroll Management Systems\r\n1200 Victory Blvd. Staten Island NY\r\n(718)-555-55" +"55\r\n";
             // 
             // label42
             // 
@@ -668,9 +667,9 @@
             this.label50.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label50.Location = new System.Drawing.Point(285, 469);
             this.label50.Name = "label50";
-            this.label50.Size = new System.Drawing.Size(70, 16);
+            this.label50.Size = new System.Drawing.Size(13, 16);
             this.label50.TabIndex = 51;
-            this.label50.Text = "Bonus  HERE";
+            this.label50.Text = "0";
             // 
             // label51
             // 
@@ -712,9 +711,9 @@
             this.label54.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label54.Location = new System.Drawing.Point(288, 786);
             this.label54.Name = "label54";
-            this.label54.Size = new System.Drawing.Size(67, 16);
+            this.label54.Size = new System.Drawing.Size(13, 16);
             this.label54.TabIndex = 55;
-            this.label54.Text = "Bonus HERE";
+            this.label54.Text = "0";
             // 
             // label55
             // 
@@ -987,9 +986,9 @@
             this.label79.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label79.Location = new System.Drawing.Point(416, 766);
             this.label79.Name = "label79";
-            this.label79.Size = new System.Drawing.Size(91, 16);
+            this.label79.Size = new System.Drawing.Size(72, 16);
             this.label79.TabIndex = 70;
-            this.label79.Text = "Social Security Tax";
+            this.label79.Text = "Social Security";
             // 
             // label80
             // 
@@ -1009,9 +1008,9 @@
             this.label81.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label81.Location = new System.Drawing.Point(569, 392);
             this.label81.Name = "label81";
-            this.label81.Size = new System.Drawing.Size(115, 16);
+            this.label81.Size = new System.Drawing.Size(11, 16);
             this.label81.TabIndex = 82;
-            this.label81.Text = "HOW MANY CHECKS";
+            this.label81.Text = "-";
             // 
             // label82
             // 
@@ -1031,9 +1030,9 @@
             this.label83.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label83.Location = new System.Drawing.Point(567, 698);
             this.label83.Name = "label83";
-            this.label83.Size = new System.Drawing.Size(115, 16);
+            this.label83.Size = new System.Drawing.Size(11, 16);
             this.label83.TabIndex = 84;
-            this.label83.Text = "HOW MANY CHECKS";
+            this.label83.Text = "-";
             // 
             // label84
             // 
@@ -1108,9 +1107,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(689, 961);
+            this.ClientSize = new System.Drawing.Size(684, 961);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label87);
@@ -1199,6 +1199,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form8";
             this.Text = "Print Check";
@@ -1299,5 +1300,6 @@
         private System.Windows.Forms.Label label87;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button2;
+
     }
 }

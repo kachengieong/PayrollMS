@@ -50,7 +50,7 @@ namespace PayrollGoC
             if (result == DialogResult.Yes)
             {
                 // Delete Record
-                OleDbConnection conn = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\ieong\Source\Repos\PayrollMS1\payrollSystem.accdb");
+                OleDbConnection conn = new OleDbConnection(@"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\semih\source\repos\PayrollMS\payrollSystem.mdb");
                 conn.Open();
                 OleDbCommand command = conn.CreateCommand();
                 command.CommandType = CommandType.Text;
@@ -179,7 +179,7 @@ namespace PayrollGoC
         private void button1_Click_1(object sender, EventArgs e)
         {
             //sql connection
-            OleDbConnection con1 = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\ieong\Source\Repos\PayrollMS1\payrollSystem.accdb");
+            OleDbConnection con1 = new OleDbConnection(@"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\semih\source\repos\PayrollMS\payrollSystem.mdb");
             con1.Open();
             //check if the employee id is found:
             //data from HRView:
@@ -254,7 +254,7 @@ namespace PayrollGoC
             int overtimeHour = GrossIncome.CalculateOvertimeHour(int.Parse(textBox2.Text));
             double overtimePay = GrossIncome.CalculateOvertimePay(overtimeHour, Convert.ToDouble(textBox6.Text));
             double grossIncome = GrossIncome.CalculateGrossIncome(int.Parse(textBox2.Text), overtimePay, Convert.ToDouble(textBox6.Text));
-            OleDbConnection con1 = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\ieong\Source\Repos\PayrollMS1\payrollSystem.accdb");
+            OleDbConnection con1 = new OleDbConnection(@"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\semih\source\repos\PayrollMS\payrollSystem.mdb");
             con1.Open();
 
 
@@ -334,13 +334,7 @@ namespace PayrollGoC
                 cmd4.Parameters.AddWithValue("@Department", textBox3.Text);
                 cmd4.ExecuteNonQuery();
             }
-
-
             con1.Close();
-
-
-
-            this.Close();
             MessageBox.Show("Employee Record Updated");
         }
 

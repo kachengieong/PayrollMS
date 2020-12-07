@@ -21,13 +21,16 @@ namespace PayrollGoC
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Close();
+            MessageBox.Show("Succesfully Logged Out");
+            Form1 myInfo = new Form1();
+            myInfo.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
-            Form5 myInfo = new Form5();
+            Form6 myInfo = new Form6();
             myInfo.Show();
         }
 
@@ -39,7 +42,7 @@ namespace PayrollGoC
             // this.TopMost = true;
 
             //database connection
-            OleDbConnection con1 = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\ieong\Source\Repos\PayrollMS1\payrollSystem.accdb");
+            OleDbConnection con1 = new OleDbConnection(@"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\semih\source\repos\PayrollMS\payrollSystem.mdb");
             con1.Open();
 
             //retrieve info from databse based on empl id

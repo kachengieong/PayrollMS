@@ -50,7 +50,7 @@ namespace PayrollGoC
         private void button2_Click(object sender, EventArgs e)
         {
             //sql connection
-            OleDbConnection con1 = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\ieong\Source\Repos\PayrollMS1\payrollSystem.accdb");
+            OleDbConnection con1 = new OleDbConnection(@"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\semih\source\repos\PayrollMS\payrollSystem.mdb");
             con1.Open();
 
             //1st reader
@@ -74,7 +74,7 @@ namespace PayrollGoC
             label66.Text = weekEnd.ToString();
 
             //
-
+            
 
 
             //
@@ -105,18 +105,31 @@ namespace PayrollGoC
                 label71.Text = (myReader2["RetirementCost"].ToString());
                 label40.Text = (myReader2["Netpay"].ToString());
                 label69.Text = (myReader2["Netpay"].ToString());
-
-                //DO NOT DELETE COMMENTED OUT CODE
-
+                label18.Text = (myReader2["Netpay"].ToString());
+                label58.Text = (myReader2["Netpay"].ToString());
                 label20.Text = (myReader["SSN"].ToString());
                 label60.Text = (myReader["SSN"].ToString());
-                //label3.Text = (myReader["NetPay"].ToString());
+                label3.Text = (myReader2["Netpay"].ToString());
                 label32.Text = (myReader2["FedTax"].ToString());
                 label76.Text = (myReader2["FedTax"].ToString());
-                //label31.Text = (myReader["socsecW"].ToString());
-                //label75.Text = (myReader["socsecW"].ToString());
-                label30.Text = (myReader2["NYstateTax"].ToString());
-                label74.Text = (myReader2["NYstateTax"].ToString());
+                label31.Text = (myReader2["SSAWithholdings"].ToString());
+                label75.Text = (myReader2["SSAWithholdings"].ToString());
+                string state = (myReader2["State"].ToString());
+                if (state == "New York")
+                {
+                    label30.Text = (myReader2["NYstateTax"].ToString());
+                    label74.Text = (myReader2["NYstateTax"].ToString());
+                }
+                else if (state == "New Jersey")
+                {
+                    label30.Text = (myReader2["NJstateTax"].ToString());
+                    label74.Text = (myReader2["NJstateTax"].ToString());
+                }
+                else if (state == "Connecticut")
+                {
+                    label30.Text = (myReader2["CTstateTax"].ToString());
+                    label74.Text = (myReader2["CTstateTax"].ToString());
+                }
                 label49.Text = (myReader2["Weeklygrosspay"].ToString());
                 label53.Text = (myReader2["Weeklygrosspay"].ToString());
 

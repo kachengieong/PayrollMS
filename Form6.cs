@@ -27,7 +27,7 @@ namespace PayrollGoC
 
         private void button2_Click(object sender, EventArgs e)
         {
-            //OleDbConnection con1 = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\ieong\Source\Repos\PayrollMS1\payrollSystem.accdb");
+            //OleDbConnection con1 = new OleDbConnection(@"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\semih\source\repos\PayrollMS\payrollSystem.mdb");
             //con1.Open();
 
             //OleDbDataReader myReader = null;

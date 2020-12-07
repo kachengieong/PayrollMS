@@ -10,35 +10,35 @@ namespace PayrollGoC
     {
         public static double FedRate(double grossIncome)
         {
-            if (grossIncome <= 9875)
+            if  (grossIncome <= 9875)
             {
-                return grossIncome -= (0.10 * grossIncome);
+                return Math.Round(0.10 * grossIncome,2);
             }
 
             else if (grossIncome >= 9876 && grossIncome <= 40125)
             {
-                return grossIncome -= (0.12 * grossIncome);
+                return Math.Round(0.12 * grossIncome,2);
             }
 
             else if (grossIncome >= 40126 && grossIncome <= 85525)
             {
-                return grossIncome -= (0.22 * grossIncome);
+                return Math.Round(0.22 * grossIncome,2);
             }
             else if (grossIncome >= 85526 && grossIncome <= 163300)
             {
-                return grossIncome -= (0.24 * grossIncome);
+                return Math.Round(0.24 * grossIncome,2);
             }
             else if (grossIncome >= 163301 && grossIncome <= 207350)
             {
-                return grossIncome -= (0.32 * grossIncome);
+                return Math.Round(0.32 * grossIncome,2);
             }
             else if (grossIncome >= 207351 && grossIncome <= 518400)
             {
-                return grossIncome -= (0.35 * grossIncome);
+                return Math.Round(0.35 * grossIncome,2);
             }
             else
             {
-                return grossIncome -= (0.37 * grossIncome);
+                return Math.Round(0.37 * grossIncome,2);
             }
 
         }
