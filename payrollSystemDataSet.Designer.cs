@@ -1106,6 +1106,8 @@ namespace PayrollGoC {
             
             private global::System.Data.DataColumn columnSSAWithholdings;
             
+            private global::System.Data.DataColumn columnState;
+            
             private global::System.Data.DataColumn columnSSN;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1359,6 +1361,14 @@ namespace PayrollGoC {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn StateColumn {
+                get {
+                    return this.columnState;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn SSNColumn {
                 get {
                     return this.columnSSN;
@@ -1430,6 +1440,7 @@ namespace PayrollGoC {
                         string Dentalvision, 
                         string Visioncost, 
                         string SSAWithholdings, 
+                        string State, 
                         string SSN) {
                 HRViewRow rowHRViewRow = ((HRViewRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
@@ -1460,6 +1471,7 @@ namespace PayrollGoC {
                         Dentalvision,
                         Visioncost,
                         SSAWithholdings,
+                        State,
                         SSN};
                 rowHRViewRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowHRViewRow);
@@ -1510,6 +1522,7 @@ namespace PayrollGoC {
                 this.columnDentalvision = base.Columns["Dentalvision"];
                 this.columnVisioncost = base.Columns["Visioncost"];
                 this.columnSSAWithholdings = base.Columns["SSAWithholdings"];
+                this.columnState = base.Columns["State"];
                 this.columnSSN = base.Columns["SSN"];
             }
             
@@ -1572,6 +1585,8 @@ namespace PayrollGoC {
                 base.Columns.Add(this.columnVisioncost);
                 this.columnSSAWithholdings = new global::System.Data.DataColumn("SSAWithholdings", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnSSAWithholdings);
+                this.columnState = new global::System.Data.DataColumn("State", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnState);
                 this.columnSSN = new global::System.Data.DataColumn("SSN", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnSSN);
                 this.columnFirstname.MaxLength = 255;
@@ -1598,6 +1613,7 @@ namespace PayrollGoC {
                 this.columnDentalvision.MaxLength = 255;
                 this.columnVisioncost.MaxLength = 255;
                 this.columnSSAWithholdings.MaxLength = 255;
+                this.columnState.MaxLength = 255;
                 this.columnSSN.MaxLength = 255;
             }
             
@@ -2582,6 +2598,8 @@ namespace PayrollGoC {
             
             private global::System.Data.DataColumn columnSSAWithholdings;
             
+            private global::System.Data.DataColumn columnState;
+            
             private global::System.Data.DataColumn columnSSN;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2915,6 +2933,14 @@ namespace PayrollGoC {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn StateColumn {
+                get {
+                    return this.columnState;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn SSNColumn {
                 get {
                     return this.columnSSN;
@@ -2996,6 +3022,7 @@ namespace PayrollGoC {
                         string Dentalcost, 
                         string Visioncost, 
                         string SSAWithholdings, 
+                        string State, 
                         string SSN) {
                 MastertableRow rowMastertableRow = ((MastertableRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
@@ -3036,6 +3063,7 @@ namespace PayrollGoC {
                         Dentalcost,
                         Visioncost,
                         SSAWithholdings,
+                        State,
                         SSN};
                 rowMastertableRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowMastertableRow);
@@ -3096,6 +3124,7 @@ namespace PayrollGoC {
                 this.columnDentalcost = base.Columns["Dentalcost"];
                 this.columnVisioncost = base.Columns["Visioncost"];
                 this.columnSSAWithholdings = base.Columns["SSAWithholdings"];
+                this.columnState = base.Columns["State"];
                 this.columnSSN = base.Columns["SSN"];
             }
             
@@ -3178,6 +3207,8 @@ namespace PayrollGoC {
                 base.Columns.Add(this.columnVisioncost);
                 this.columnSSAWithholdings = new global::System.Data.DataColumn("SSAWithholdings", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnSSAWithholdings);
+                this.columnState = new global::System.Data.DataColumn("State", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnState);
                 this.columnSSN = new global::System.Data.DataColumn("SSN", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnSSN);
                 this.columnFirstname.MaxLength = 50;
@@ -3200,6 +3231,7 @@ namespace PayrollGoC {
                 this.columnDentalcost.MaxLength = 255;
                 this.columnVisioncost.MaxLength = 255;
                 this.columnSSAWithholdings.MaxLength = 255;
+                this.columnState.MaxLength = 255;
                 this.columnSSN.MaxLength = 255;
             }
             
@@ -4574,6 +4606,22 @@ namespace PayrollGoC {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string State {
+                get {
+                    try {
+                        return ((string)(this[this.tableHRView.StateColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'State\' in table \'HRView\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableHRView.StateColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string SSN {
                 get {
                     try {
@@ -4910,6 +4958,18 @@ namespace PayrollGoC {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetSSAWithholdingsNull() {
                 this[this.tableHRView.SSAWithholdingsColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsStateNull() {
+                return this.IsNull(this.tableHRView.StateColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetStateNull() {
+                this[this.tableHRView.StateColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6484,6 +6544,22 @@ namespace PayrollGoC {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string State {
+                get {
+                    try {
+                        return ((string)(this[this.tableMastertable.StateColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'State\' in table \'Mastertable\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableMastertable.StateColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string SSN {
                 get {
                     try {
@@ -6940,6 +7016,18 @@ namespace PayrollGoC {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetSSAWithholdingsNull() {
                 this[this.tableMastertable.SSAWithholdingsColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsStateNull() {
+                return this.IsNull(this.tableMastertable.StateColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetStateNull() {
+                this[this.tableMastertable.StateColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7710,11 +7798,12 @@ namespace PayrollGoC.payrollSystemDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("Dentalvision", "Dentalvision");
             tableMapping.ColumnMappings.Add("Visioncost", "Visioncost");
             tableMapping.ColumnMappings.Add("SSAWithholdings", "SSAWithholdings");
+            tableMapping.ColumnMappings.Add("State", "State");
             tableMapping.ColumnMappings.Add("SSN", "SSN");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.InsertCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO `HRView` (`ID`, `Firstname`, `Lastname`, `Occupation`, `HealthPlan`, `RetirementPlan`, `Maternaty/Paternatyleave`, `Password`, `Age`, `DateofBirth`, `Department`, `Datehired`, `Email`, `PhoneNumber`, `Address`, `Address2`, `ZipCode`, `Gender`, `DentalCoverage`, `VisionCoverage`, `Position`, `Status`, `RoomNo`, `Healthcost`, `Dentalvision`, `Visioncost`, `SSAWithholdings`, `SSN`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO `HRView` (`ID`, `Firstname`, `Lastname`, `Occupation`, `HealthPlan`, `RetirementPlan`, `Maternaty/Paternatyleave`, `Password`, `Age`, `DateofBirth`, `Department`, `Datehired`, `Email`, `PhoneNumber`, `Address`, `Address2`, `ZipCode`, `Gender`, `DentalCoverage`, `VisionCoverage`, `Position`, `Status`, `RoomNo`, `Healthcost`, `Dentalvision`, `Visioncost`, `SSAWithholdings`, `State`, `SSN`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("ID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ID", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Firstname", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Firstname", global::System.Data.DataRowVersion.Current, false, null));
@@ -7743,6 +7832,7 @@ namespace PayrollGoC.payrollSystemDataSetTableAdapters {
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Dentalvision", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Dentalvision", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Visioncost", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Visioncost", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("SSAWithholdings", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "SSAWithholdings", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("State", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "State", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("SSN", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "SSN", global::System.Data.DataRowVersion.Current, false, null));
         }
         
@@ -7759,7 +7849,7 @@ namespace PayrollGoC.payrollSystemDataSetTableAdapters {
             this._commandCollection = new global::System.Data.OleDb.OleDbCommand[1];
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT ID, Firstname, Lastname, Occupation, HealthPlan, RetirementPlan, [Maternaty/Paternatyleave], [Password], Age, DateofBirth, Department, Datehired, Email, PhoneNumber, Address, Address2, ZipCode, Gender, DentalCoverage, VisionCoverage, [Position], Status, RoomNo, Healthcost, Dentalvision, Visioncost, SSAWithholdings, SSN FROM HRView";
+            this._commandCollection[0].CommandText = @"SELECT ID, Firstname, Lastname, Occupation, HealthPlan, RetirementPlan, [Maternaty/Paternatyleave], [Password], Age, DateofBirth, Department, Datehired, Email, PhoneNumber, Address, Address2, ZipCode, Gender, DentalCoverage, VisionCoverage, [Position], Status, RoomNo, Healthcost, Dentalvision, Visioncost, SSAWithholdings, State, SSN FROM HRView";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -7848,6 +7938,7 @@ namespace PayrollGoC.payrollSystemDataSetTableAdapters {
                     string Dentalvision, 
                     string Visioncost, 
                     string SSAWithholdings, 
+                    string State, 
                     string SSN) {
             if ((ID.HasValue == true)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = ((int)(ID.Value));
@@ -8006,11 +8097,17 @@ namespace PayrollGoC.payrollSystemDataSetTableAdapters {
             else {
                 this.Adapter.InsertCommand.Parameters[26].Value = ((string)(SSAWithholdings));
             }
-            if ((SSN == null)) {
+            if ((State == null)) {
                 this.Adapter.InsertCommand.Parameters[27].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[27].Value = ((string)(SSN));
+                this.Adapter.InsertCommand.Parameters[27].Value = ((string)(State));
+            }
+            if ((SSN == null)) {
+                this.Adapter.InsertCommand.Parameters[28].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[28].Value = ((string)(SSN));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -9421,11 +9518,12 @@ namespace PayrollGoC.payrollSystemDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("Dentalcost", "Dentalcost");
             tableMapping.ColumnMappings.Add("Visioncost", "Visioncost");
             tableMapping.ColumnMappings.Add("SSAWithholdings", "SSAWithholdings");
+            tableMapping.ColumnMappings.Add("State", "State");
             tableMapping.ColumnMappings.Add("SSN", "SSN");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.InsertCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO `Mastertable` (`ID`, `Firstname`, `Lastname`, `Occupation`, `Hours`, `OvertimeHours`, `Paytime`, `Overtimepay`, `Directpay`, `Netpay`, `Weeklygrosspay`, `Yearlypay`, `HealthCost`, `HealthPlan`, `RetirementCost`, `Maternaty/Paternatyleave`, `HourlyPay`, `Password`, `DateofBirth`, `Age`, `Department`, `Gender`, `DateHired`, `DentalCoverage`, `VisionCoverage`, `Email`, `PhoneNumber`, `Address`, `Address2`, `Zipcode`, `CTstateTax`, `NYstateTax`, `NJstateTax`, `FedTax`, `Dentalcost`, `Visioncost`, `SSAWithholdings`, `SSN`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO `Mastertable` (`ID`, `Firstname`, `Lastname`, `Occupation`, `Hours`, `OvertimeHours`, `Paytime`, `Overtimepay`, `Directpay`, `Netpay`, `Weeklygrosspay`, `Yearlypay`, `HealthCost`, `HealthPlan`, `RetirementCost`, `Maternaty/Paternatyleave`, `HourlyPay`, `Password`, `DateofBirth`, `Age`, `Department`, `Gender`, `DateHired`, `DentalCoverage`, `VisionCoverage`, `Email`, `PhoneNumber`, `Address`, `Address2`, `Zipcode`, `CTstateTax`, `NYstateTax`, `NJstateTax`, `FedTax`, `Dentalcost`, `Visioncost`, `SSAWithholdings`, `State`, `SSN`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("ID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ID", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Firstname", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Firstname", global::System.Data.DataRowVersion.Current, false, null));
@@ -9464,6 +9562,7 @@ namespace PayrollGoC.payrollSystemDataSetTableAdapters {
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Dentalcost", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Dentalcost", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Visioncost", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Visioncost", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("SSAWithholdings", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "SSAWithholdings", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("State", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "State", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("SSN", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "SSN", global::System.Data.DataRowVersion.Current, false, null));
         }
         
@@ -9480,7 +9579,7 @@ namespace PayrollGoC.payrollSystemDataSetTableAdapters {
             this._commandCollection = new global::System.Data.OleDb.OleDbCommand[1];
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT ID, Firstname, Lastname, Occupation, Hours, OvertimeHours, Paytime, Overtimepay, Directpay, Netpay, Weeklygrosspay, Yearlypay, HealthCost, HealthPlan, RetirementCost, [Maternaty/Paternatyleave], HourlyPay, [Password], DateofBirth, Age, Department, Gender, DateHired, DentalCoverage, VisionCoverage, Email, PhoneNumber, Address, Address2, Zipcode, CTstateTax, NYstateTax, NJstateTax, FedTax, Dentalcost, Visioncost, SSAWithholdings, SSN FROM Mastertable";
+            this._commandCollection[0].CommandText = @"SELECT ID, Firstname, Lastname, Occupation, Hours, OvertimeHours, Paytime, Overtimepay, Directpay, Netpay, Weeklygrosspay, Yearlypay, HealthCost, HealthPlan, RetirementCost, [Maternaty/Paternatyleave], HourlyPay, [Password], DateofBirth, Age, Department, Gender, DateHired, DentalCoverage, VisionCoverage, Email, PhoneNumber, Address, Address2, Zipcode, CTstateTax, NYstateTax, NJstateTax, FedTax, Dentalcost, Visioncost, SSAWithholdings, State, SSN FROM Mastertable";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -9579,6 +9678,7 @@ namespace PayrollGoC.payrollSystemDataSetTableAdapters {
                     string Dentalcost, 
                     string Visioncost, 
                     string SSAWithholdings, 
+                    string State, 
                     string SSN) {
             if ((ID.HasValue == true)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = ((int)(ID.Value));
@@ -9792,11 +9892,17 @@ namespace PayrollGoC.payrollSystemDataSetTableAdapters {
             else {
                 this.Adapter.InsertCommand.Parameters[36].Value = ((string)(SSAWithholdings));
             }
-            if ((SSN == null)) {
+            if ((State == null)) {
                 this.Adapter.InsertCommand.Parameters[37].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[37].Value = ((string)(SSN));
+                this.Adapter.InsertCommand.Parameters[37].Value = ((string)(State));
+            }
+            if ((SSN == null)) {
+                this.Adapter.InsertCommand.Parameters[38].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[38].Value = ((string)(SSN));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 

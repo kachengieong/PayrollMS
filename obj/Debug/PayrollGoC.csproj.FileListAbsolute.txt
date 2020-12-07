@@ -1,3 +1,7 @@
+C:\Users\ieong\Source\Repos\PayrollMS1\bin\Debug\payrollSystem.accdb
+C:\Users\ieong\Source\Repos\PayrollMS1\bin\Debug\PayrollGoC.exe.config
+C:\Users\ieong\Source\Repos\PayrollMS1\bin\Debug\PayrollGoC.exe
+C:\Users\ieong\Source\Repos\PayrollMS1\bin\Debug\PayrollGoC.pdb
 C:\Users\ieong\Source\Repos\PayrollMS1\obj\Debug\PayrollGoC.csprojAssemblyReference.cache
 C:\Users\ieong\Source\Repos\PayrollMS1\obj\Debug\PayrollGoC.Form1.resources
 C:\Users\ieong\Source\Repos\PayrollMS1\obj\Debug\PayrollGoC.Form2.resources
@@ -10,9 +14,5 @@ C:\Users\ieong\Source\Repos\PayrollMS1\obj\Debug\PayrollGoC.Form8.resources
 C:\Users\ieong\Source\Repos\PayrollMS1\obj\Debug\PayrollGoC.Properties.Resources.resources
 C:\Users\ieong\Source\Repos\PayrollMS1\obj\Debug\PayrollGoC.csproj.GenerateResource.cache
 C:\Users\ieong\Source\Repos\PayrollMS1\obj\Debug\PayrollGoC.csproj.CoreCompileInputs.cache
-C:\Users\ieong\Source\Repos\PayrollMS1\bin\Debug\PayrollGoC.exe.config
-C:\Users\ieong\Source\Repos\PayrollMS1\bin\Debug\PayrollGoC.exe
-C:\Users\ieong\Source\Repos\PayrollMS1\bin\Debug\PayrollGoC.pdb
 C:\Users\ieong\Source\Repos\PayrollMS1\obj\Debug\PayrollGoC.exe
 C:\Users\ieong\Source\Repos\PayrollMS1\obj\Debug\PayrollGoC.pdb
-C:\Users\ieong\Source\Repos\PayrollMS1\bin\Debug\payrollSystem.accdb

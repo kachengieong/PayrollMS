@@ -10,68 +10,68 @@ namespace PayrollGoC
     {
         public static double soc_sec_adm(double grossIncomeSSA)
         {
-            return grossIncomeSSA -= (0.062 * grossIncomeSSA);  //returns gross pay after SSA withholdings
+            return Math.Round(0.062 * grossIncomeSSA,2); 
         }
 
         public static double medicare(double grossIncomeMED)
         {
-            return grossIncomeMED -= (0.0145 * grossIncomeMED); //returns gross pay after medicare witholdings
+            return Math.Round(0.0145 * grossIncomeMED,2); 
         }
         public static double healthCoverage(double grossIncomeHealth, string healthCoverage)
         {
             if (healthCoverage == "Premium Pack")
             {
-                return grossIncomeHealth -= 30000;
+                return 250;
             }
 
             else if (healthCoverage == "Gold Pack")
             {
-                return grossIncomeHealth -= 15000;
+                return 150;
             }
 
             else
             {
-                return grossIncomeHealth -= 7000;
+                return 75;
             }
         }
         public static double dentalCoverage(double grossIncomeDental, string dentalCoverage)
         {
             if (dentalCoverage == "Premium Pack")
             {
-                return grossIncomeDental -= 30000;
+                return  175;
             }
 
             else if (dentalCoverage == "Gold Pack")
             {
-                return grossIncomeDental -= 15000;
+                return  100;
             }
 
             else
             {
-                return grossIncomeDental -= 7000;
+                return  50;
             }
         }
         public static double visionCoverage(double grossIncomeVision, string visionCoverage)
         {
             if (visionCoverage == "Premium Pack")
             {
-                return grossIncomeVision -= 30000;
+                return  100;
             }
 
             else if (visionCoverage == "Gold Pack")
             {
-                return grossIncomeVision -= 15000;
+                return  75;
             }
 
             else
             {
-                return grossIncomeVision -= 7000;
+                return  40;
             }
         }
 
         public static double retirement(double grossIncomeRET)
         {
-            return grossIncomeRET -= grossIncomeRET * 0.04;
+            return Math.Round(grossIncomeRET * 0.04,2);
         }
     }
 }

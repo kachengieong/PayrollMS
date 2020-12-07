@@ -49,7 +49,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(1031, 150);
             this.label1.TabIndex = 0;
-            this.label1.Text = "WELCOME  TO PAYROLL \r\n              MANAGEMENT SYSTEM";
+            this.label1.Text = "WELCOME  TO GoC PAYROLL \r\n              MANAGEMENT SYSTEM";
             // 
             // label2
             // 

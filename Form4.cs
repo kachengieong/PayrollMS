@@ -334,13 +334,7 @@ namespace PayrollGoC
                 cmd4.Parameters.AddWithValue("@Department", textBox3.Text);
                 cmd4.ExecuteNonQuery();
             }
-
-
             con1.Close();
-
-
-
-            this.Close();
             MessageBox.Show("Employee Record Updated");
         }
 

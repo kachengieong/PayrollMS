@@ -21,18 +21,18 @@ namespace PayrollGoC
         }
         public static double CalculateOvertimePay(int overtimeHour, double hourlyWage)
         {
-            return hourlyWage * 1.5 * overtimeHour;
+            return Math.Round(hourlyWage * 1.5 * overtimeHour,2);
         }
 
         public static double CalculateGrossIncome(int hour, double overtimePay, double hourlyWage)
         {
             if (hour <= 40)
             {
-                return hourlyWage * hour;
+                return Math.Round(hourlyWage * hour,2);
             }
             else
             {
-                return (hourlyWage * hour) + overtimePay;
+                return Math.Round((hourlyWage * hour) + overtimePay,2);
             }
         }
     }

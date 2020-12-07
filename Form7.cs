@@ -21,13 +21,16 @@ namespace PayrollGoC
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Close();
+            MessageBox.Show("Succesfully Logged Out");
+            Form1 myInfo = new Form1();
+            myInfo.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
-            Form5 myInfo = new Form5();
+            Form6 myInfo = new Form6();
             myInfo.Show();
         }
 
