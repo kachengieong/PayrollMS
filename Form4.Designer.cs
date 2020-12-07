@@ -82,6 +82,10 @@
             this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.label35 = new System.Windows.Forms.Label();
             this.textBox12 = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -124,7 +128,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(62, 576);
+            this.label3.Location = new System.Drawing.Point(1068, 9);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(24, 16);
             this.label3.TabIndex = 50;
@@ -136,7 +140,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(12, 576);
+            this.label4.Location = new System.Drawing.Point(1018, 9);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(44, 16);
             this.label4.TabIndex = 49;
@@ -740,12 +744,48 @@
             this.textBox12.Size = new System.Drawing.Size(236, 26);
             this.textBox12.TabIndex = 93;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(72, 554);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(60, 62);
+            this.pictureBox1.TabIndex = 96;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.Black;
+            this.label10.Location = new System.Drawing.Point(138, 554);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(18, 18);
+            this.label10.TabIndex = 95;
+            this.label10.Text = "®";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.BackColor = System.Drawing.Color.Transparent;
+            this.label15.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.Black;
+            this.label15.Location = new System.Drawing.Point(10, 601);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(56, 15);
+            this.label15.TabIndex = 94;
+            this.label15.Text = "pwrd by";
+            // 
             // Form4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1100, 628);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label15);
             this.Controls.Add(this.textBox12);
             this.Controls.Add(this.comboBox4);
             this.Controls.Add(this.label35);
@@ -805,6 +845,7 @@
             this.Name = "Form4";
             this.Text = "Update Employee Info";
             this.Load += new System.EventHandler(this.Form4_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -864,5 +905,8 @@
         private System.Windows.Forms.ComboBox comboBox4;
         private System.Windows.Forms.Label label35;
         private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label15;
     }
 }
