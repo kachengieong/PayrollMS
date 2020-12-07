@@ -258,8 +258,8 @@ namespace PayrollGoC
             con1.Open();
 
 
-            OleDbCommand cmd = new OleDbCommand("UPDATE HRView SET [Email] = @Email, [PhoneNumber] = @PhoneNumber, [Address] = @Address, [Address2] =  @Address2, [ZipCode] = @ZipCode, [Department]= @Department, [Position] = @Position where ID =" + int.Parse(textBox1.Text), con1);
-            //OleDbCommand cmd = new OleDbCommand("UPDATE HRView SET [Email] = @Email, [PhoneNumber] = @PhoneNumber, [Address] = @Address, [Address2] =  @Address2, [ZipCode] = @ZipCode, [Department]= @Department, [Position] = @Position, [HealthPlan] = @HealthPlan, [DentalCoverage] = @DentalCoverage, [VisionCoverage] = @VisionCoverage WHERE ID =" + int.Parse(textBox1.Text), con1);
+            //OleDbCommand cmd = new OleDbCommand("UPDATE HRView SET [Email] = @Email, [PhoneNumber] = @PhoneNumber, [Address] = @Address, [Address2] =  @Address2, [ZipCode] = @ZipCode, [Department]= @Department, [Position] = @Position where ID =" + int.Parse(textBox1.Text), con1);
+            OleDbCommand cmd = new OleDbCommand("UPDATE HRView SET [Email] = @Email, [PhoneNumber] = @PhoneNumber, [Address] = @Address, [Address2] =  @Address2, [ZipCode] = @ZipCode, [Department]= @Department, [Position] = @Position, [HealthPlan] = @HealthPlan, [DentalCoverage] = @DentalCoverage, [VisionCoverage] = @VisionCoverage WHERE ID =" + int.Parse(textBox1.Text), con1);
 
 
             //to save the updates to database:
@@ -270,9 +270,9 @@ namespace PayrollGoC
             cmd.Parameters.AddWithValue("@ZipCode", textBox11.Text);
             cmd.Parameters.AddWithValue("@Department", textBox3.Text);
             cmd.Parameters.AddWithValue("@Position", textBox4.Text);
-            //cmd.Parameters.AddWithValue("@HealthPlan", comboBox1.SelectedItem.Text);
-            //cmd.Parameters.AddWithValue("@DentalCoverage", comboBox2.SelectedItem.Text);
-            //cmd.Parameters.AddWithValue("@VisionCoverage", comboBox3.SelectedItem.Text);
+            cmd.Parameters.AddWithValue("@HealthPlan", comboBox1.Text);
+            cmd.Parameters.AddWithValue("@DentalCoverage", comboBox2.Text);
+            cmd.Parameters.AddWithValue("@VisionCoverage", comboBox3.Text);
             cmd.ExecuteNonQuery();
 
             if (textBox6.Text == "0.00")
@@ -307,7 +307,7 @@ namespace PayrollGoC
 
             if (textBox6.Text == "0.00")
             {
-                OleDbCommand cmd3 = new OleDbCommand("UPDATE Mastertable SET [Weeklygrosspay] = @Weeklygrosspay, [Occupation] = @Occupation, [Email] = @Email, [PhoneNumber] = @PhoneNumber, [Address] = @Address, [Address2] =  @Address2, [ZipCode] = @ZipCode, [Department]= @Department where ID =" + int.Parse(textBox1.Text), con1);
+                OleDbCommand cmd3 = new OleDbCommand("UPDATE Mastertable SET [Weeklygrosspay] = @Weeklygrosspay, [Occupation] = @Occupation, [Email] = @Email, [PhoneNumber] = @PhoneNumber, [Address] = @Address, [Address2] =  @Address2, [ZipCode] = @ZipCode, [Department]= @Department, [HealthPlan] = @HealthPlan, [DentalCoverage] = @DentalCoverage, [VisionCoverage] = @VisionCoverage where ID =" + int.Parse(textBox1.Text), con1);
                 cmd3.Parameters.AddWithValue("@Occupation", textBox4.Text);
                 cmd3.Parameters.AddWithValue("@Weeklygrosspay", Convert.ToDouble(textBox5.Text));
                 cmd3.Parameters.AddWithValue("@Email", textBox7.Text);
@@ -316,11 +316,14 @@ namespace PayrollGoC
                 cmd3.Parameters.AddWithValue("@Address2", textBox10.Text);
                 cmd3.Parameters.AddWithValue("@ZipCode", textBox11.Text);
                 cmd3.Parameters.AddWithValue("@Department", textBox3.Text);
+                cmd3.Parameters.AddWithValue("@HealthPlan", comboBox1.Text);
+                cmd3.Parameters.AddWithValue("@DentalCoverage", comboBox2.Text);
+                cmd3.Parameters.AddWithValue("@VisionCoverage", comboBox3.Text);
                 cmd3.ExecuteNonQuery();
             }
             else
             {
-                OleDbCommand cmd4 = new OleDbCommand("UPDATE Mastertable SET [Hours] = @Hours, [OvertimeHours] = @OvertimeHours, [Overtimepay] = @Overtimepay, [Weeklygrosspay] = @Weeklygrosspay, [Occupation] = @Occupation, [Email] = @Email, [PhoneNumber] = @PhoneNumber, [Address] = @Address, [Address2] =  @Address2, [ZipCode] = @ZipCode, [Department]= @Department where ID =" + int.Parse(textBox1.Text), con1);
+                OleDbCommand cmd4 = new OleDbCommand("UPDATE Mastertable SET [Hours] = @Hours, [OvertimeHours] = @OvertimeHours, [Overtimepay] = @Overtimepay, [Weeklygrosspay] = @Weeklygrosspay, [Occupation] = @Occupation, [Email] = @Email, [PhoneNumber] = @PhoneNumber, [Address] = @Address, [Address2] =  @Address2, [ZipCode] = @ZipCode, [Department]= @Department, [HealthPlan] = @HealthPlan, [DentalCoverage] = @DentalCoverage, [VisionCoverage] = @VisionCoverage where ID =" + int.Parse(textBox1.Text), con1);
                 cmd4.Parameters.AddWithValue("@Hours", (int.Parse(textBox2.Text) - overtimeHour));
                 cmd4.Parameters.AddWithValue("@OvertimeHours", overtimeHour);
                 cmd4.Parameters.AddWithValue("@Overtimepay", overtimePay);
@@ -332,6 +335,9 @@ namespace PayrollGoC
                 cmd4.Parameters.AddWithValue("@Address2", textBox10.Text);
                 cmd4.Parameters.AddWithValue("@ZipCode", textBox11.Text);
                 cmd4.Parameters.AddWithValue("@Department", textBox3.Text);
+                cmd4.Parameters.AddWithValue("@HealthPlan", comboBox1.Text);
+                cmd4.Parameters.AddWithValue("@DentalCoverage", comboBox2.Text);
+                cmd4.Parameters.AddWithValue("@VisionCoverage", comboBox3.Text);
                 cmd4.ExecuteNonQuery();
             }
             con1.Close();
