@@ -144,7 +144,7 @@ namespace PayrollGoC
             OleDbCommand addCommand = conn.CreateCommand();
             addCommand.CommandType = CommandType.Text;
             addCommand.CommandText = "INSERT INTO HRView (ID, [Password], Status, Firstname, Lastname, DateofBirth, Age, Gender, Department, Occupation, Datehired, HealthPlan, DentalCoverage, VisionCoverage, Email, PhoneNumber, Address, Address2, ZipCode) VALUES ('" +
-                int.Parse(textBox15.Text) + "', '" + textBox14.Text + "', 'active', '" + textBox1.Text + "', '" + textBox2.Text + "', '" + dateTimePicker1.Value + "', '" + int.Parse(textBox12.Text) + "', '" + gendertext + "', '" + textBox3.Text + "', '" + textBox4.Text + "', '" + dateTimePicker2.Value + "', '" + comboBox1.Text +
+                int.Parse(textBox15.Text) + "', '" + textBox14.Text + "', 'Active', '" + textBox1.Text + "', '" + textBox2.Text + "', '" + dateTimePicker1.Value + "', '" + int.Parse(textBox12.Text) + "', '" + gendertext + "', '" + textBox3.Text + "', '" + textBox4.Text + "', '" + dateTimePicker2.Value + "', '" + comboBox1.Text +
                 "', '" + comboBox2.Text + "', '" + comboBox3.Text + "', '" + textBox7.Text + "', '" + textBox8.Text + "', '" + textBox9.Text + "', '" + textBox10.Text + "', '" + textBox11.Text + "')";
             addCommand.ExecuteNonQuery();
             if (radioButton3.Checked)
