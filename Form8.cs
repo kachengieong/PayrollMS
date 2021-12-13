@@ -50,7 +50,7 @@ namespace PayrollGoC
         private void button2_Click(object sender, EventArgs e)
         {
             //sql connection
-            OleDbConnection con1 = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\ieong\Source\Repos\PayrollMS1\payrollSystem.accdb");
+            OleDbConnection con1 = new OleDbConnection(ConnectionPath.connectionString);
             con1.Open();
 
             //1st reader

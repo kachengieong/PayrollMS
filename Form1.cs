@@ -51,7 +51,7 @@ namespace PayrollGoC
             }
             else
             {
-                OleDbConnection conn = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\ieong\Source\Repos\PayrollMS1\payrollSystem.accdb");
+                OleDbConnection conn = new OleDbConnection(ConnectionPath.connectionString);
                 conn.Open();
                 OleDbCommand cmd = conn.CreateCommand();
                 cmd.CommandType = CommandType.Text;

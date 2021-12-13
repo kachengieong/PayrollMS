@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Benefits.cs" />
+    <Compile Include="ConnectionPath.cs" />
     <Compile Include="CTstateTax.cs" />
     <Compile Include="FedTax.cs" />
     <Compile Include="Form1.cs">

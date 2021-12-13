@@ -108,7 +108,7 @@ namespace PayrollGoC
             int overtimeHour = GrossIncome.CalculateOvertimeHour(int.Parse(textBox13.Text));
             double overtimePay = GrossIncome.CalculateOvertimePay(overtimeHour, Convert.ToDouble(textBox6.Text));
             double grossIncome = GrossIncome.CalculateGrossIncome(int.Parse(textBox13.Text), overtimePay, Convert.ToDouble(textBox6.Text));
-            OleDbConnection conn = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\ieong\Source\Repos\PayrollMS1\payrollSystem.accdb");
+            OleDbConnection conn = new OleDbConnection(ConnectionPath.connectionString);
             conn.Open();
             //to choose gender radio button:
             string gendertext = "";
