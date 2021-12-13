@@ -61,7 +61,6 @@
             this.label30 = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.label33 = new System.Windows.Forms.Label();
             this.label34 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
@@ -497,19 +496,6 @@
             this.label32.Text = "Emp ID# :";
             this.label32.Click += new System.EventHandler(this.label32_Click);
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Tomato;
-            this.button1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(720, 528);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(312, 40);
-            this.button1.TabIndex = 83;
-            this.button1.Text = "Log Out";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // label33
             // 
             this.label33.AutoSize = true;
@@ -540,7 +526,7 @@
             // 
             this.button2.BackColor = System.Drawing.Color.MistyRose;
             this.button2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(402, 528);
+            this.button2.Location = new System.Drawing.Point(720, 483);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(312, 40);
             this.button2.TabIndex = 87;
@@ -771,7 +757,6 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label33);
             this.Controls.Add(this.label34);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.label31);
             this.Controls.Add(this.label32);
             this.Controls.Add(this.label27);
@@ -848,7 +833,6 @@
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.Label label32;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.Button button2;

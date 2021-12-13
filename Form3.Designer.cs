@@ -74,8 +74,6 @@ namespace PayrollGoC
             this.textBox11 = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
             this.textBox12 = new System.Windows.Forms.TextBox();
-            this.label23 = new System.Windows.Forms.Label();
-            this.textBox13 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.label24 = new System.Windows.Forms.Label();
@@ -433,6 +431,7 @@ namespace PayrollGoC
             // textBox6
             // 
             this.textBox6.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox6.HideSelection = false;
             this.textBox6.Location = new System.Drawing.Point(156, 367);
             this.textBox6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBox6.Name = "textBox6";
@@ -623,26 +622,6 @@ namespace PayrollGoC
             this.textBox12.Name = "textBox12";
             this.textBox12.Size = new System.Drawing.Size(43, 26);
             this.textBox12.TabIndex = 45;
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.ForeColor = System.Drawing.Color.Black;
-            this.label23.Location = new System.Drawing.Point(84, 297);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(70, 19);
-            this.label23.TabIndex = 46;
-            this.label23.Text = "Hours : ";
-            this.label23.Click += new System.EventHandler(this.label23_Click);
-            // 
-            // textBox13
-            // 
-            this.textBox13.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox13.Location = new System.Drawing.Point(160, 294);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(100, 26);
-            this.textBox13.TabIndex = 47;
             // 
             // button1
             // 
@@ -836,8 +815,6 @@ namespace PayrollGoC
             this.Controls.Add(this.comboBox4);
             this.Controls.Add(this.label24);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox13);
-            this.Controls.Add(this.label23);
             this.Controls.Add(this.textBox12);
             this.Controls.Add(this.label22);
             this.Controls.Add(this.textBox11);
@@ -938,8 +915,6 @@ namespace PayrollGoC
         private System.Windows.Forms.TextBox textBox11;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.TextBox textBox13;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ComboBox comboBox4;
         private System.Windows.Forms.Label label24;

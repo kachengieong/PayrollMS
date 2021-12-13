@@ -120,11 +120,6 @@ namespace PayrollGoC
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
         private void button2_Click(object sender, EventArgs e)
         {
             if (label15.Text == "Hr" || label15.Text == "HR" || label15.Text == "hr" || label15.Text == "Human Resource" || label15.Text == "human resource" || label15.Text == "Human resource")

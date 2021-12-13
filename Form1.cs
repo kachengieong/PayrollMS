@@ -74,18 +74,18 @@ namespace PayrollGoC
                     textBox2.Clear();
                     if (status == 0 && datatable.Rows.Count == 1)
                     {
+                        MessageBox.Show("Login Succeed!");
                         Form2 frm2 = new Form2();
                         frm2.Show();
                         this.Hide();
-                        MessageBox.Show("Login Succeed!");
                     }
 
                     else if (status == 1 && datatable.Rows.Count == 0)
                     {
+                        MessageBox.Show("Login Succeed!");
                         Form6 frm6 = new Form6();
                         frm6.Show();
                         this.Hide();
-                        MessageBox.Show("Login Succeed!");
                     }
                     else
                     {

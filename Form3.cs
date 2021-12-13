@@ -62,13 +62,14 @@ namespace PayrollGoC
 
         private void radioButton3_CheckedChanged(object sender, EventArgs e)
         {
-
-
+            textBox6.Enabled = false;
+            textBox5.Enabled = true;
         }
 
         private void radioButton4_CheckedChanged(object sender, EventArgs e)
-        {   
-
+        {
+            textBox5.Enabled = false;
+            textBox6.Enabled = true;
         }
 
         private void textBox5_TextChanged(object sender, EventArgs e)
@@ -105,9 +106,6 @@ namespace PayrollGoC
 
         private void button2_Click(object sender, EventArgs e)
         {
-            int overtimeHour = GrossIncome.CalculateOvertimeHour(int.Parse(textBox13.Text));
-            double overtimePay = GrossIncome.CalculateOvertimePay(overtimeHour, Convert.ToDouble(textBox6.Text));
-            double grossIncome = GrossIncome.CalculateGrossIncome(int.Parse(textBox13.Text), overtimePay, Convert.ToDouble(textBox6.Text));
             OleDbConnection conn = new OleDbConnection(ConnectionPath.connectionString);
             conn.Open();
             //to choose gender radio button:
@@ -134,7 +132,7 @@ namespace PayrollGoC
                 string typetext = radioButton4.Text;
                 OleDbCommand cmd = conn.CreateCommand();
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "INSERT INTO Economictable (ID, Firstname, Lastname, Occupation, Hours, OvertimeHours, Overtimepay, Weeklygrosspay, HourlyPay, Paytime, [Password], DateofBirth, Age, Gender, Department, Datehired, Email, PhoneNumber, Address, Address2, Zipcode) VALUES ('" + int.Parse(textBox15.Text) + "', '" + textBox1.Text + "', '" + textBox2.Text + "', '" + textBox4.Text + "', '" + (int.Parse(textBox13.Text) - overtimeHour) + "', '" + overtimeHour + "', '" + overtimePay + "', '" + grossIncome + "', '" 
+                cmd.CommandText = "INSERT INTO Economictable (ID, Firstname, Lastname, Occupation, HourlyPay, Paytime, [Password], DateofBirth, Age, Gender, Department, Datehired, Email, PhoneNumber, Address, Address2, Zipcode) VALUES ('" + int.Parse(textBox15.Text) + "', '" + textBox1.Text + "', '" + textBox2.Text + "', '" + textBox4.Text  + "', '" 
                     + Convert.ToDouble(textBox6.Text) + "', '" + typetext + "', '" + textBox14.Text + "', '" + dateTimePicker1.Value + "', '" + int.Parse(textBox12.Text) + "', '" + gendertext + "', '" + textBox3.Text + "', '" + dateTimePicker2.Value + "', '" + textBox7.Text + "', '" + textBox8.Text + "', '" + textBox9.Text + "', '" + textBox10.Text + "', '" + textBox11.Text + "')";
                 cmd.ExecuteNonQuery();
             }
@@ -160,8 +158,8 @@ namespace PayrollGoC
                 string typetext = radioButton4.Text;
                 OleDbCommand command = conn.CreateCommand();
                 command.CommandType = CommandType.Text;
-                command.CommandText = "INSERT INTO Mastertable (ID, [Password], Hours, OvertimeHours, Overtimepay, Weeklygrosspay, HourlyPay, Paytime, Firstname, Lastname, DateofBirth, Age, Gender,Department, Occupation, Datehired, HealthPlan, DentalCoverage, VisionCoverage, Email, PhoneNumber, Address, Address2, Zipcode, SSN, State) VALUES ('"
-                    + int.Parse(textBox15.Text) + "', '" + textBox14.Text + "', '" + (int.Parse(textBox13.Text) - overtimeHour) + "', '" + overtimeHour + "', '" + overtimePay + "', '" + grossIncome + "', '" + Convert.ToDouble(textBox6.Text) + "', '" + typetext + "', '" + textBox1.Text + "', '" + textBox2.Text + "', '" + dateTimePicker1.Value + "', '" +
+                command.CommandText = "INSERT INTO Mastertable (ID, [Password], HourlyPay, Paytime, Firstname, Lastname, DateofBirth, Age, Gender,Department, Occupation, Datehired, HealthPlan, DentalCoverage, VisionCoverage, Email, PhoneNumber, Address, Address2, Zipcode, SSN, State) VALUES ('"
+                    + int.Parse(textBox15.Text) + "', '" + textBox14.Text  + "', '" + Convert.ToDouble(textBox6.Text) + "', '" + typetext + "', '" + textBox1.Text + "', '" + textBox2.Text + "', '" + dateTimePicker1.Value + "', '" +
                     int.Parse(textBox12.Text) + "', '" + gendertext + "', '" + textBox3.Text + "', '" + textBox4.Text + "', '" + dateTimePicker2.Value + "', '" + comboBox1.Text + "', '"
                     + comboBox2.Text + "', '" + comboBox3.Text + "', '" + textBox7.Text + "', '" + textBox8.Text + "', '" + textBox9.Text + "', '" + textBox10.Text + "', '" + textBox11.Text + "', '" + textBox16.Text + "', '" + comboBox4.Text + "')";
                 command.ExecuteNonQuery();
